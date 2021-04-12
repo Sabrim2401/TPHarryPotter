@@ -1,4 +1,5 @@
 package app.artefactos;
+import app.poderes.Poder;
 
 public class Artefacto {
     public String nombre;
