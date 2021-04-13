@@ -1,5 +1,5 @@
 package app.personajes;
 
-public class Elfo extends Criatura {
+public class Elfo extends Criatura{
     
 }
