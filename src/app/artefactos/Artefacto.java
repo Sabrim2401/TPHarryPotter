@@ -44,4 +44,15 @@ public class Artefacto {
         this.poder = poder;
     }
 
+    // @Override
+    // boolean esInvisibleAMuggles(){
+    // aca va la logica del metodo
+    // return true;
+    // }
+    // @Override
+    // boolean esInvisible(){
+    // agregar logica
+    // return true;
+    // }
+
 }

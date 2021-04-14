@@ -1,5 +1,7 @@
 package app.interfaces;
 
-public class IReliquiaMuerte {
-    
+public interface IReliquiaMuerte { // cambio el public class por public interface y agrego el metodo boolean
+
+    boolean esReliquiaMuerte();
+
 }
