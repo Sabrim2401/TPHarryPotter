@@ -7,7 +7,7 @@ public class Artefacto {
     private double amplificadorDeDanio;
     private double amplificadorDeCuracion;
     private Poder poder;
-    private double dañoInicial;
+    private double danioInicial;
 
     // Agrego getters y setters de los atributos
     // de artefacto
