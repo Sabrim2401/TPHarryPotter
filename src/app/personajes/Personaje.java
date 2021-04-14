@@ -2,19 +2,19 @@ package app.personajes;
 
 public abstract class Personaje {
 
-   
-    public String nombre;
-    public int salud;//max 100
-    public int edad;
+
+    private String nombre;
+    private int salud;//max 100
+    private int edad;
+    private int golpe; // fuerza con la que golpea
+    private String color; // color del personaje para diferenciarlo
+
 
     // Método. Habría que armarlo.
 
-     
-    
-    // Getters y Setters de los atributos
+     // Getters y Setters de los atributos
 
     //Nombre
-
     public String getNombre(){
         return this.nombre;
     }
@@ -24,7 +24,6 @@ public abstract class Personaje {
     }
 
     // Salud
-
     public int getSalud(){
         return this.salud;
     }
@@ -34,7 +33,6 @@ public abstract class Personaje {
     }
 
     // Edad
-
     public int getEdad(){
         return this.edad;
     }
@@ -43,8 +41,30 @@ public abstract class Personaje {
         this.edad = edad;
     }
 
+    //Golpe
+    public int getGolpe(){
+        return this.golpe;
+    }
+
+    public void setGolpe(int golpe){
+        this.golpe = golpe;
+    }
 
 
+    //Golpe
+   public String getColor(){
+    return this.color;
+    }
 
-    
+    public void setColor(String color){
+    this.color = color;
+    }
+ 
+ 
+    //metodo esta vivo // Tira error. Queda para arreglar (Bren)
+   public boolean estaVivo(){
+       if (personaje.salud > 0){
+           return false;
+    }
+
 }

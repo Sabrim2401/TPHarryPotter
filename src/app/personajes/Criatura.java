@@ -1,5 +1,7 @@
 package app.personajes;
 
-public class Criatura extends Personaje{
+import app.interfaces.IEsMagico;
+
+public class Criatura extends Personaje implements IEsMagico{
     
 }
