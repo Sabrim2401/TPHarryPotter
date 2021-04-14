@@ -11,5 +11,13 @@ public interface IHaceMagia {
     int getPoderInicial();
 
     void setPoder(Poder poder);
+
+    Artefacto getArtefacto();
+
+    void aprender(Hechizo h);
+
+    void atacar(Personaje personaje, Hechizo hechizo);
+
+    void atacar(Personaje personaje, String hechizo);
     
 }
