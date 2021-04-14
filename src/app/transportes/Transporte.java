@@ -12,6 +12,8 @@ public class Transporte  {
     private String nombre;
     private int duracionDelRecorrido;
 
+    private List<Transporte>transportes = new ArrayList<>();
+
     public String getNombre(){
         return this.nombre;
     }
