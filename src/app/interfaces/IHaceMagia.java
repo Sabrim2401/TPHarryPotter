@@ -1,25 +1,26 @@
 package app.interfaces;
+
 import app.personajes.*;
 import app.poderes.hechizos.*;
 import app.poderes.Poder;
 import app.artefactos.*;
 
 public interface IHaceMagia {
-    
-    abstract int getEnergiaMagica();
 
-    abstract void setEnergiaMagica(int energiaMagica);
+    int getEnergiaMagica();
 
-    abstract int getPoderInicial();
+    void setEnergiaMagica(int energiaMagica);
 
-    abstract void setPoder(Poder poder);
+    Poder getPoderInicial();
 
-    abstract Artefacto getArtefacto();
+    void setPoder(Poder poder);
 
-    abstract void aprender(Hechizo h);
+    Artefacto getArtefacto();
 
-    abstract void atacar(Personaje personaje, Hechizo hechizo);
+    void aprender(Hechizo h);
 
-    abstract void atacar(Personaje personaje, String hechizo);
-    
+    void atacar(Personaje personaje, Hechizo hechizo);
+
+    void atacar(Personaje personaje, String hechizo);
+
 }

@@ -22,7 +22,7 @@ public class Elfo extends Criatura implements IHaceMagia {
    }
    // poder inicial
 
-   public int getPoderInicial(){
+   public Poder getPoderInicial(){
       return this.poderInicial;
    }
 
@@ -33,20 +33,20 @@ public class Elfo extends Criatura implements IHaceMagia {
    
 
 
-/*    abstract int getEnergiaMagica(); HECHO
+/*  int getEnergiaMagica(); HECHO
 
-    abstract void setEnergiaMagica(int energiaMagica); HECHO
+    void setEnergiaMagica(int energiaMagica); HECHO
 
-    abstract int getPoderInicial(); HECHO
+    int getPoderInicial(); HECHO
 
-    abstract void setPoder(Poder poder);
+    void setPoder(Poder poder);
 
-    abstract Artefacto getArtefacto();
+    Artefacto getArtefacto();
 
-    abstract void aprender(Hechizo h);
+    void aprender(Hechizo h);
 
-    abstract void atacar(Personaje personaje, Hechizo hechizo);
+    void atacar(Personaje personaje, Hechizo hechizo);
 
-    abstract void atacar(Personaje personaje, String hechizo);  */
+    void atacar(Personaje personaje, String hechizo);  */
 
 }
