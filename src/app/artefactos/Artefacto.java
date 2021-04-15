@@ -1,37 +1,58 @@
 package app.artefactos;
+
 import app.poderes.Poder;
 
 public class Artefacto {
     private String nombre;
     private double amplificadorDeDanio;
     private double amplificadorDeCuracion;
-    private Poder poder; // ¿ get y set ? sabri
+    private Poder poder;
+    private double danioInicial;
 
+    // Agrego getters y setters de los atributos
+    // de artefacto
 
-    //nombre
-    public String getNombre(){
+    public String getNombre() {
         return this.nombre;
     }
-    public void setNombre(String nombre){
+
+    public void setNombre(String nombre) {
         this.nombre = nombre;
     }
 
-    //amplificador de danio
-    public double getAmplificadorDeDanio (){
+    public double getAmplificadorDeDanio() {
         return this.amplificadorDeDanio;
     }
 
-    public void setAmplificadorDeDanio(double amplificadorDeDanio){
+    public void setAmplificadorDeDanio(double amplificadorDeDanio) {
         this.amplificadorDeDanio = amplificadorDeDanio;
     }
 
-    //amplificador de curacion
-    public double getAmplificadorDeCuracion(){
+    public double getAmplificadorDeCuracion() {
         return this.amplificadorDeCuracion;
     }
 
-    public void setAmplificadorDeCuracion (double amplificadorDeCuracion) {
+    public void setAmplificadorDeCuracion(double amplificadorDeCuracion) {
         this.amplificadorDeCuracion = amplificadorDeCuracion;
     }
+
+    public Poder getPoder() {
+        return this.poder;
+    }
+
+    public void setPoder(Poder poder) {
+        this.poder = poder;
+    }
+
+    // @Override
+    // boolean esInvisibleAMuggles(){
+    // aca va la logica del metodo
+    // return true;
+    // }
+    // @Override
+    // boolean esInvisible(){
+    // agregar logica
+    // return true;
+    // }
 
 }

@@ -3,12 +3,8 @@ package app.interfaces;
 import app.poderes.Poder;
 
 public interface IEsMagico {
-    
-    int getEnergiaMagica();
 
-    void setEnergiaMagica(int energiaMagica);
+    abstract boolean esInvisibleAMuggles(); // Agrego los metodos boolean base , caro :)
 
-    int getPoderInicial();
-
-    void setPoder(Poder poder);
+    abstract boolean esInvisible();
 }
