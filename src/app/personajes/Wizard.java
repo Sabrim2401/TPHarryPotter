@@ -1,5 +1,6 @@
 
 package app.personajes;
+
 import app.artefactos.*;
 import app.interfaces.IHaceMagia;
 import app.poderes.Poder;
@@ -45,8 +46,7 @@ public class Wizard extends Persona implements IHaceMagia {
     public void setArtefacto(Artefacto artefacto) {
         this.artefacto = artefacto;
     }
-
-    // MAGO OSCURO
+    // poder
 
     public Poder getPoderInicial() {
         return this.poderInicial;
@@ -54,5 +54,16 @@ public class Wizard extends Persona implements IHaceMagia {
 
     public void setPoderInicial(Poder poderInicial) {
         this.poderInicial = poderInicial;
+    }
+
+    // mago oscuro x Bren
+
+
+    public Boolean getMagoOscuro() {
+        return this.magoOscuro;
+    }
+
+    public void setMagoOscuro(Boolean magoOscuro) {
+        this.magoOscuro = magoOscuro;
     }
 }
