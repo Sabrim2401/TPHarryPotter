@@ -4,12 +4,15 @@ import java.util.*;
 import app.poderes.hechizos.*;
 import app.poderes.Poder;
 import app.interfaces.IHaceMagia;
+import app.artefactos.*;
 
 public class Elfo extends Criatura implements IHaceMagia {
 
    private int energiaMagica;
    private List<Hechizo> hechizos = new ArrayList<>();
    private Poder poderInicial;
+   private Poder poder;
+   private Artefacto artefacto;
 
    // Salud
 
@@ -30,7 +33,15 @@ public class Elfo extends Criatura implements IHaceMagia {
       this.poderInicial = poderInicial;
    }
 
-   
+   //poder
+   public void setPoder(Poder poder){
+      this.poder = poder;
+   }
+
+   // Artefecto
+   public Artefacto getArtefacto(){
+      return this.artefacto;
+   }
 
 
 /*  int getEnergiaMagica(); HECHO
@@ -39,9 +50,9 @@ public class Elfo extends Criatura implements IHaceMagia {
 
     int getPoderInicial(); HECHO
 
-    void setPoder(Poder poder);
+    void setPoder(Poder poder); hecho no se si esta bien
 
-    Artefacto getArtefacto();
+    Artefacto getArtefacto(); no se si esta bien
 
     void aprender(Hechizo h);
 
