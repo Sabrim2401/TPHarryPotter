@@ -42,7 +42,7 @@ public class Elfo extends Criatura implements IHaceMagia {
    public Artefacto getArtefacto(){
       return this.artefacto;
    }
-
+   
 
 /*  int getEnergiaMagica(); HECHO
 
