@@ -1,20 +1,14 @@
 package app.transportes;
+import app.interfaces.IEsMagico;
 
 public class Escoba extends Transporte implements IEsMagico {
 
-    @Override
-
-    boolean esInvisibleAMuggles() {
-        // logica
+    public boolean esInvisibleAMuggles(){
+        return true;
+    }
+ 
+    public boolean esInvisible() {
         return true;
     }
 
-    @Override
-
-    boolean esInvisible() {
-        // logica
-        return true;
-
-    }
-    // Hacen falta ambos esInvisible?
 }

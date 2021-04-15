@@ -1,10 +1,13 @@
 package app.transportes;
+import app.interfaces.*;
 
 public class TrenExpresoHowards extends Transporte implements IEsMagico {
 
-    @Override
-    boolean esInvisibleAMuggles() {
-        //
+    public boolean esInvisibleAMuggles(){
+        return true;
+    }
+ 
+    public boolean esInvisible() {
         return true;
     }
 
