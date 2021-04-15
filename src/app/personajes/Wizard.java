@@ -56,7 +56,7 @@ public class Wizard extends Persona implements IHaceMagia {
         this.poderInicial = poderInicial;
     }
 
-    // mago oscuro x Bren
+    // mago oscuro
 
 
     public Boolean getMagoOscuro() {
@@ -67,15 +67,27 @@ public class Wizard extends Persona implements IHaceMagia {
         this.magoOscuro = magoOscuro;
     }
 
+    // poder
+    public void setPoder(Poder poder){
+     this.poder = poder;
+    }
+   
+  
+    public void aprender(Hechizo h);
+
+    public void atacar(Personaje personaje, Hechizo hechizo);
+    
+    public void atacar(Personaje personaje, String hechizo);
+
    /*  int getEnergiaMagica(); HECHO
 
     void setEnergiaMagica(int energiaMagica); HECHO
 
     int getPoderInicial(); HECHO
 
-    void setPoder(Poder poder);
+    void setPoder(Poder poder); hecho
 
-    Artefacto getArtefacto();
+    Artefacto getArtefacto(); hecho
 
     void aprender(Hechizo h);
 

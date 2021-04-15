@@ -2,6 +2,8 @@ package app.personajes;
 import app.interfaces.IEsMagico;
 import app.poderes.Poder;
 
+
+
 public class Criatura extends Personaje implements IEsMagico {
 
     private int energiaMagica;
