@@ -2,6 +2,15 @@ package app.personajes;
 
 public abstract class Personaje {
 
+    //CONSTRUCTOR CON ATRIBUTOS (nombre, salud, golpe, color) DE PERSONAJE
+     
+    public Personaje(String nombre, int salud, int golpe, String color){
+        this.nombre = nombre;
+        this.salud = salud;
+        this.golpe = golpe;
+        this.color = color;
+    }
+
     private String nombre;
     private int salud;// max 100
     private int edad;
@@ -11,7 +20,7 @@ public abstract class Personaje {
     // Método. Habría que armarlo.
 
     // Getters y Setters de los atributos
-
+    
     // Nombre
     public String getNombre() {
         return this.nombre;
