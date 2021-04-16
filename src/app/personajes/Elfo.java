@@ -50,9 +50,9 @@ public class Elfo extends Criatura implements IHaceMagia {
 
     int getPoderInicial(); HECHO
 
-    void setPoder(Poder poder); hecho no se si esta bien
+    void setPoder(Poder poder); HECHO
 
-    Artefacto getArtefacto(); no se si esta bien
+    Artefacto getArtefacto();  HECHO
 
     void aprender(Hechizo h);
 
