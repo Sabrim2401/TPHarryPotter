@@ -8,6 +8,23 @@ import app.artefactos.*;
 
 public class Elfo extends Criatura implements IHaceMagia {
 
+   @Override
+   public void aprender(Hechizo h) {
+   
+   }
+
+   @Override
+   public void atacar(Personaje personaje, Hechizo hechizo) {
+   // generar metodo
+
+   }
+
+   @Override
+   public void atacar(Personaje personaje, String hechizo) {
+   // generar metodo
+
+   }
+
    private int energiaMagica;
    private List<Hechizo> hechizos = new ArrayList<>();
    private Poder poderInicial;
@@ -25,7 +42,7 @@ public class Elfo extends Criatura implements IHaceMagia {
    }
    // poder inicial
 
-   public Poder getPoderInicial(){
+   public Poder getPoderInicial() {
       return this.poderInicial;
    }
 
@@ -33,31 +50,14 @@ public class Elfo extends Criatura implements IHaceMagia {
       this.poderInicial = poderInicial;
    }
 
-   //poder
-   public void setPoder(Poder poder){
+   // poder
+   public void setPoder(Poder poder) {
       this.poder = poder;
    }
 
    // Artefecto
-   public Artefacto getArtefacto(){
+   public Artefacto getArtefacto() {
       return this.artefacto;
    }
-   
-
-/*  int getEnergiaMagica(); HECHO
-
-    void setEnergiaMagica(int energiaMagica); HECHO
-
-    int getPoderInicial(); HECHO
-
-    void setPoder(Poder poder); HECHO
-
-    Artefacto getArtefacto();  HECHO
-
-    void aprender(Hechizo h);
-
-    void atacar(Personaje personaje, Hechizo hechizo);
-
-    void atacar(Personaje personaje, String hechizo);  */
 
 }
