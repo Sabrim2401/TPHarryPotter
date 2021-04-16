@@ -20,7 +20,7 @@ public class App {
 
         miJuegoHP.listarCreditos();
 
-        miJuegoHP.elegirMenu();
+        miJuegoHP.inicializarMenu();
 
     }
 }

@@ -58,5 +58,32 @@ public class JuegoHP {
 
     }
     
+
+    // Método que sirve para inicializar Menú
+
+    public void inicializarMenu(){
+
+        int opcion = 0;
+        opcion = elegirMenu();
+
+        switch (opcion){
+            case 1:
+                jugar();
+                break;
+            case 2:
+                verHistoria();
+                break;
+            case 3:
+                listarCreditos();
+                break;
+            case 4:
+                salirDelJuego();
+                break;
+            default:
+                System.out.printf( "La opción  " + opcion  +  " no es una opción válida");
+                break;
+                
+        }while (opcion != 0);
+    }
     
 }
