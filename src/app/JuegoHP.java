@@ -4,34 +4,46 @@ import java.util.*;
 
 public class JuegoHP {
 
+    //Agrego colores para menú
+
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_BLACK = "\u001B[30m";
+    public static final String ANSI_RED = "\u001B[31m";
+    public static final String ANSI_GREEN = "\u001B[32m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_BLUE = "\u001B[34m";
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_CYAN = "\u001B[36m";
+    public static final String ANSI_WHITE = "\u001B[37m";
+
     public static Scanner Teclado = new Scanner(System.in);
 
     // Método que permite ver la Historia creada.
 
     public static void verHistoria() {
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println("Años después de la muerte de Lord Voldermort, la comunidad mágica se ve amenazada por un nuevo terror.");
-        System.out.println("Continuar historia");
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_CYAN + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE +"Años después de la muerte de Lord Voldermort, la comunidad mágica se ve amenazada por un nuevo terror.");
+        System.out.println(ANSI_PURPLE +"Continuar historia");
+        System.out.println(ANSI_CYAN +"══════════════════════════════════════════════════════════════════════════════════════════");
     }
 
     // Método que da lista los créditos del juego.
     public void listarCreditos() {
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(" Juego desarrollado por:");
-        System.out.println(" ■ Sabrina Meli");
-        System.out.println(" ■ Brenda Monteagudo");
-        System.out.println(" ■ Carolina Portillo");
-        System.out.println(" ■ Luli Nieva");
-        System.out.println(" ■ Mariana Avilano");
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_CYAN +"═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_GREEN +" Juego desarrollado por:");
+        System.out.println(ANSI_GREEN + " ■ Sabrina Meli");
+        System.out.println(ANSI_GREEN +" ■ Brenda Monteagudo");
+        System.out.println(ANSI_GREEN +" ■ Carolina Portillo");
+        System.out.println(ANSI_GREEN +" ■ Luli Nieva");
+        System.out.println(ANSI_GREEN +" ■ Mariana Avilano");
+        System.out.println(ANSI_CYAN +"═════════════════════════════════════════════════════════════════════════════════════════");
     }
 
     // Método que permite salir del juego.
     public static void salirDelJuego() {
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println("Gracias por jugar HPAda");
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_CYAN +"═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE +"Gracias por jugar HPAda");
+        System.out.println(ANSI_CYAN +"═════════════════════════════════════════════════════════════════════════════════════════");
     }
 
     // Método que permite Jugar // FALTA DESARROLLO
@@ -42,35 +54,33 @@ public class JuegoHP {
     }
 
     // Método que sirve para el menú inicial
-    public int elegirMenu() {
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(" Ingrese una opción ---->");
-        System.out.println(" 1- ■ Jugar");
-        System.out.println(" 2- ■ Ver historia");
-        System.out.println(" 3- ■ Listar créditos");
-        System.out.println(" 4- ■ Salir");
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-
-        int respuestaUsuario = Teclado.nextInt();
-        Teclado.nextLine();
-
-        return respuestaUsuario;
+    public static void listarMenu() {
+        System.out.println(ANSI_CYAN +"═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE + "JUEGO HDP");
+        System.out.println(ANSI_PURPLE +" 1- ■ Jugar");
+        System.out.println(ANSI_PURPLE +" 2- ■ Ver historia");
+        System.out.println(ANSI_PURPLE +" 3- ■ Listar créditos");
+        System.out.println(ANSI_PURPLE +" 4- ■ Salir");
+        System.out.println(ANSI_CYAN + "═════════════════════════════════════════════════════════════════════════════════════════");
 
     }
 
     //Método para validar elección del usuario //WORKING PROGRESS
-    public static boolean esValidaResp(){
-        int opcion = 0;
-        boolean respValida;
-        respValida = true;
-        if(opcion = scanner.hasNextInt() && (opcion > 0 && opcion <= 4)){
-            respValida = false;
-            System.out.printf( "La opción  " + opcion  +  " no es una opción válida");
-            System.out.printf( "Por favor, elija otra opción");
+    public static int ingresoOpcionMenu() {
 
+        Scanner sc = new Scanner(System.in);
+        int opcion;
+        do {
+            System.out.println(ANSI_PURPLE +"Ingrese una opción ---->");
+            System.out.println(ANSI_CYAN + "═════════════════════════════════════════════════════════════════════════════════════════");
+            while (!sc.hasNextInt()) {
+                System.out.println(ANSI_PURPLE +"La opción ingresada no es un número.");
+                sc.next();
             }
-          return respValida;
-
+            opcion = sc.nextInt();
+        } while (opcion <= 4 && opcion > 0);
+            
+        return opcion;
     }
 
     //Método que sirve para volver al Menú principal
@@ -80,12 +90,13 @@ public class JuegoHP {
 
     }
     
-    // Método que sirve para inicializar Menú
+    // Método que sirve para inicializar Menú// DEBE MEJORARSE
 
     public void inicializarMenu(){
 
+        listarMenu();
         int opcion = 0;
-        opcion = elegirMenu();
+        opcion = ingresoOpcionMenu();
 
         switch (opcion){
             case 1:
