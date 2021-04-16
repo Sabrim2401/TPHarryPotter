@@ -57,8 +57,29 @@ public class JuegoHP {
         return respuestaUsuario;
 
     }
-    
 
+    //Método para validar elección del usuario //WORKING PROGRESS
+    public static boolean esValidaResp(){
+        int opcion = 0;
+        boolean respValida;
+        respValida = true;
+        if(opcion = scanner.hasNextInt() && (opcion > 0 && opcion <= 4)){
+            respValida = false;
+            System.out.printf( "La opción  " + opcion  +  " no es una opción válida");
+            System.out.printf( "Por favor, elija otra opción");
+
+            }
+          return respValida;
+
+    }
+
+    //Método que sirve para volver al Menú principal
+
+    public void volverMenuPrin(){
+
+
+    }
+    
     // Método que sirve para inicializar Menú
 
     public void inicializarMenu(){
@@ -83,7 +104,7 @@ public class JuegoHP {
                 System.out.printf( "La opción  " + opcion  +  " no es una opción válida");
                 break;
                 
-        }while (opcion != 0);
+        }while (opcion > 0 && opcion <= 4);
     }
     
 }
