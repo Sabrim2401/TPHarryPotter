@@ -3,7 +3,7 @@ package app.personajes;
 public abstract class Personaje {
 
     //CONSTRUCTOR CON ATRIBUTOS (nombre, salud, golpe, color) DE PERSONAJE
-     
+
     public Personaje(String nombre, int salud, int golpe, String color){
         this.nombre = nombre;
         this.salud = salud;
@@ -66,9 +66,9 @@ public abstract class Personaje {
         this.color = color;
     }
 
-    public boolean estaVivo(int salud) {
+    public boolean estaVivo(String nombre, int salud) {
         int estaVivo = 1;
-        if (salud > 1 && salud < 100) {
+        if (nombre.salud > 1 && salud < 100) {
             return true;
         }
         return false;
