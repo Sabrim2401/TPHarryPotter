@@ -1,5 +1,13 @@
 package app.artefactos;
 
-public class VaritaSauco extends Varita{
-    
+import app.interfaces.IReliquiaMuerte;
+
+public class VaritaSauco extends Varita implements IReliquiaMuerte {
+
+    @Override
+    public boolean esReliquiaMuerte() {
+        //
+        return true;
+    }
+
 }

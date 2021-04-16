@@ -1,5 +1,13 @@
 package app.artefactos;
 
-public class CapaInvisibilidad extends Artefacto {
-    
+import app.interfaces.IReliquiaMuerte;
+
+public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
+
+    @Override
+    public boolean esReliquiaMuerte() {
+        // logica
+        return true;
+    }
+
 }

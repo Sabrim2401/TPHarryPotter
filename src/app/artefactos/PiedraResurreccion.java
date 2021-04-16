@@ -1,5 +1,13 @@
 package app.artefactos;
 
-public class PiedraResurreccion extends Artefacto {
-    
+import app.interfaces.IReliquiaMuerte;
+
+public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
+
+    @Override
+    public boolean esReliquiaMuerte() {
+        //
+        return true;
+    }
+
 }
