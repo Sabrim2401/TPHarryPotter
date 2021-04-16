@@ -4,6 +4,16 @@ public class Poder {
     private String nombreDelPoder;
     private String descripcionDelPoder;
     private int poderInicial;
+    private int poder;
+
+    // poder
+    public int getPoder() {
+        return this.poder;
+    }
+
+    public void setPoder(int poder) {
+        this.poder = poder;
+    }
 
     // nombre del poder
     public String getNombreDelPoder() {

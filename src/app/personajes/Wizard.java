@@ -10,10 +10,23 @@ import java.util.*;
 
 public class Wizard extends Persona implements IHaceMagia {
 
+    public void Aprender(Hechizo h) {
+
+    }
+
+    public void Atacar(Personaje personaje, Hechizo hechizo) {
+        
+    }
+
+    public void Atacar(Personaje personaje, String hechizo) {
+
+    }
+
     private int energiaMagica;
     private List<Hechizo> hechizos = new ArrayList<>();
     private Escoba escoba; // bren lo modifica
     private Poder poderInicial; // get y set en clase Poder
+    private Poder poder;
     private Artefacto artefacto;
     private boolean magoOscuro;
 
@@ -58,7 +71,6 @@ public class Wizard extends Persona implements IHaceMagia {
 
     // mago oscuro
 
-
     public Boolean getMagoOscuro() {
         return this.magoOscuro;
     }
@@ -67,33 +79,9 @@ public class Wizard extends Persona implements IHaceMagia {
         this.magoOscuro = magoOscuro;
     }
 
-    // poder
-    public void setPoder(Poder poder){
-     this.poder = poder;
+    // poder ARREGLAR
+    public void setPoder(Poder poder) {
+        this.poder = poder;
     }
-   
-  
-    public void aprender(Hechizo h);
 
-    public void atacar(Personaje personaje, Hechizo hechizo);
-    
-    public void atacar(Personaje personaje, String hechizo);
-
-   /*  int getEnergiaMagica(); HECHO
-
-    void setEnergiaMagica(int energiaMagica); HECHO
-
-    int getPoderInicial(); HECHO
-
-    void setPoder(Poder poder); hecho
-
-    Artefacto getArtefacto(); hecho
-
-    void aprender(Hechizo h);
-
-    void atacar(Personaje personaje, Hechizo hechizo);
-
-    void atacar(Personaje personaje, String hechizo);  */
-
-    
 }
