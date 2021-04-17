@@ -15,7 +15,7 @@ public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
         this.duracion = duracion;
     }
 
-    public in getArtefacto() {
+    public int getArtefacto() {
         return this.artefacto;
     }
     public void setArtefacto(int artefacto) {
@@ -23,7 +23,7 @@ public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
     }
     
     public int getIReliquiaMuerte() {
-        return this.esRelquiaMuerte;
+        return this.esReliquiaMuerte;
     }
     public void setIReliquiaMuerte(boolean IReliquiaMuerte) {
         this.IReliquiaMuerte = IReliquiaMuerte;

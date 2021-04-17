@@ -15,7 +15,7 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte {
         this.duracion = duracion;
     }
 
-    public in getArtefacto() {
+    public int getArtefacto() {
         return this.artefacto;
     }
     public void setArtefacto(int artefacto) {
@@ -23,7 +23,7 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte {
     }
     
     public int getIReliquiaMuerte() {
-        return this.IRelquiaMuerte;
+        return this.IReliquiaMuerte;
     }
     public void setIReliquiaMuerte(boolean IReliquiaMuerte) {
         this.IReliquiaMuerte = IReliquiaMuerte;

@@ -1,5 +1,6 @@
 package app.artefactos;
 
+import app.artefactos.Artefacto;
 import app.interfaces.IReliquiaMuerte;
 
 public class Horrocrux extends Artefacto implements IReliquiaMuerte {
@@ -15,15 +16,15 @@ public class Horrocrux extends Artefacto implements IReliquiaMuerte {
         this.duracion = duracion;
     }
 
-    public in getArtefacto() {
+    public int getArtefacto() {
         return this.artefacto;
     }
     public void setArtefacto(int artefacto) {
         this.artefacto = artefacto;
     }
     
-    public int getIReliquiaMuerte() {
-        return this.IRelquiaMuerte;
+    public int getIReliquiaMuerte() { // verificar
+        return this.IReliquiaMuerte;
     }
     public void setIReliquiaMuerte(boolean IReliquiaMuerte) {
         this.IReliquiaMuerte = IReliquiaMuerte;

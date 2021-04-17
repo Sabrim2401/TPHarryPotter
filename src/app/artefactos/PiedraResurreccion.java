@@ -15,7 +15,7 @@ public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
         this.duracion = duracion;
     }
 
-    public in getArtefacto() {
+    public int getArtefacto() {
         return this.artefacto;
     }
     public void setArtefacto(int artefacto) {
@@ -23,14 +23,13 @@ public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
     }
     
     public int getIReliquiaMuerte() {
-        return this.IRelquiaMuerte;
+        return this.IReliquiaMuerte;
     }
     public void setEsReliquiaMuerte(boolean IReliquiaMuerte) {
         this.IReliquiaMuerte = IReliquiaMuerte;
     }
 
     
-@Override
 
     @Override
     public boolean esReliquiaMuerte() {
