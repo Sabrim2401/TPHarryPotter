@@ -122,16 +122,49 @@ public class JuegoHP {
         }while (opcion > 0 && opcion <= 4);
 
 
-
+       //muggle
 
         Personaje muggle = new Personaje();  // no se si esta correcto
         muggle.setNombre("...");
         muggle.setEdad(18);
         muggle.setSalud(100);
         muggle.setGolpe(10);
+        muggle.setColor("...");
 
         personaje.personajes().add(muggle);
 
+        //elfo
+
+        Personaje elfo = new Personaje();  // no se si esta correcto
+        elfo.setNombre("...");
+        elfo.setEdad(18);
+        elfo.setSalud(100);
+        elfo.setGolpe(10);
+        elfo.setColor("...");
+
+        personaje.personajes().add(elfo);
+
+        //wizard
+
+        Personaje wizard = new Personaje();  // no se si esta correcto
+        wizard.setNombre("...");
+        wizard.setEdad(18);
+        wizard.setSalud(100);
+        wizard.setGolpe(10);
+        wizard.setColor("...");
+
+        personaje.personajes().add(wizard);
+
+     // squibs
+      
+        Personaje squibs = new Personaje();  // no se si esta correcto
+        squibs.setNombre("...");
+        squibs.setEdad(18);
+        squibs.setSalud(100);
+        squibs.setGolpe(10);
+        squibs.setColor("...");
+        
+        personaje.personajes().add(squibs);
 
 
 
