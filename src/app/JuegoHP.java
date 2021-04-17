@@ -124,7 +124,7 @@ public class JuegoHP {
 
 
 
-        Personaje muggle = new Serie();  // no se si esta correcto
+        Personaje muggle = new Personaje();  // no se si esta correcto
         muggle.setNombre("...");
         muggle.setEdad(18);
         muggle.setSalud(100);
