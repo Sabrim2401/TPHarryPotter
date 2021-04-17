@@ -78,7 +78,8 @@ public class JuegoHP {
                 sc.next();
             }
             opcion = sc.nextInt();
-        } while (opcion <= 4 && opcion > 0);
+            sc.nextLine();
+        } while (opcion < 0  || opcion > 4);
             
         return opcion;
     }
