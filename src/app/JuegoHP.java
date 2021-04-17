@@ -3,6 +3,7 @@ import java.util.*;
 
 
 public class JuegoHP {
+    public List<Personaje> personajes = new ArrayList<>();
 
     //Agrego colores para menú
 
