@@ -10,15 +10,15 @@ import java.util.*;
 
 public class Wizard extends Persona implements IHaceMagia {
 
-    public void Aprender(Hechizo h) {
+    public void aprender(Hechizo h) {
 
     }
 
-    public void Atacar(Personaje personaje, Hechizo hechizo) {
+    public void atacar(Personaje personaje, Hechizo hechizo) {
         
     }
 
-    public void Atacar(Personaje personaje, String hechizo) {
+    public void atacar(Personaje personaje, String hechizo) {
 
     }
 
