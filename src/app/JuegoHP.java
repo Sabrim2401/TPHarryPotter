@@ -7,6 +7,7 @@ import app.personajes.Personaje;
 public class JuegoHP {
     public List<Personaje> personajes = new ArrayList<>();
 
+
     //Agrego colores para menú
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -163,8 +164,9 @@ public class JuegoHP {
         squibs.setSalud(100);
         squibs.setGolpe(10);
         squibs.setColor("...");
-        
+
         personaje.personajes().add(squibs);
+        
 
 
 
