@@ -1,6 +1,8 @@
 package app;
 import java.util.*;
 
+import app.personajes.Personaje;
+
 
 public class JuegoHP {
     public List<Personaje> personajes = new ArrayList<>();
@@ -118,6 +120,24 @@ public class JuegoHP {
                 break;
                 
         }while (opcion > 0 && opcion <= 4);
+
+
+
+
+        Personaje muggle = new Serie();  // no se si esta correcto
+        muggle.setNombre("...");
+        muggle.setEdad(18);
+        muggle.setSalud(100);
+        muggle.setGolpe(10);
+
+        personaje.personajes().add(muggle);
+
+
+
+
+
+
+
     }
     
 }
