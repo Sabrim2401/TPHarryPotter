@@ -15,21 +15,19 @@ public class VaritaSauco extends Varita implements IReliquiaMuerte {
         this.duracion = duracion;
     }
 
-    public int getArtefacto() {
+    public Artefacto getArtefacto() {
         return this.artefacto;
     }
-    public void setArtefacto(int artefacto) {
+    public void setArtefacto(Artefacto artefacto) {
         this.artefacto = artefacto;
     }
     
-    public int getIReliquiaMuerte() {
-        return this.IReliquiaMuerte;
+    public boolean getIReliquiaMuerte() {
+        return true;
     }
     public void setIReliquiaMuerte(boolean IReliquiaMuerte) {
         this.IReliquiaMuerte = IReliquiaMuerte;
-    }
-
-    
+    } 
 
     @Override
     public boolean esReliquiaMuerte() {
