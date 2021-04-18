@@ -6,6 +6,10 @@ import app.poderes.Poder;
 
 public class Criatura extends Personaje implements IEsMagico {
 
+    public Criatura (String nombre, int salud, int golpe, String color) {
+        super(nombre, salud, golpe, color);
+    }
+   
     private int energiaMagica;
     private Object Poder;
 

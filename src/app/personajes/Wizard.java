@@ -10,6 +10,11 @@ import java.util.*;
 
 public class Wizard extends Persona implements IHaceMagia {
 
+    public Wizard (String nombre, int salud, int golpe, String color) {
+        super(nombre, salud, golpe, color);
+    }
+   
+
     public void aprender(Hechizo h) {
 
     }
