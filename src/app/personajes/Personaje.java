@@ -1,6 +1,7 @@
 package app.personajes;
+import java.util.*;
 
-public abstract class Personaje {
+public class Personaje {
 
     // CONSTRUCTOR CON ATRIBUTOS (nombre, salud, golpe, color) DE PERSONAJE
 
@@ -9,6 +10,7 @@ public abstract class Personaje {
         this.salud = salud;
         this.golpe = golpe;
         this.color = color;
+    //    this.edad = edad;
     }
 
     private String nombre;
@@ -16,6 +18,8 @@ public abstract class Personaje {
     private int edad;
     private int golpe; // fuerza con la que golpea
     private String color; // color del personaje para diferenciarlo
+//    private List<Personaje> personajes = new ArrayList<>(); //verificar si esta bien, chabri
+
 
     // Método. Habría que armarlo.
 
