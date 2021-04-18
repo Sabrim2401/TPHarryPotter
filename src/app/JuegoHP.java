@@ -154,18 +154,18 @@ public class JuegoHP {
 
     // wizard
 
-    Personaje wizard = new Personaje("Wizard-Bren", 75, 12, "Verde" ); 
+    Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde" ); 
 
     this.personajes.add(wizard);
 
     // squibs
 
-    Personaje squibs = new Personaje("Squibs-Mariana", 90, 10, "Purpura"); 
+    Personaje squibs = new Personaje("Squibs-Bren", 90, 10, "Purpura"); 
  this.personajes.add(squibs);
 
    // wizard oscuro
 
-    Personaje wizardOscuro = new Personaje("Wizard-LuLI", 60, 42, "Azul" ); 
+    Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul" ); 
 
     this.personajes.add(wizardOscuro);
 
