@@ -1,29 +1,18 @@
 package app.personajes;
-import java.util.*;
 
 public class Personaje {
-
-    // CONSTRUCTOR CON ATRIBUTOS (nombre, salud, golpe, color) DE PERSONAJE
-
     public Personaje(String nombre, int salud, int golpe, String color) {
         this.nombre = nombre;
         this.salud = salud;
         this.golpe = golpe;
         this.color = color;
-    //    this.edad = edad;
     }
 
     private String nombre;
-    private int salud;// max 100
+    private int salud;
     private int edad;
-    private int golpe; // fuerza con la que golpea
-    private String color; // color del personaje para diferenciarlo
-//    private List<Personaje> personajes = new ArrayList<>(); //verificar si esta bien, chabri
-
-
-    // Método. Habría que armarlo.
-
-    // Getters y Setters de los atributos
+    private int golpe; 
+    private String color; 
 
     // Nombre
     public String getNombre() {
@@ -72,7 +61,8 @@ public class Personaje {
 
     public boolean estaVivo(String nombre, int salud) {
         int estaVivo = 1;
-        if (salud > estaVivo && salud < 100){
+        int saludMaxima= 100;
+        if (salud > estaVivo && salud < saludMaxima){
             return true;
         }
         return false;

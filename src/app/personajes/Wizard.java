@@ -13,44 +13,25 @@ public class Wizard extends Persona implements IHaceMagia {
     public Wizard (String nombre, int salud, int golpe, String color) {
         super(nombre, salud, golpe, color);
     }
-   
-
-    public void aprender(Hechizo h) {
-
-    }
-
-    public void atacar(Personaje personaje, Hechizo hechizo) {
-        
-    }
-
-    public void atacar(Personaje personaje, String hechizo) {
-
-    }
 
     private int energiaMagica;
     private List<Hechizo> hechizos = new ArrayList<>();
-    private Escoba escoba; // bren lo modifica
-    private Poder poderInicial; // get y set en clase Poder
+    private Escoba escoba; 
+    private Poder poderInicial; 
     private Poder poder;
     private Artefacto artefacto;
     private boolean magoOscuro;
 
-    // Salud Hecho por Bren
-
     public int getEnergiaMagica() {
         return this.energiaMagica;
     }
-
     public void setEnergiaMagica(int energiaMagica) {
         this.energiaMagica = energiaMagica;
     }
-
     // ESCOBA
-
     public Escoba getEscoba() {
         return this.escoba;
     }
-
     public void setEscoba(Escoba escoba) {
         this.escoba = escoba;
     }
@@ -75,7 +56,6 @@ public class Wizard extends Persona implements IHaceMagia {
     }
 
     // mago oscuro
-
     public Boolean getMagoOscuro() {
         return this.magoOscuro;
     }
@@ -84,9 +64,25 @@ public class Wizard extends Persona implements IHaceMagia {
         this.magoOscuro = magoOscuro;
     }
 
-    // poder ARREGLAR
+    // poder 
+    public Poder getPoder() {
+        return this.poder;
+    }
+
     public void setPoder(Poder poder) {
         this.poder = poder;
+    }
+
+    public void aprender(Hechizo h) {
+
+    }
+
+    public void atacar(Personaje personaje, Hechizo hechizo) {
+        
+    }
+
+    public void atacar(Personaje personaje, String hechizo) {
+
     }
 
 }

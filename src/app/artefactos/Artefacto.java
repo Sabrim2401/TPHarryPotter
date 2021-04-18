@@ -3,14 +3,19 @@ package app.artefactos;
 import app.poderes.Poder;
 
 public class Artefacto {
+
+    public Artefacto (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion, Poder poder) {
+        this.nombre = nombre;
+        this.amplificadorDeDanio = amplificadorDeDanio;
+        this.amplificadorDeCuracion = amplificadorDeCuracion;
+        this.poder = poder;
+    }
+
+
     private String nombre;
     private double amplificadorDeDanio;
     private double amplificadorDeCuracion;
     private Poder poder;
-    private double danioInicial;
-
-    // Agrego getters y setters de los atributos
-    // de artefacto
 
     public String getNombre() {
         return this.nombre;
@@ -43,16 +48,5 @@ public class Artefacto {
     public void setPoder(Poder poder) {
         this.poder = poder;
     }
-
-    // @Override
-    // boolean esInvisibleAMuggles(){
-    // aca va la logica del metodo
-    // return true;
-    // }
-    // @Override
-    // boolean esInvisible(){
-    // agregar logica
-    // return true;
-    // }
 
 }

@@ -4,8 +4,6 @@ public class Cavelnimicum extends HechizoDefensa {
     
 
     public void DefensaCanelnimicum () {
-        /* 
-        
-        */
+    
     }
 }

@@ -1,12 +1,16 @@
 package app;
 
 import java.util.*;
-
-import app.personajes.Muggle;
 import app.personajes.Personaje;
+import app.artefactos.*;
+import app.poderes.hechizos.*;
 
 public class JuegoHP {
-    private List<Personaje> personajes = new ArrayList<>();
+    public List<Personaje> personajes = new ArrayList<>();
+    public List<Artefacto> artefactos = new ArrayList<>();
+    public List<Hechizo> hechizos = new ArrayList<>();
+
+
 
     // Agrego colores para menú
 

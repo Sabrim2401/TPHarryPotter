@@ -1,37 +1,15 @@
 package app.artefactos;
-
+import app.poderes.*;
 import app.interfaces.IReliquiaMuerte;
 
 public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
-
-    private int duracion; //en minutos
-    private Artefacto artefacto = new Artefacto();
-    private boolean IReliquiaMuerte; // REVISAR chabri
-
-    public int getDuracion() {
-        return this.duracion;
-    }
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
+  
+    public PiedraResurreccion (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion, Poder poder)  {
+        super(nombre, amplificadorDeDanio, amplificadorDeCuracion, poder);
     }
 
-    public Artefacto getArtefacto() {
-        return this.artefacto;
-    }
-    public void setArtefacto(Artefacto artefacto) {
-        this.artefacto = artefacto;
-    }
-    
-    public boolean getIReliquiaMuerte() {
-        return true;
-    }
-    public void setEsReliquiaMuerte(boolean IReliquiaMuerte) {
-        this.IReliquiaMuerte = IReliquiaMuerte;
-    }
-
-    @Override
     public boolean esReliquiaMuerte() {
-        //
+        // generar metodo para definir si es reliquia
         return true;
     }
 

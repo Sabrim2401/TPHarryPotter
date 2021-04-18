@@ -1,40 +1,16 @@
 package app.artefactos;
-
+import app.poderes.*;
 import app.interfaces.IReliquiaMuerte;
 
 public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
 
-    private int duracion; // en minutos
-    private Artefacto artefacto = new Artefacto();
-    private boolean IReliquiaMuerte;
-
-    public int getDuracion() {
-        return this.duracion;
+    public CapaInvisibilidad (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion, Poder poder)  {
+        super(nombre, amplificadorDeDanio, amplificadorDeCuracion, poder);
     }
 
-    public void setDuracion(int duracion) {
-        this.duracion = duracion;
-    }
 
-    public Artefacto getArtefacto() {
-        return this.artefacto;
-    }
-
-    public void setArtefacto(Artefacto artefacto) {
-        this.artefacto = artefacto;
-    }
-
-    public boolean getIReliquiaMuerte() {
-        return true;
-    }
-
-    public void setIReliquiaMuerte(boolean IReliquiaMuerte) {
-        this.IReliquiaMuerte = IReliquiaMuerte;
-    }
-
-    @Override
     public boolean esReliquiaMuerte() {
-        // logica
+        // funcion para definir si es reliquia -- revisar
         return true;
     }
 
