@@ -8,6 +8,11 @@ import app.artefactos.*;
 
 public class Elfo extends Criatura implements IHaceMagia {
 
+   public Elfo (String nombre, int salud, int golpe, String color) {
+      super(nombre, salud, golpe, color);
+  }
+ 
+
    @Override
    public void aprender(Hechizo h) {
    
