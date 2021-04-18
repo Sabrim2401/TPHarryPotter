@@ -157,7 +157,13 @@ public class JuegoHP {
     // squibs
 
     Personaje squibs = new Personaje("Squibs-Mariana", 90, 10, "Purpura"); 
-this.personajes.add(squibs);
+ this.personajes.add(squibs);
+
+   // wizard oscuro
+
+    Personaje wizardOscuro = new Personaje("Wizard-LuLI", 60, 42, "Azul" ); 
+
+    this.personajes.add(wizardOscuro);
 
 } 
 
