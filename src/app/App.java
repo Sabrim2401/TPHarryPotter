@@ -18,7 +18,7 @@ public class App {
 
         System.out.println("Inicializando Juego HP ADA");
 
-        miJuegoHP.listarCreditos();
+        miJuegoHP.msjBienvenida();
 
         miJuegoHP.inicializarMenu();
 
