@@ -28,7 +28,7 @@ public class JuegoHP {
 
     // Método que permite ver la Historia creada.
 
-    public static void verHistoria() {
+    public void verHistoria() {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         System.out.println(ANSI_PURPLE
@@ -36,6 +36,7 @@ public class JuegoHP {
         System.out.println(ANSI_PURPLE + "Continuar historia");
         System.out.println(ANSI_CYAN
                 + "══════════════════════════════════════════════════════════════════════════════════════════");
+        volverMenuPrincipal();
     }
 
     // Método que da la bienvenida al jugador
@@ -77,6 +78,7 @@ public class JuegoHP {
         System.out.println(ANSI_GREEN + " ■ Mariana Avilano");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
+        volverMenuPrincipal();
     }
 
     // Método que permite salir del juego.
@@ -124,10 +126,34 @@ public class JuegoHP {
 
     // Método que sirve para volver al Menú principal
 
-    public void volverMenuPrin() {
+    public void volverMenuPrincipal(){
 
-    }
+        System.out.println(ANSI_CYAN
+                        + "═════════════════════════════════════════════════════════════════════════════════════════");
+            System.out.println(ANSI_PURPLE + "Presione 1 para volver al menú principal.");
+            System.out.println(ANSI_PURPLE + "Presione 2 para salir del juego.");
+            System.out.println(ANSI_CYAN
+                        + "═════════════════════════════════════════════════════════════════════════════════════════");
+        Scanner sc = new Scanner(System.in);
+        int opcion;
+           opcion = sc.nextInt();
+        do {
+            switch (opcion) {
+                case 1:
+                    inicializarMenu();
+                    break;
+                case 2:
+                    salirDelJuego();
+                    break;
+                default:
+                    System.out.printf("La opción  " + opcion + " no es una opción válida");
+                    break;
+            }      
+            
+            }while (opcion > 0 && opcion <= 3);        
+        }
 
+    
     // Método que sirve para inicializar Menú// DEBE MEJORARSE
 
     public void inicializarMenu() {
@@ -175,12 +201,6 @@ public class JuegoHP {
         Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde" ); 
         this.personajes.add(wizard);
         return wizard;
-    }
-
-    public Personaje crearPersonajeSquib(){
-        Personaje squibs = new Personaje("Squibs-Bren", 90, 10, "Purpura"); 
-        this.personajes.add(squibs);
-        return squibs;
     }
 
     public Personaje crearWizardOscuro(){
