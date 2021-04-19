@@ -4,14 +4,15 @@ import app.interfaces.*;
 
 public class TrenExpresoHowards extends Transporte implements IEsMagico {
 
-    @Override
+    public TrenExpresoHowards(int duracionDelRecorrido, String nombre) {
+        super(duracionDelRecorrido,nombre);
+    }
+    
     public boolean esInvisibleAMuggles() {
         return true;
     }
 
-    @Override
     public boolean esInvisible() {
         return true;
     }
-
 }

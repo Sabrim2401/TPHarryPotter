@@ -5,19 +5,12 @@ import java.util.*;
 public class Transporte {
 
     public Transporte(int duracionDelRecorrido, String nombre) {
-
         this.nombre = nombre;
         this.duracionDelRecorrido = duracionDelRecorrido;
     }
-
-    public Transporte() {
-
-    }
-
     private String nombre;
     private int duracionDelRecorrido;
-
-    private List<Transporte> transportes = new ArrayList<>();
+    public List<Transporte> transportes = new ArrayList<>();
 
     public String getNombre() {
         return this.nombre;
@@ -27,11 +20,11 @@ public class Transporte {
         this.nombre = nombre;
     }
 
-    public int getDuracionDelrecorrido() {
+    public int getDuracionDelRecorrido() {
         return this.duracionDelRecorrido;
     }
 
-    public void setDuraciondelRecorrdio(int duracionDelRecorrido) {
+    public void setDuraciondelRecorrido(int duracionDelRecorrido) {
         this.duracionDelRecorrido = duracionDelRecorrido;
 
     }
