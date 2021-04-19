@@ -61,13 +61,6 @@ public class JuegoHP {
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
     }
 
-    // Método que permite Jugar // FALTA DESARROLLO
-    public static void jugar() {
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println("IncializandoJuego");
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-    }
-
     // Método que sirve para el menú inicial
     public static void listarMenu() {
         System.out.println(ANSI_CYAN
@@ -82,7 +75,7 @@ public class JuegoHP {
 
     }
 
-    // Método para validar elección del usuario //WORKING PROGRESS
+    // Método para validar elección del usuario 
     public static int ingresoOpcionMenu() {
 
         Scanner sc = new Scanner(System.in);
@@ -139,36 +132,41 @@ public class JuegoHP {
 
     }
 
-    public void inicializarPersonajes() {
+    public Personaje crearPersonajeMuggle() {
+        Personaje muggle = new Personaje("Muggle-Caro", 100, 10, "Rojo");
+        this.personajes.add(muggle);
+        return muggle;
+    }
 
-    // muggle
-    Personaje muggle = new Personaje("Muggle-Caro", 100, 10, "Rojo");
+    public Personaje crearPersonajeElfo() {
+        Personaje elfo = new Personaje("Elfo-Chabri", 50 , 15 , "Gris"); 
+        this.personajes.add(elfo);
+        return elfo;
+    }
 
-    this.personajes.add(muggle);
+    public Personaje crearPersonajeWizard(){
+        Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde" ); 
+        this.personajes.add(wizard);
+        return wizard;
+    }
 
-    // elfo
+    public Personaje crearPersonajeSquib(){
+        Personaje squibs = new Personaje("Squibs-Bren", 90, 10, "Purpura"); 
+        this.personajes.add(squibs);
+        return squibs;
+    }
 
-    Personaje elfo = new Personaje("Elfo-Chabri", 50 , 15 , "Gris"); 
+    public Personaje crearWizardOscuro(){
+        Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul" ); 
+        this.personajes.add(wizardOscuro);
+        return wizardOscuro;
+    }
 
-    this.personajes.add(elfo);
-
-    // wizard
-
-    Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde" ); 
-
-    this.personajes.add(wizard);
-
-    // squibs
-
-    Personaje squibs = new Personaje("Squibs-Bren", 90, 10, "Purpura"); 
- this.personajes.add(squibs);
-
-   // wizard oscuro
-
-    Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul" ); 
-
-    this.personajes.add(wizardOscuro);
-
-} 
+   // Método que permite Jugar // FALTA DESARROLLO
+   public static void jugar() {
+    System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+    System.out.println("IncializandoJuego");
+    System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+}
 
 }
