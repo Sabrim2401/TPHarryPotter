@@ -4,7 +4,7 @@ import app.personajes.*;
 import app.poderes.hechizos.*;
 import app.poderes.Poder;
 import app.artefactos.*;
-
+// SOLO PUEDE ATACAR
 public interface IHaceMagia {
 
     int getEnergiaMagica();

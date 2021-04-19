@@ -6,6 +6,11 @@ import app.poderes.Poder;
 import app.interfaces.IHaceMagia;
 import app.artefactos.*;
 
+// SOLO PUEDE ATACAR Y TENER ARTEFACTO
+//● Debe poder haber una pelea entre Wizard y Elfo. 
+//La forma de atacar de un Elfo se deja a libre interpretación.
+
+
 public class Elfo extends Criatura implements IHaceMagia {
 
    public Elfo(String nombre, int salud, int golpe, String color) {

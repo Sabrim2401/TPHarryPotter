@@ -8,16 +8,30 @@ import app.poderes.hechizos.*;
 import app.transportes.*;
 import java.util.*;
 
+// SOLO PUEDE ATACAR y USAR ARTEFACTO
+
+/*Cada vez que un Wizard ataca a otro personaje, el daño total 
+del hechizo que utilice se incrementara según el atributo
+amplificadorDeDanio del artefacto que posea el atacante(si posee). 
+El daño final a infligir en el atacado se vera afectado
+por el atributo amplificadorDeCuracion del artefacto que posea
+la victima del ataque(si posee). El calculo de ello y otros
+factores se deja a libre creatividad.*/
+
+/* ● Debe poder haber una pelea entre Wizard y Elfo. 
+La forma de atacar de un Elfo se deja a libre interpretación.
+ */
+
 public class Wizard extends Persona implements IHaceMagia {
 
-    public Wizard (String nombre, int salud, int golpe, String color) {
+    public Wizard(String nombre, int salud, int golpe, String color) {
         super(nombre, salud, golpe, color);
     }
 
     private int energiaMagica;
     private List<Hechizo> hechizos = new ArrayList<>();
-    private Escoba escoba; 
-    private Poder poderInicial; 
+    private Escoba escoba;
+    private Poder poderInicial;
     private Poder poder;
     private Artefacto artefacto;
     private boolean magoOscuro;
@@ -25,13 +39,16 @@ public class Wizard extends Persona implements IHaceMagia {
     public int getEnergiaMagica() {
         return this.energiaMagica;
     }
+
     public void setEnergiaMagica(int energiaMagica) {
         this.energiaMagica = energiaMagica;
     }
+
     // ESCOBA
     public Escoba getEscoba() {
         return this.escoba;
     }
+
     public void setEscoba(Escoba escoba) {
         this.escoba = escoba;
     }
@@ -64,7 +81,7 @@ public class Wizard extends Persona implements IHaceMagia {
         this.magoOscuro = magoOscuro;
     }
 
-    // poder 
+    // poder
     public Poder getPoder() {
         return this.poder;
     }
@@ -78,7 +95,7 @@ public class Wizard extends Persona implements IHaceMagia {
     }
 
     public void atacar(Personaje personaje, Hechizo hechizo) {
-        
+
     }
 
     public void atacar(Personaje personaje, String hechizo) {
