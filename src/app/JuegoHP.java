@@ -4,7 +4,6 @@ import java.util.*;
 import app.personajes.*;
 import app.artefactos.*;
 import app.poderes.hechizos.*;
-import app.poderes.*;
 
 public class JuegoHP {
     public List<Personaje> personajes = new ArrayList<>();
@@ -257,7 +256,7 @@ public class JuegoHP {
     public Wizard crearPersonajeWizard() {
         Wizard wizard = new Wizard("Wizard-Mari", 75, 12, "Verde");
         wizard.setEnergiaMagica(150);//Revisar
-        wizard.getArtefacto();//falta instanciar
+        wizard.setArtefacto(Capainvisibilidad());//falta instanciar
         wizard.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
         this.personajes.add(wizard);
         return wizard;
@@ -288,10 +287,10 @@ public class JuegoHP {
         return VulneraSanentur;
     }
 
-    public WingwardumLeviosa WingwadumLeviosa() {
-        WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(0, 30, 1, 5);// settear parámetros
-        this.hechizos.add(WingwardumLeviosa);
-        return WingwardumLeviosa;
+    public WingwadumLeviosa WingwadumLeviosa() {
+        WingwadumLeviosa WingwadumLeviosa = new WingwadumLeviosa(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(WingwadumLeviosa);
+        return WingwadumLeviosa;
     }
 
     public Cavelnimicum Cavelnimicum() {
@@ -377,38 +376,31 @@ public class JuegoHP {
 
     public CapaInvisibilidad CapaInvisibilidad() {
         CapaInvisibilidad CapaInvisibilidad = new CapaInvisibilidad("Capa de invisibilidad", 0.1, 0.5);
-        this.artefactos.add(CapaInvisibilidad);
-
         return CapaInvisibilidad;
     }
     
      public PiedraResurreccion PiedraResurreccion() {
         PiedraResurreccion PiedraResurreccion = new PiedraResurreccion("Piedra Resurrección", 0.1, 0.5);
-        this.artefactos.add(PiedraResurreccion);
         return PiedraResurreccion;
     }
     
     public VaritaSauco VaritaSauco() {
         VaritaSauco VaritaSauco = new VaritaSauco("VaritaSauco", 0.6,0.2);
-        this.artefactos.add(VaritaSauco);
         return VaritaSauco;
     }
      
     public Horrocrux Horrocrux() {
         Horrocrux Horrocrux= new Horrocrux("Horrocrux", 0.6, 0.2);
-        this.artefactos.add(Horrocrux);
         return Horrocrux;
     }
 
-    public String elegirNombre(){      
-        Scanner sc = new Scanner(System.in);
-        String nombreElegido;
-        nombreElegido = sc.nextLine();
-        return nombreElegido;
-    }
 
-    
- 
+
+
+
+
+   
+
     // Método que permite Jugar // FALTA DESARROLLO
     public void jugar() {
         System.out.println(ANSI_CYAN
@@ -435,6 +427,7 @@ public class JuegoHP {
         //mientras ambos tengan salud, pelear entre si
         //gameloop
         while(p1.energiaMagica > 0 && p2.energiaMagica > 0){
+            
             Personaje atacante;
             Personaje oponente;
 
@@ -469,7 +462,20 @@ public class JuegoHP {
         }
         else{
             System.out.println(p2.color + p2.nombre + " gano!!!");
+
         }
+
+        public Artefacto obtenerArtefactoRandom() {
+
+            int max = this.artefactos.size();
+            int min = 1;
+    
+            int random = (int) (Math.random() * ((max - min) + 1)) + min;
+            return this.artefactos.get(random - 1);
+
+
+
+
 
     }
 
