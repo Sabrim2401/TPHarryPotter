@@ -8,7 +8,6 @@ public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
         super(nombre, amplificadorDeDanio, amplificadorDeCuracion);
     }
 
-
     public boolean esReliquiaMuerte() {
         // funcion para definir si es reliquia -- revisar
         return true;

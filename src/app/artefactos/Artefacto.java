@@ -4,11 +4,10 @@ import app.poderes.Poder;
 
 public class Artefacto {
 
-    public Artefacto (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion, Poder poder) {
+    public Artefacto (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion) {
         this.nombre = nombre;
         this.amplificadorDeDanio = amplificadorDeDanio;
         this.amplificadorDeCuracion = amplificadorDeCuracion;
-        this.poder = poder;
     }
 
 
