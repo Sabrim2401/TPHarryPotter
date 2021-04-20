@@ -222,6 +222,50 @@ public class JuegoHP {
         return wizardOscuro;
     }
 
+    // Instanciamos Hechizos: Modelo del constructor:
+// public Hechizo(int nivelDanio, int nivelCuracion, int energiaMagica, int energiaUtilizada)
+
+public Hechizo SectumSempra(){
+        Hechizo SectumSempra = new Hechizo(30, 0, 2, 3);// settear parámetros
+        this.hechizos.add(SectumSempra);
+        return SectumSempra;
+    }
+    
+    public Hechizo VulneraSanentur(){
+        Hechizo VulneraSanentur = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(VulneraSanentur);
+        return VulneraSanentur;
+    }
+    
+    public Hechizo WingwadumLeviosa(){
+        Hechizo WingwadumLeviosa = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(WingwadumLeviosa);
+        return WingwadumLeviosa;
+    }
+    
+    public Hechizo Cavelnimicum(){
+        Hechizo Cavelnimicum = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(Cavelnimicum);
+        return Cavelnimicum;
+    }
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     // Método que permite Jugar // FALTA DESARROLLO
     public static void jugar() {
         System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
