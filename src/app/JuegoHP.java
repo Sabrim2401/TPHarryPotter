@@ -4,6 +4,7 @@ import java.util.*;
 import app.personajes.*;
 import app.artefactos.*;
 import app.poderes.hechizos.*;
+import app.poderes.*;
 
 public class JuegoHP {
     public List<Personaje> personajes = new ArrayList<>();
@@ -287,10 +288,10 @@ public class JuegoHP {
         return VulneraSanentur;
     }
 
-    public WingwadumLeviosa WingwadumLeviosa() {
-        WingwadumLeviosa WingwadumLeviosa = new WingwadumLeviosa(0, 30, 1, 5);// settear parámetros
-        this.hechizos.add(WingwadumLeviosa);
-        return WingwadumLeviosa;
+    public WingwardumLeviosa WingwardumLeviosa() {
+        WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(WingwardumLeviosa);
+        return WingwardumLeviosa;
     }
 
     public Cavelnimicum Cavelnimicum() {
