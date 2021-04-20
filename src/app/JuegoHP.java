@@ -372,25 +372,25 @@ public class JuegoHP {
    
 
     // Se instancian los artefactos
-    //super(nombre, amplificadorDeDanio, amplificadorDeCuracion, poder);
+    //super(nombre, amplificadorDeDanio, amplificadorDeCuracion):
 
-    public Artefacto CapaInvisibilidad() {
-        Artefacto CapaInvisibilidad = new Artefacto("Capa de invisibilidad", 0.1, 0.5);
+    public CapaInvisibilidad CapaInvisibilidad() {
+        CapaInvisibilidad CapaInvisibilidad = new CapaInvisibilidad("Capa de invisibilidad", 0.1, 0.5);
         return CapaInvisibilidad;
     }
     
-     public Artefacto PiedraResurreccion() {
-        Artefacto PiedraResurreccion = new Artefacto("Piedra Resurrección", 0.1, 0.5);
+     public PiedraResurreccion PiedraResurreccion() {
+        PiedraResurreccion PiedraResurreccion = new PiedraResurreccion("Piedra Resurrección", 0.1, 0.5);
         return PiedraResurreccion;
     }
     
-    public Artefacto VaritaSauco() {
-        Artefacto VaritaSauco = new Artefacto("VaritaSauco", 0.6,0.2);
+    public VaritaSauco VaritaSauco() {
+        VaritaSauco VaritaSauco = new VaritaSauco("VaritaSauco", 0.6,0.2);
         return VaritaSauco;
     }
      
-    public Artefacto Horrocrux() {
-        Artefacto Horrocrux= new Artefacto("Horrocrux", 0.6, 0.2);
+    public Horrocrux Horrocrux() {
+        Horrocrux Horrocrux= new Horrocrux("Horrocrux", 0.6, 0.2);
         return Horrocrux;
     }
 
