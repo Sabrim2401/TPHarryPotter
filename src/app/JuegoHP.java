@@ -1,7 +1,7 @@
 package app;
 
 import java.util.*;
-import app.personajes.Personaje;
+import app.personajes.*;
 import app.artefactos.*;
 import app.poderes.hechizos.*;
 
@@ -240,33 +240,33 @@ public class JuegoHP {
 
     // hecho por chabri y luli
 
-    public Personaje crearPersonajeMuggle() {
-        Personaje muggle = new Personaje("Muggle-Caro", 100, 10, "Rojo");
+    public Muggle crearPersonajeMuggle() {
+        Muggle muggle = new Muggle("Muggle-Caro", 100, 10, "Rojo");
         this.personajes.add(muggle);
         return muggle;
     }
 
-    public Personaje crearPersonajeElfo() {
-        Personaje elfo = new Personaje("Elfo-Chabri", 50, 15, "Gris");
+    public Elfo crearPersonajeElfo() {
+        Elfo elfo = new Elfo("Elfo-Chabri", 50, 15, "Gris");
         elfo.setEnergiaMagica(150);//Revisar
         this.personajes.add(elfo);
         return elfo;
     }
 
-    public Personaje crearPersonajeWizard() {
-        Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde");
+    public Wizard crearPersonajeWizard() {
+        Wizard wizard = new Wizard("Wizard-Mari", 75, 12, "Verde");
         wizard.setEnergiaMagica(150);//Revisar
-        wizard.setArtefacto(Capainvisibilidad);//falta instanciar
+        wizard.setArtefacto(Capainvisibilidad());//falta instanciar
         wizard.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
         this.personajes.add(wizard);
         return wizard;
     }
 
-    public Personaje crearWizardOscuro() {
-        Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul");
+    public WizardOscuro crearWizardOscuro() {
+        WizardOscuro wizardOscuro = new WizardOscuro("Wizard-Luli", 60, 42, "Azul");
         wizardOscuro.setEnergiaMagica(150);//Revisar
-        wizardOscuro.setArtefacto(Horrocrux);//falta instanciar
-        wizard.setHechizo(aprenderHechizoRandom());
+        wizardOscuro.setArtefacto(Horrocrux());//falta instanciar
+        wizardOscuro.setHechizo(aprenderHechizoRandom());
         this.personajes.add(wizardOscuro);
         return wizardOscuro;
     }
@@ -275,26 +275,26 @@ public class JuegoHP {
     // public Hechizo(int nivelDanio, int nivelCuracion, int energiaMagica, int
     // energiaUtilizada)
 
-    public Hechizo SectumSempra() {
-        Hechizo SectumSempra = new Hechizo(30, 0, 2, 3);// settear parámetros
+    public SectumSempra SectumSempra() {
+        SectumSempra SectumSempra = new SectumSempra(30, 0, 2, 3);// settear parámetros
         this.hechizos.add(SectumSempra);
         return SectumSempra;
     }
 
-    public Hechizo VulneraSanentur() {
-        Hechizo VulneraSanentur = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public VulneraSanentur VulneraSanentur() {
+        VulneraSanentur VulneraSanentur = new VulneraSanentur(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(VulneraSanentur);
         return VulneraSanentur;
     }
 
-    public Hechizo WingwadumLeviosa() {
-        Hechizo WingwadumLeviosa = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public WingwadumLeviosa WingwadumLeviosa() {
+        WingwadumLeviosa WingwadumLeviosa = new WingwadumLeviosa(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(WingwadumLeviosa);
         return WingwadumLeviosa;
     }
 
-    public Hechizo Cavelnimicum() {
-        Hechizo Cavelnimicum = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public Cavelnimicum Cavelnimicum() {
+        Cavelnimicum Cavelnimicum = new Cavelnimicum(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(Cavelnimicum);
         return Cavelnimicum;
     }
@@ -302,27 +302,27 @@ public class JuegoHP {
     //Es un hechizo de curación
     public Hechizo Anapneo() {
         Hechizo Anapneo = new Hechizo(0, 30, 1, 5);// settear parámetros!
-        this.hechizos.add(Anapneo);
+        //this.hechizos.add(Anapneo);
         return Anapneo;
     }
 
     //Alarte ascendare: Este hechizo eleva a su objetivo por los aires.
     public Hechizo Alarteascendare() {
         Hechizo Alarteascendare = new Hechizo(0, 30, 1, 5);// settear parámetros
-        this.hechizos.add(Alarteascendare);
+       //this.hechizos.add(Alarteascendare);
         return Alarteascendare;
     }
 
     //Salvio hexia. Permite proteger de encantamientos oscuros una zona
-    public Hechizo Salviohexia() {
-        Hechizo Salviohexia = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public HechizoDefensa Salviohexia() {
+        HechizoDefensa Salviohexia = new HechizoDefensa(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(Salviohexia);
         return Salviohexia;
     }
 
     //Melofors. Envuelve la cabeza del enemigo con una calabaza
-    public Hechizo Melofors() {
-        Hechizo Melofors = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public HechizoAtaque Melofors() {
+        HechizoAtaque Melofors = new HechizoAtaque(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(Melofors);
         return Melofors;
     }
@@ -330,14 +330,14 @@ public class JuegoHP {
     //Cura heridas.
     public Hechizo Episkey() {
         Hechizo Episkey = new Hechizo(0, 30, 1, 5);// settear parámetros
-        this.hechizos.add(Episkey);
+        //this.hechizos.add(Episkey);
         return Episkey;
     }
 
      //Genera cosquillas en la víctima
     public Hechizo Rictusempra() {
         Hechizo Rictusempra = new Hechizo(0, 30, 1, 5);// settear parámetros
-        this.hechizos.add(Rictusempra);
+        //this.hechizos.add(Rictusempra);
         return Rictusempra;
     }
 
@@ -354,22 +354,22 @@ public class JuegoHP {
 
     // Se instancian los poderes:
 
-    public Poder Invisibilidad() {
-        Poder Invisibilidad = new Poder("Invisibilidad", "Limita el ataque del oponente", 10, 50);// settear parámetros
+    public Invisibilidad Invisibilidad() {
+        Invisibilidad Invisibilidad = new Invisibilidad("Invisibilidad", "Limita el ataque del oponente", 10, 50);// settear parámetros
         return Invisibilidad;
     }
 
-    public Poder ParseTongue() {
-        Poder ParseTongue = new Poder("Lengua Pársel", "Invoca serpientes", 15, 20);
+    public ParseTongue ParseTongue() {
+        ParseTongue ParseTongue = new ParseTongue("Lengua Pársel", "Invoca serpientes", 15, 20);
         return ParseTongue;
     }
 
-    public Poder Metamorfosis() {
-        Poder Metamorfosis = new Poder("Metamorfosis", "Permite alterar la forma física para defenderse de un ataque", 10, 15);
+    public Metamorfosis Metamorfosis() {
+        Metamorfosis Metamorfosis = new Metamorfosis("Metamorfosis", "Permite alterar la forma física para defenderse de un ataque", 10, 15);
         return Metamorfosis;
     }
 
-    public Poder Hechizo() {
+    public Hechizo Hechizo() {
         Poder Hechizo = new Poder(); //¿Se puede pasar como parámetro una lista?
         return Hechizo;
     }
