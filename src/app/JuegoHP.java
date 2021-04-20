@@ -376,21 +376,26 @@ public class JuegoHP {
 
     public CapaInvisibilidad CapaInvisibilidad() {
         CapaInvisibilidad CapaInvisibilidad = new CapaInvisibilidad("Capa de invisibilidad", 0.1, 0.5);
+        this.artefactos.add(CapaInvisibilidad);
+
         return CapaInvisibilidad;
     }
     
      public PiedraResurreccion PiedraResurreccion() {
         PiedraResurreccion PiedraResurreccion = new PiedraResurreccion("Piedra Resurrección", 0.1, 0.5);
+        this.artefactos.add(PiedraResurreccion);
         return PiedraResurreccion;
     }
     
     public VaritaSauco VaritaSauco() {
         VaritaSauco VaritaSauco = new VaritaSauco("VaritaSauco", 0.6,0.2);
+        this.artefactos.add(VaritaSauco);
         return VaritaSauco;
     }
      
     public Horrocrux Horrocrux() {
         Horrocrux Horrocrux= new Horrocrux("Horrocrux", 0.6, 0.2);
+        this.artefactos.add(Horrocrux);
         return Horrocrux;
     }
 
