@@ -4,8 +4,8 @@ import app.interfaces.IReliquiaMuerte;
 
 public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
   
-    public PiedraResurreccion (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion, Poder poder)  {
-        super(nombre, amplificadorDeDanio, amplificadorDeCuracion, poder);
+    public PiedraResurreccion (String nombre, double amplificadorDeDanio, double amplificadorDeCuracion)  {
+        super(nombre, amplificadorDeDanio, amplificadorDeCuracion);
     }
 
     public boolean esReliquiaMuerte() {
