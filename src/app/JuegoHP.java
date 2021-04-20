@@ -360,7 +360,7 @@ public class JuegoHP {
     }
 
     public Poder ParseTongue() {
-        Poder ParseTongue = new Poder("Lengua Pársel", "Invoca serpientes", 15,20);
+        Poder ParseTongue = new Poder("Lengua Pársel", "Invoca serpientes", 15, 20);
         return ParseTongue;
     }
 
@@ -369,25 +369,31 @@ public class JuegoHP {
         return Metamorfosis;
     }
 
-        // Se instancian los artefactos
+    public Poder Hechizo() {
+        Poder Hechizo = new Poder(); //¿Se puede pasar como parámetro una lista?
+        return Hechizo;
+    }
+
+    // Se instancian los artefactos
+    //super(nombre, amplificadorDeDanio, amplificadorDeCuracion, poder);
 
     public Artefacto CapaInvisibilidad() {
-        Artefacto CapaInvisibilidad = new Artefacto();
+        Artefacto CapaInvisibilidad = new Artefacto("Capa de invisibilidad", 0.1, 0.5, Invisibilidad());
         return CapaInvisibilidad;
     }
     
      public Artefacto PiedraResurreccion() {
-        Artefacto ParseTongue = new Artefacto();
-        return ParseTongue;
+        Artefacto PiedraResurreccion = new Artefacto("Piedra Resurrección", 0.1, 0.5, Metamorfosis());
+        return PiedraResurreccion;
     }
     
     public Artefacto VaritaSauco() {
-        Artefacto VaritaSauco = new Artefacto();
+        Artefacto VaritaSauco = new Artefacto("VaritaSauco",  0.6,0.2, Hechizo());
         return VaritaSauco;
     }
      
     public Artefacto Horrocrux() {
-        Artefacto Horrocrux= new Artefacto();
+        Artefacto Horrocrux= new Artefacto("Horrocrux", 0.6, 0.2, Hechizo());
         return Horrocrux;
     }
 
