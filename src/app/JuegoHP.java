@@ -359,7 +359,10 @@ public class JuegoHP {
         elegirPersonaje();
     }
 
-    public static void combate() {
+    public void combate() {
+
+        Personaje p1 = crearWizard();
+        Personaje p2 = crearWizardOscuro();
 
         boolean turnoP1 = true;
 
@@ -371,7 +374,7 @@ public class JuegoHP {
         
         //mientras ambos tengan salud, pelear entre si
         //gameloop
-        while(p1.salud > 0 && p2.salud > 0){
+        while(p1.energiaMagica > 0 && p2.energiaMagica > 0){
             Personaje atacante;
             Personaje oponente;
 
