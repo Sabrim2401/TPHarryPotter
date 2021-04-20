@@ -248,18 +248,21 @@ public class JuegoHP {
 
     public Personaje crearPersonajeElfo() {
         Personaje elfo = new Personaje("Elfo-Chabri", 50, 15, "Gris");
+        elfo.setEnergiaMagica(150);//Revisar
         this.personajes.add(elfo);
         return elfo;
     }
 
     public Personaje crearPersonajeWizard() {
         Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde");
+        wizard.setEnergiaMagica(150);//Revisar
         this.personajes.add(wizard);
         return wizard;
     }
 
     public Personaje crearWizardOscuro() {
         Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul");
+        wizardOscuro.setEnergiaMagica(150);//Revisar
         this.personajes.add(wizardOscuro);
         return wizardOscuro;
     }

@@ -1,5 +1,6 @@
 package app.personajes;
 
+
 public class Personaje {
     public Personaje(String nombre, int salud, int golpe, String color) {
         this.nombre = nombre;
@@ -7,6 +8,7 @@ public class Personaje {
         this.golpe = golpe;
         this.color = color;
     }
+   
 
     private String nombre;
     private int salud;
