@@ -351,7 +351,25 @@ public class JuegoHP {
         int random = (int) (Math.random() * ((max - min) + 1)) + min;
         return this.hechizos.get(random - 1);
     }
-    
+
+    // Instanciamos Poderes
+    // public Poder(String nombreDelPoder, String descripcionDelPoder, int poderInicial, int poder){
+
+    public Poder Invisibilidad() {
+        Poder Invisibilidad = new Poder("Invisibilidad", "Limita el ataque del oponente", 10, 50);// settear parámetros
+        return Invisibilidad;
+    }
+
+    public Poder ParseTongue() {
+        Poder ParseTongue = new Poder("Lengua Pársel", "Invoca serpientes", 15,20);
+        return ParseTongue;
+    }
+
+    public Poder Metamorfosis() {
+        Poder Metamorfosis = new Poder("Metamorfosis", "Permite alterar la forma física para defenderse de un ataque", 10, 15);
+        return Metamorfosis;
+    }
+   
 
     // Método que permite Jugar // FALTA DESARROLLO
     public void jugar() {
