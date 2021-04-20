@@ -351,10 +351,63 @@ public class JuegoHP {
 
     // Método que permite Jugar // FALTA DESARROLLO
     public void jugar() {
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println("IncializandoJuego");
-        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE + "𝑰𝒏𝒊𝒄𝒊𝒂𝒍𝒊𝒛𝒂𝒏𝒅𝒐 𝒆𝒍 𝒋𝒖𝒆𝒈𝒐");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
         elegirPersonaje();
+    }
+
+    public static void combate() {
+
+        boolean turnoP1 = true;
+
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE + "𝑪𝒐𝒎𝒊𝒆𝒏𝒛𝒂 𝒆𝒍 𝒄𝒐𝒎𝒃𝒂𝒕𝒆");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        
+        //mientras ambos tengan salud, pelear entre si
+        //gameloop
+        while(p1.salud > 0 && p2.salud > 0){
+            Personaje atacante;
+            Personaje oponente;
+
+            if (turnoP1){
+                atacante = p1;
+                oponente = p2;
+            }
+            else{
+                atacante = p2;
+                oponente = p1;
+            }
+
+            int max = 10;
+            int min = 2;
+            //genera un valor random entre 2 y 10
+            int danio = (int) (Math.random() * ((max - min) + 1)) + min;
+
+            System.out.println(atacante.color + atacante.nombre + " ataca a "+ oponente.nombre);
+            
+            atacante.atacarA(oponente, danio);
+            
+            System.out.println("A "+ oponente.nombre + " le queda "+ oponente.salud + " de salud");
+
+            turnoP1 = !turnoP1;
+
+            //Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
+            Thread.sleep(1000);
+        }
+
+        if (p1.salud > 0){
+            System.out.println(p1.color + p1.nombre + " gano!!!");
+        }
+        else{
+            System.out.println(p2.color + p2.nombre + " gano!!!");
+        }
+
     }
 
 }
