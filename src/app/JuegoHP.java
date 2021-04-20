@@ -400,13 +400,15 @@ public class JuegoHP {
         return Horrocrux;
     }
 
+    public String elegirNombre(){      
+        Scanner sc = new Scanner(System.in);
+        String nombreElegido;
+        nombreElegido = sc.nextLine();
+        return nombreElegido;
+    }
 
-
-
-
-
-   
-
+    
+ 
     // Método que permite Jugar // FALTA DESARROLLO
     public void jugar() {
         System.out.println(ANSI_CYAN
