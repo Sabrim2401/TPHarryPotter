@@ -330,6 +330,13 @@ public class JuegoHP {
         return Episkey;
     }
 
+     //Genera cosquillas en la víctima
+    public Hechizo Rictusempra() {
+        Hechizo Rictusempra = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(Rictusempra);
+        return Rictusempra;
+    }
+
     //Método para aprender un hechizo random:
 
     public Hechizo aprenderHechizoRandom() {
