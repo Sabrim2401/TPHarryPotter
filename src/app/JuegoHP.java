@@ -256,7 +256,7 @@ public class JuegoHP {
     public Wizard crearPersonajeWizard() {
         Wizard wizard = new Wizard("Wizard-Mari", 75, 12, "Verde");
         wizard.setEnergiaMagica(150);//Revisar
-        wizard.setArtefacto(Capainvisibilidad());//falta instanciar
+        wizard.getArtefacto();//falta instanciar
         wizard.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
         this.personajes.add(wizard);
         return wizard;
