@@ -9,7 +9,6 @@ public class Personaje {
         this.color = color;
     }
    
-
     private String nombre;
     private int salud;
     private int edad;

@@ -5,6 +5,7 @@ import app.poderes.Poder;
 public class Hechizo extends Poder {
 
     public Hechizo(int nivelDanio, int nivelCuracion, int energiaMagica, int energiaUtilizada){
+     
         this.nivelDanio = nivelDanio;
         this.nivelCuracion = nivelCuracion;
         this.energiaMagica = energiaMagica;

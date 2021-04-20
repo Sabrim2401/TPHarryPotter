@@ -102,10 +102,10 @@ public class Wizard extends Persona implements IHaceMagia {
 
     }
    /// no se si esta bien brenda
-    public Boolean esMagoOscuro(){
+  /*  public Boolean esMagoOscuro(){
         if (Wizard.hechizo.septumSempra.equals(esMagoOscuro()));
-        return true;
-    }
+        return true; 
+    } */
 
 
 }

@@ -2,11 +2,8 @@ package app.poderes;
 
 public class Poder {
 
-    public Poder(String nombreDelPoder, String descripcionDelPoder, int poderInicial, int poder){
-        this.nombreDelPoder = nombreDelPoder;
-        this.descripcionDelPoder = descripcionDelPoder;
-        this.poderInicial = poderInicial;
-        this.poder = poder;
+    public Poder(){
+ 
     }    
 
     private String nombreDelPoder;
