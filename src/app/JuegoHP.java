@@ -352,8 +352,7 @@ public class JuegoHP {
         return this.hechizos.get(random - 1);
     }
 
-    // Instanciamos Poderes
-    // public Poder(String nombreDelPoder, String descripcionDelPoder, int poderInicial, int poder){
+    // Se instancian los poderes:
 
     public Poder Invisibilidad() {
         Poder Invisibilidad = new Poder("Invisibilidad", "Limita el ataque del oponente", 10, 50);// settear parámetros
@@ -369,6 +368,34 @@ public class JuegoHP {
         Poder Metamorfosis = new Poder("Metamorfosis", "Permite alterar la forma física para defenderse de un ataque", 10, 15);
         return Metamorfosis;
     }
+
+        // Se instancian los artefactos
+
+    public Artefacto CapaInvisibilidad() {
+        Artefacto CapaInvisibilidad = new Artefacto();
+        return CapaInvisibilidad;
+    }
+    
+     public Artefacto PiedraResurreccion() {
+        Artefacto ParseTongue = new Artefacto();
+        return ParseTongue;
+    }
+    
+    public Artefacto VaritaSauco() {
+        Artefacto VaritaSauco = new Artefacto();
+        return VaritaSauco;
+    }
+     
+    public Artefacto Horrocrux() {
+        Artefacto Horrocrux= new Artefacto();
+        return Horrocrux;
+    }
+
+
+
+
+
+
    
 
     // Método que permite Jugar // FALTA DESARROLLO
