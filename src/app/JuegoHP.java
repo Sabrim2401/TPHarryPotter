@@ -146,8 +146,7 @@ public class JuegoHP {
         int opcion;
         opcion = sc.nextInt();
         /*
-         * while (opcion > 0 && opcion <= 2) {
-         * System.out.
+         * while (opcion > 0 && opcion <= 2) { System.out.
          * println("La opcion ingresada no es correcta, vuelva a ingresar la opcion");
          * opcion = sc.nextInt(); FALTA CORREGIR
          */
@@ -198,6 +197,49 @@ public class JuegoHP {
 
     }
 
+    // hecho por chabri y luli
+    public void elegirPersonaje() {
+        System.out.println("Seleccione su personaje: ");
+
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_YELLOW + " 1- ■ Muggle-Caro");
+        System.out.println(ANSI_YELLOW + " 2- ■ Elfo-Chabri");
+        System.out.println(ANSI_YELLOW + " 3- ■ Wizard-Mari");
+        System.out.println(ANSI_YELLOW + " 4- ■ Wizard Oscuro-Luli");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+
+        int opcion = 0;
+        opcion = Teclado.nextInt();
+
+        switch (opcion) {
+        case 1:
+            crearPersonajeMuggle();
+            System.out.println("¡Muggle-Caro ha sido elegido!");
+            break;
+        case 2:
+            crearPersonajeElfo();
+            System.out.println("¡Elfo-Chabri ha sido elegido!");
+            break;
+        case 3:
+            crearPersonajeWizard();
+            System.out.println("¡Wizard-Mari ha sido elegido!");
+            break;
+        case 4:
+            crearWizardOscuro();
+            System.out.println("¡Wizard Oscuro-Luli ha sido elegido!");
+            break;
+        default:
+            System.out.printf("La opción  " + opcion + " no es una opción válida");
+            break;
+
+        }
+
+    }
+
+    // hecho por chabri y luli
+
     public Personaje crearPersonajeMuggle() {
         Personaje muggle = new Personaje("Muggle-Caro", 100, 10, "Rojo");
         this.personajes.add(muggle);
@@ -223,54 +265,39 @@ public class JuegoHP {
     }
 
     // Instanciamos Hechizos: Modelo del constructor:
-// public Hechizo(int nivelDanio, int nivelCuracion, int energiaMagica, int energiaUtilizada)
+    // public Hechizo(int nivelDanio, int nivelCuracion, int energiaMagica, int
+    // energiaUtilizada)
 
-public Hechizo SectumSempra(){
+    public Hechizo SectumSempra() {
         Hechizo SectumSempra = new Hechizo(30, 0, 2, 3);// settear parámetros
         this.hechizos.add(SectumSempra);
         return SectumSempra;
     }
-    
-    public Hechizo VulneraSanentur(){
+
+    public Hechizo VulneraSanentur() {
         Hechizo VulneraSanentur = new Hechizo(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(VulneraSanentur);
         return VulneraSanentur;
     }
-    
-    public Hechizo WingwadumLeviosa(){
+
+    public Hechizo WingwadumLeviosa() {
         Hechizo WingwadumLeviosa = new Hechizo(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(WingwadumLeviosa);
         return WingwadumLeviosa;
     }
-    
-    public Hechizo Cavelnimicum(){
+
+    public Hechizo Cavelnimicum() {
         Hechizo Cavelnimicum = new Hechizo(0, 30, 1, 5);// settear parámetros
         this.hechizos.add(Cavelnimicum);
         return Cavelnimicum;
     }
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     // Método que permite Jugar // FALTA DESARROLLO
-    public static void jugar() {
+    public void jugar() {
         System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
         System.out.println("IncializandoJuego");
         System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+        elegirPersonaje();
     }
 
 }
