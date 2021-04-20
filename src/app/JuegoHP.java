@@ -93,7 +93,7 @@ public class JuegoHP {
     public static void salirDelJuego() {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "Gracias por jugar HPAda");
+        System.out.println(ANSI_PURPLE + "¡𝔊𝔯𝔞𝔠𝔦𝔞𝔰 𝔭𝔬𝔯 𝔧𝔲𝔤𝔞𝔯!¡ℌ𝔞𝔰𝔱𝔞 𝔩𝔞 𝔭𝔯𝔬́𝔵𝔦𝔪𝔞!");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
     }
@@ -294,6 +294,18 @@ public class JuegoHP {
         this.hechizos.add(Cavelnimicum);
         return Cavelnimicum;
     }
+
+    //Método para aprender un hechizo random:
+
+    public Hechizo aprenderHechizoRandom() {
+
+        int max = this.hechizos.size();
+        int min = 1;
+
+        int random = (int) (Math.random() * ((max - min) + 1)) + min;
+        return this.hechizos.get(random - 1);
+    }
+    
 
     // Método que permite Jugar // FALTA DESARROLLO
     public void jugar() {
