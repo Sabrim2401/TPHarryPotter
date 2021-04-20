@@ -356,21 +356,19 @@ public class JuegoHP {
     // Se instancian los poderes:
 
     public Invisibilidad Invisibilidad() {
-        Invisibilidad Invisibilidad = new Invisibilidad("Invisibilidad", "Limita el ataque del oponente", 10, 50);// settear parámetros
+        Invisibilidad Invisibilidad = new Invisibilidad();// settear parámetros
         return Invisibilidad;
     }
 
     public ParseTongue ParseTongue() {
-        ParseTongue ParseTongue = new ParseTongue("Lengua Pársel", "Invoca serpientes", 15, 20);
+        ParseTongue ParseTongue = new ParseTongue();
         return ParseTongue;
     }
 
     public Metamorfosis Metamorfosis() {
-        Metamorfosis Metamorfosis = new Metamorfosis("Metamorfosis", "Permite alterar la forma física para defenderse de un ataque", 10, 15);
+        Metamorfosis Metamorfosis = new Metamorfosis();
         return Metamorfosis;
     }
-
-   
 
     // Se instancian los artefactos
     //super(nombre, amplificadorDeDanio, amplificadorDeCuracion):
@@ -414,7 +412,7 @@ public class JuegoHP {
 
     public void combate() {
 
-        Personaje p1 = crearWizard();
+        Personaje p1 = crearPersonajeWizard();
         Personaje p2 = crearWizardOscuro();
 
         boolean turnoP1 = true;
