@@ -10,8 +10,6 @@ public class JuegoHP {
     public List<Artefacto> artefactos = new ArrayList<>();
     public List<Hechizo> hechizos = new ArrayList<>();
 
-
-
     // Agrego colores para menú
 
     public static final String ANSI_RESET = "\u001B[0m";
@@ -40,29 +38,39 @@ public class JuegoHP {
     }
 
     // Método que da la bienvenida al jugador
-    public void msjBienvenida(){
-        System.out.println(ANSI_CYAN + "█╗░░██╗░█████╗░██████╗░██████╗░██╗░░░██╗  ██████╗░░█████╗░████████╗████████╗███████╗██████╗░██╗");
-        System.out.println(ANSI_CYAN + "██║░░██║██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝  ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗╚═╝");
-        System.out.println(ANSI_CYAN + "███████║███████║██████╔╝██████╔╝░╚████╔╝░  ██████╔╝██║░░██║░░░██║░░░░░░██║░░░█████╗░░██████╔╝░░░");
-        System.out.println(ANSI_CYAN + "██╔══██║██╔══██║██╔══██╗██╔══██╗░░╚██╔╝░░  ██╔═══╝░██║░░██║░░░██║░░░░░░██║░░░██╔══╝░░██╔══██╗░░░");
-        System.out.println(ANSI_CYAN + "██║░░██║██║░░██║██║░░██║██║░░██║░░░██║░░░  ██║░░░░░╚█████╔╝░░░██║░░░░░░██║░░░███████╗██║░░██║██╗");
-        System.out.println(ANSI_CYAN + "╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░  ╚═╝░░░░░░╚════╝░░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝");
-        
-        System.out.println(ANSI_CYAN + "███████╗██╗░░░░░  ██████╗░███████╗░██████╗░██████╗░███████╗░██████╗░█████╗░  ██████╗░███████╗██╗░░░░░");
-        System.out.println(ANSI_CYAN + "██╔════╝██║░░░░░  ██╔══██╗██╔════╝██╔════╝░██╔══██╗██╔════╝██╔════╝██╔══██╗  ██╔══██╗██╔════╝██║░░░░░");
-        System.out.println(ANSI_CYAN + "█████╗░░██║░░░░░  ██████╔╝█████╗░░██║░░██╗░██████╔╝█████╗░░╚█████╗░██║░░██║  ██║░░██║█████╗░░██║░░░░░");
-        System.out.println(ANSI_CYAN + "██╔══╝░░██║░░░░░  ██╔══██╗██╔══╝░░██║░░╚██╗██╔══██╗██╔══╝░░░╚═══██╗██║░░██║  ██║░░██║██╔══╝░░██║░░░░░");
-        System.out.println(ANSI_CYAN + "███████╗███████╗  ██║░░██║███████╗╚██████╔╝██║░░██║███████╗██████╔╝╚█████╔╝  ██████╔╝███████╗███████╗");
-        System.out.println(ANSI_CYAN + "╚══════╝╚══════╝  ╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░░╚═╝╚══════╝╚═════╝░░╚════╝░  ╚═════╝░╚══════╝╚══════╝");
-        
+    public void msjBienvenida() {
+        System.out.println(ANSI_CYAN
+                + "█╗░░██╗░█████╗░██████╗░██████╗░██╗░░░██╗  ██████╗░░█████╗░████████╗████████╗███████╗██████╗░██╗");
+        System.out.println(ANSI_CYAN
+                + "██║░░██║██╔══██╗██╔══██╗██╔══██╗╚██╗░██╔╝  ██╔══██╗██╔══██╗╚══██╔══╝╚══██╔══╝██╔════╝██╔══██╗╚═╝");
+        System.out.println(ANSI_CYAN
+                + "███████║███████║██████╔╝██████╔╝░╚████╔╝░  ██████╔╝██║░░██║░░░██║░░░░░░██║░░░█████╗░░██████╔╝░░░");
+        System.out.println(ANSI_CYAN
+                + "██╔══██║██╔══██║██╔══██╗██╔══██╗░░╚██╔╝░░  ██╔═══╝░██║░░██║░░░██║░░░░░░██║░░░██╔══╝░░██╔══██╗░░░");
+        System.out.println(ANSI_CYAN
+                + "██║░░██║██║░░██║██║░░██║██║░░██║░░░██║░░░  ██║░░░░░╚█████╔╝░░░██║░░░░░░██║░░░███████╗██║░░██║██╗");
+        System.out.println(ANSI_CYAN
+                + "╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝╚═╝░░╚═╝░░░╚═╝░░░  ╚═╝░░░░░░╚════╝░░░░╚═╝░░░░░░╚═╝░░░╚══════╝╚═╝░░╚═╝╚═╝");
+
+        System.out.println(ANSI_CYAN
+                + "███████╗██╗░░░░░  ██████╗░███████╗░██████╗░██████╗░███████╗░██████╗░█████╗░  ██████╗░███████╗██╗░░░░░");
+        System.out.println(ANSI_CYAN
+                + "██╔════╝██║░░░░░  ██╔══██╗██╔════╝██╔════╝░██╔══██╗██╔════╝██╔════╝██╔══██╗  ██╔══██╗██╔════╝██║░░░░░");
+        System.out.println(ANSI_CYAN
+                + "█████╗░░██║░░░░░  ██████╔╝█████╗░░██║░░██╗░██████╔╝█████╗░░╚█████╗░██║░░██║  ██║░░██║█████╗░░██║░░░░░");
+        System.out.println(ANSI_CYAN
+                + "██╔══╝░░██║░░░░░  ██╔══██╗██╔══╝░░██║░░╚██╗██╔══██╗██╔══╝░░░╚═══██╗██║░░██║  ██║░░██║██╔══╝░░██║░░░░░");
+        System.out.println(ANSI_CYAN
+                + "███████╗███████╗  ██║░░██║███████╗╚██████╔╝██║░░██║███████╗██████╔╝╚█████╔╝  ██████╔╝███████╗███████╗");
+        System.out.println(ANSI_CYAN
+                + "╚══════╝╚══════╝  ╚═╝░░╚═╝╚══════╝░╚═════╝░╚═╝░░╚═╝╚══════╝╚═════╝░░╚════╝░  ╚═════╝░╚══════╝╚══════╝");
+
         System.out.println(ANSI_CYAN + "███╗░░░███╗░█████╗░██╗░░░░░");
         System.out.println(ANSI_CYAN + "████╗░████║██╔══██╗██║░░░░░");
         System.out.println(ANSI_CYAN + "██╔████╔██║███████║██║░░░░░");
         System.out.println(ANSI_CYAN + "██║╚██╔╝██║██╔══██║██║░░░░░");
         System.out.println(ANSI_CYAN + "██║░╚═╝░██║██║░░██║███████╗");
-        System.out.println(ANSI_CYAN + "╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝");     
-        
-
+        System.out.println(ANSI_CYAN + "╚═╝░░░░░╚═╝╚═╝░░╚═╝╚══════╝");
 
     }
 
@@ -104,7 +112,7 @@ public class JuegoHP {
 
     }
 
-    // Método para validar elección del usuario 
+    // Método para validar elección del usuario
     public static int ingresoOpcionMenu() {
 
         Scanner sc = new Scanner(System.in);
@@ -126,34 +134,39 @@ public class JuegoHP {
 
     // Método que sirve para volver al Menú principal
 
-    public void volverMenuPrincipal(){
+    public void volverMenuPrincipal() {
 
         System.out.println(ANSI_CYAN
-                        + "═════════════════════════════════════════════════════════════════════════════════════════");
-            System.out.println(ANSI_PURPLE + "Presione 1 para volver al menú principal.");
-            System.out.println(ANSI_PURPLE + "Presione 2 para salir del juego.");
-            System.out.println(ANSI_CYAN
-                        + "═════════════════════════════════════════════════════════════════════════════════════════");
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE + "Presione 1 para volver al menú principal.");
+        System.out.println(ANSI_PURPLE + "Presione 2 para salir del juego.");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
         Scanner sc = new Scanner(System.in);
         int opcion;
-           opcion = sc.nextInt();
-        do {
-            switch (opcion) {
-                case 1:
-                    inicializarMenu();
-                    break;
-                case 2:
-                    salirDelJuego();
-                    break;
-                default:
-                    System.out.printf("La opción  " + opcion + " no es una opción válida");
-                    break;
-            }      
-            
-            }while (opcion > 0 && opcion <= 3);        
-        }
+        opcion = sc.nextInt();
+        /*
+         * while (opcion > 0 && opcion <= 2) {
+         * System.out.
+         * println("La opcion ingresada no es correcta, vuelva a ingresar la opcion");
+         * opcion = sc.nextInt(); FALTA CORREGIR
+         */
 
-    
+        switch (opcion) {
+        case 1:
+            inicializarMenu();
+            break;
+        case 2:
+            salirDelJuego();
+            break;
+        default:
+            System.out.printf("La opción  " + opcion + " no es una opción válida");
+            break;
+        }
+        while (opcion > 0 && opcion <= 2)
+            ;
+    }
+
     // Método que sirve para inicializar Menú// DEBE MEJORARSE
 
     public void inicializarMenu() {
@@ -192,28 +205,28 @@ public class JuegoHP {
     }
 
     public Personaje crearPersonajeElfo() {
-        Personaje elfo = new Personaje("Elfo-Chabri", 50 , 15 , "Gris"); 
+        Personaje elfo = new Personaje("Elfo-Chabri", 50, 15, "Gris");
         this.personajes.add(elfo);
         return elfo;
     }
 
-    public Personaje crearPersonajeWizard(){
-        Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde" ); 
+    public Personaje crearPersonajeWizard() {
+        Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde");
         this.personajes.add(wizard);
         return wizard;
     }
 
-    public Personaje crearWizardOscuro(){
-        Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul" ); 
+    public Personaje crearWizardOscuro() {
+        Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul");
         this.personajes.add(wizardOscuro);
         return wizardOscuro;
     }
 
-   // Método que permite Jugar // FALTA DESARROLLO
-   public static void jugar() {
-    System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-    System.out.println("IncializandoJuego");
-    System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
-}
+    // Método que permite Jugar // FALTA DESARROLLO
+    public static void jugar() {
+        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println("IncializandoJuego");
+        System.out.println("═════════════════════════════════════════════════════════════════════════════════════════");
+    }
 
 }
