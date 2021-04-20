@@ -369,31 +369,28 @@ public class JuegoHP {
         return Metamorfosis;
     }
 
-    public Hechizo Hechizo() {
-        Poder Hechizo = new Poder(); //¿Se puede pasar como parámetro una lista?
-        return Hechizo;
-    }
+   
 
     // Se instancian los artefactos
     //super(nombre, amplificadorDeDanio, amplificadorDeCuracion, poder);
 
     public Artefacto CapaInvisibilidad() {
-        Artefacto CapaInvisibilidad = new Artefacto("Capa de invisibilidad", 0.1, 0.5, Invisibilidad());
+        Artefacto CapaInvisibilidad = new Artefacto("Capa de invisibilidad", 0.1, 0.5);
         return CapaInvisibilidad;
     }
     
      public Artefacto PiedraResurreccion() {
-        Artefacto PiedraResurreccion = new Artefacto("Piedra Resurrección", 0.1, 0.5, Metamorfosis());
+        Artefacto PiedraResurreccion = new Artefacto("Piedra Resurrección", 0.1, 0.5);
         return PiedraResurreccion;
     }
     
     public Artefacto VaritaSauco() {
-        Artefacto VaritaSauco = new Artefacto("VaritaSauco",  0.6,0.2, Hechizo());
+        Artefacto VaritaSauco = new Artefacto("VaritaSauco", 0.6,0.2);
         return VaritaSauco;
     }
      
     public Artefacto Horrocrux() {
-        Artefacto Horrocrux= new Artefacto("Horrocrux", 0.6, 0.2, Hechizo());
+        Artefacto Horrocrux= new Artefacto("Horrocrux", 0.6, 0.2);
         return Horrocrux;
     }
 
