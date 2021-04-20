@@ -393,11 +393,17 @@ public class JuegoHP {
         return Horrocrux;
     }
 
+    public String crearNombrePersonaje() {
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE + "Elija un nombre para su personaje mago:");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
 
-
-
-
-
+        String nombreElegido;
+        nombreElegido= Teclado.nextLine();
+        return nombreElegido;
+    }
    
 
     // Método que permite Jugar // FALTA DESARROLLO
@@ -412,8 +418,16 @@ public class JuegoHP {
 
     public void combate() {
 
-        Personaje p1 = crearPersonajeWizard();
-        Personaje p2 = crearWizardOscuro();
+        Personaje p1 = new Personaje();
+        //el usuario puede elegir el nombre de su personaje
+        p1.nombre = "SubZero";
+        p1.salud = 100;
+        p1.color = ANSI_BLUE;
+
+        Personaje p2 = new Personaje();
+        p2.nombre = "Scorpion";
+        p2.salud = 100;
+        p2.color = ANSI_YELLOW;
 
         boolean turnoP1 = true;
 
