@@ -256,6 +256,8 @@ public class JuegoHP {
     public Personaje crearPersonajeWizard() {
         Personaje wizard = new Personaje("Wizard-Mari", 75, 12, "Verde");
         wizard.setEnergiaMagica(150);//Revisar
+        wizard.setArtefacto(Capainvisibilidad);//falta instanciar
+        wizard.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
         this.personajes.add(wizard);
         return wizard;
     }
@@ -263,6 +265,8 @@ public class JuegoHP {
     public Personaje crearWizardOscuro() {
         Personaje wizardOscuro = new Personaje("Wizard-Luli", 60, 42, "Azul");
         wizardOscuro.setEnergiaMagica(150);//Revisar
+        wizardOscuro.setArtefacto(Horrocrux);//falta instanciar
+        wizard.setHechizo(aprenderHechizoRandom());
         this.personajes.add(wizardOscuro);
         return wizardOscuro;
     }
