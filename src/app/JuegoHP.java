@@ -295,6 +295,41 @@ public class JuegoHP {
         return Cavelnimicum;
     }
 
+    //Es un hechizo de curación
+    public Hechizo Anapneo() {
+        Hechizo Anapneo = new Hechizo(0, 30, 1, 5);// settear parámetros!
+        this.hechizos.add(Anapneo);
+        return Anapneo;
+    }
+
+    //Alarte ascendare: Este hechizo eleva a su objetivo por los aires.
+    public Hechizo Alarteascendare() {
+        Hechizo Alarteascendare = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(Alarteascendare);
+        return Alarteascendare;
+    }
+
+    //Salvio hexia. Permite proteger de encantamientos oscuros una zona
+    public Hechizo Salviohexia() {
+        Hechizo Salviohexia = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(Salviohexia);
+        return Salviohexia;
+    }
+
+    //Melofors. Envuelve la cabeza del enemigo con una calabaza
+    public Hechizo Melofors() {
+        Hechizo Melofors = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(Melofors);
+        return Melofors;
+    }
+
+    //Cura heridas.
+    public Hechizo Episkey() {
+        Hechizo Episkey = new Hechizo(0, 30, 1, 5);// settear parámetros
+        this.hechizos.add(Episkey);
+        return Episkey;
+    }
+
     //Método para aprender un hechizo random:
 
     public Hechizo aprenderHechizoRandom() {
