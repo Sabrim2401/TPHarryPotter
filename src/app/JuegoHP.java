@@ -418,16 +418,15 @@ public class JuegoHP {
 
     public void combate() {
 
-        Personaje p1 = new Personaje();
-        //el usuario puede elegir el nombre de su personaje
-        p1.nombre = "SubZero";
-        p1.salud = 100;
-        p1.color = ANSI_BLUE;
+        crearNombrePersonaje();
+        Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, "Verde");
+        p1.setEnergiaMagica(150);//Revisar
+        p1.setArtefacto(CapaInvisibilidad());//falta instanciar
+        p1.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
 
-        Personaje p2 = new Personaje();
-        p2.nombre = "Scorpion";
-        p2.salud = 100;
-        p2.color = ANSI_YELLOW;
+
+        Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, "Gris");
+        p2.setEnergiaMagica(150);//Revisar
 
         boolean turnoP1 = true;
 
@@ -439,7 +438,7 @@ public class JuegoHP {
         
         //mientras ambos tengan salud, pelear entre si
         //gameloop
-        while(p1.energiaMagica > 0 && p2.energiaMagica > 0){
+        while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
             
             Personaje atacante;
             Personaje oponente;
