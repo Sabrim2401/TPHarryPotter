@@ -347,7 +347,7 @@ public class JuegoHP {
 
     //Método para aprender un hechizo random:
 
-    public Hechizo aprenderHechizoRandom() {
+    public Hechizo obtenerHechizoRandom() {
 
         int max = this.hechizos.size();
         int min = 1;
@@ -439,9 +439,12 @@ public class JuegoHP {
 
 
     public void combate() {
-
+// crear variable atacante oponente
         Personaje personaje1 = crearWizard();
         Personaje personaje2 = crearElfo();
+
+        Personaje atacante;
+        Personaje oponente ;
 
         boolean turnoP1 = true;
 
@@ -450,22 +453,7 @@ public class JuegoHP {
         System.out.println(ANSI_PURPLE + "𝑪𝒐𝒎𝒊𝒆𝒏𝒛𝒂 𝒆𝒍 𝒄𝒐𝒎𝒃𝒂𝒕𝒆");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        
-        //Casteo de los personajes NI idea cóm hacerlo.
-
-            //voy a imprimir el trailer de nominados.
-            int totalPelis = 0;
-            int totalActores = 0;
-            for (IHaceMagia hacenmagia : this.hacenmagia) {
-                    
-                if (personaje2 instanceof Personaje)
-                   // totalPelis++;
-                if (personaje1 instanceof Personaje)
-                   // totalActores++;
-            }
-
-
-        while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
+         while(personaje1.estaVivo() && personaje2.estaVivo()){
 
             //Wizard atacante;
             //Elfo oponente;
@@ -479,29 +467,40 @@ public class JuegoHP {
                 oponente = p1;
             }
 
-            int max = 10;
-            int min = 2;
-            //genera un valor random entre 2 y 10
-            int danio = (int) (Math.random() * ((max - min) + 1)) + min;
 
-            System.out.println(atacante.color + atacante.nombre + " ataca a "+ oponente.nombre);
-            
-            atacante.atacarA(oponente, danio);
-            
-            System.out.println("A "+ oponente.nombre + " le queda "+ oponente.salud + " de salud");
+            System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a "+ oponente.getNombre());
+            // aca se atacan
+            if (atacante instanceof IHaceMagia){
+                IHaceMagia magico = (IHaceMagia)atacante; // esta linea es castear
+                magico.atacar(oponente, obtenerHechizoRandom()); 
+            } // equivalente a las lineas de 478 a 486 
+                /*
+            if (atacante instanceof Wizard){
+                Wizard magico = (Wizard)atacante; // esta linea es castear
+                magico.atacar(oponente, obtenerHechizoRandom()); 
+            } 
 
-            turnoP1 = !turnoP1;
+            if (atacante instanceof Elfo){
+                Elfo magico = (Elfo)atacante; // esta linea es castear
+                magico.atacar(oponente, obtenerHechizoRandom()); 
+            } 
+            */
 
-            //Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
-            Thread.sleep(3000);
+            System.out.println("A "+ oponente.getNombre() + " le queda "+ oponente.getSalud() + " de salud");
+            //CAMBIAR TURNO
+            turnoP1 = !turnoP1; // Aca cambia turno
+
+            // Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
+            Thread.sleep(3000); 
         }
 
         if (p1.getEnergiaMagica() > 0){
             System.out.println(p1.getColor()  + p1.getNombre() + " ganó!!!");
         }
         else{
-            System.out.println(p2.getNombre()  + p2.getNombre()+ " ganó!!!");
+            System.out.println(p2.getColor()  + p2.getNombre()+ " ganó!!!");
         }
+    }
 
         public Artefacto obtenerArtefactoRandom() {
 

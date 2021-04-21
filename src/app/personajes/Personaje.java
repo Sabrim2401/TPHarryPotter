@@ -60,7 +60,7 @@ public class Personaje {
         this.color = color;
     }
 
-    public boolean estaVivo(String nombre, int salud) {
+    public boolean estaVivo() {
         int estaVivo = 1;
         int saludMaxima= 100;
         if (salud > estaVivo && salud < saludMaxima){
