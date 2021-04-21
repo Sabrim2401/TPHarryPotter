@@ -451,27 +451,18 @@ public class JuegoHP {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         
-        //Casteo de los personajes
+        //Casteo de los personajes NI idea cóm hacerlo.
 
-        public void convertirPersonaje(){
             //voy a imprimir el trailer de nominados.
             int totalPelis = 0;
             int totalActores = 0;
             for (IHaceMagia hacenmagia : this.hacenmagia) {
-                nominado.reproducirTrailerNominacion();
-    
-                if (nominado instanceof Pelicula)
-                    totalPelis++;
-                if (nominado instanceof Actor)
-                    totalActores++;
+                    
+                if (personaje2 instanceof Personaje)
+                   // totalPelis++;
+                if (personaje1 instanceof Personaje)
+                   // totalActores++;
             }
-            System.out.println("Peliculas nominadas: "+ totalPelis);
-            System.out.println("Actores nominados: " + totalActores);
-        }
-
-
-
-
 
 
         while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
