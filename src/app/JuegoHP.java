@@ -422,11 +422,16 @@ public class JuegoHP {
         Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);//Revisar
         p1.setArtefacto(CapaInvisibilidad());//falta instanciar
-        p1.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
+        p1.setHechizo(VaritaSauco()); // Devuelve un hechizo random
+        p1.setPoderInicial(Metamorfosis());
+        p1.aprender(Melofors());
 
 
         Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);//Revisar
+        p2.setPoderInicial(Invisibilidad());
+        p2.setArtefacto(CapaInvisibilidad());
+        p2.aprender(Rictusempra());
 
         boolean turnoP1 = true;
 
@@ -439,10 +444,11 @@ public class JuegoHP {
         //mientras ambos tengan salud, pelear entre si
         //gameloop
         while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
-            
-/*            Wizard p1;
-            Elfo p2; */
 
+            //Wizard atacante;
+            //Elfo oponente;
+
+                       
             if (turnoP1){
                 atacante = p1;
                 oponente = p2;
