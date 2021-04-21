@@ -440,8 +440,8 @@ public class JuegoHP {
         //gameloop
         while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
             
-            Personaje atacante;
-            Personaje oponente;
+            Wizard atacante;
+            Elfo oponente;
 
             if (turnoP1){
                 atacante = p1;
