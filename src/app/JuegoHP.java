@@ -257,8 +257,8 @@ public class JuegoHP {
     public Wizard crearPersonajeWizard() {
         Wizard wizard = new Wizard("Wizard-Mari", 75, 12, "Verde");
         wizard.setEnergiaMagica(150);//Revisar
-        wizard.setArtefacto(Capainvisibilidad());//falta instanciar
-        wizard.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
+        wizard.setArtefacto(CapaInvisibilidad());//falta instanciar
+        wizard.aprenderHechizoRandom(); // Devuelve un hechizo random /// VERIFICAR
         this.personajes.add(wizard);
         return wizard;
     }
@@ -440,8 +440,8 @@ public class JuegoHP {
         //gameloop
         while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
             
-            Wizard atacante;
-            Elfo oponente;
+/*            Wizard p1;
+            Elfo p2; */
 
             if (turnoP1){
                 atacante = p1;
