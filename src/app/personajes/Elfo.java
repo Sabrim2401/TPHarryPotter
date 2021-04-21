@@ -10,12 +10,12 @@ import app.artefactos.*;
 //● Debe poder haber una pelea entre Wizard y Elfo. 
 //La forma de atacar de un Elfo se deja a libre interpretación.
 
-
 public class Elfo extends Criatura implements IHaceMagia {
 
    public Elfo(String nombre, int salud, int golpe, String color) {
       super(nombre, salud, golpe, color);
    }
+
    private int energiaMagica;
    private List<Hechizo> hechizos = new ArrayList<>();
    private Poder poderInicial;
@@ -23,46 +23,54 @@ public class Elfo extends Criatura implements IHaceMagia {
    private Artefacto artefacto;
 
    // Salud
-
+   @Override
    public int getEnergiaMagica() {
       return this.energiaMagica;
    }
 
+   @Override
    public void setEnergiaMagica(int energiaMagica) {
       this.energiaMagica = energiaMagica;
    }
-   // poder inicial
 
+   // poder inicial
+   @Override
    public Poder getPoderInicial() {
       return this.poderInicial;
    }
 
+   @Override
    public void setPoderInicial(Poder poderInicial) {
       this.poderInicial = poderInicial;
    }
 
    // poder
+   @Override
    public void setPoder(Poder poder) {
       this.poder = poder;
    }
 
    // Artefecto
+   @Override
    public Artefacto getArtefacto() {
       return this.artefacto;
    }
 
-  public void setArtefacto(Artefacto artefacto) {
+   public void setArtefacto(Artefacto artefacto) {
       this.artefacto = artefacto;
    }
 
+   @Override
    public void aprender(Hechizo h) {
       // generar metodo
    }
 
+   @Override
    public void atacar(Personaje personaje, Hechizo hechizo) {
       // generar metodo
    }
 
+   @Override
    public void atacar(Personaje personaje, String hechizo) {
       // generar metodo
 

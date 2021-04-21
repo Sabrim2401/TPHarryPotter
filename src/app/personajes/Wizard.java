@@ -36,10 +36,12 @@ public class Wizard extends Persona implements IHaceMagia {
     private Artefacto artefacto;
     private boolean magoOscuro;
 
+    @Override
     public int getEnergiaMagica() {
         return this.energiaMagica;
     }
 
+    @Override
     public void setEnergiaMagica(int energiaMagica) {
         this.energiaMagica = energiaMagica;
     }
@@ -54,7 +56,7 @@ public class Wizard extends Persona implements IHaceMagia {
     }
 
     // ARTEFACTO
-
+    @Override
     public Artefacto getArtefacto() {
         return this.artefacto;
     }
@@ -62,8 +64,9 @@ public class Wizard extends Persona implements IHaceMagia {
     public void setArtefacto(Artefacto artefacto) {
         this.artefacto = artefacto;
     }
-    // poder
 
+    // poder
+    @Override
     public Poder getPoderInicial() {
         return this.poderInicial;
     }
@@ -86,26 +89,29 @@ public class Wizard extends Persona implements IHaceMagia {
         return this.poder;
     }
 
+    @Override
     public void setPoder(Poder poder) {
         this.poder = poder;
     }
 
+    @Override
     public void aprender(Hechizo h) {
 
     }
 
+    @Override
     public void atacar(Personaje personaje, Hechizo hechizo) {
 
     }
 
+    @Override
     public void atacar(Personaje personaje, String hechizo) {
 
     }
-   /// no se si esta bien brenda
-  /*  public Boolean esMagoOscuro(){
-        if (Wizard.hechizo.septumSempra.equals(esMagoOscuro()));
-        return true; 
-    } */
-
+    /// no se si esta bien brenda
+    /*
+     * public Boolean esMagoOscuro(){ if
+     * (Wizard.hechizo.septumSempra.equals(esMagoOscuro())); return true; }
+     */
 
 }

@@ -14,8 +14,11 @@ public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
     @Override
     public boolean esReliquiaMuerte(boolean esReliquia) {
         esReliquia = true;
-        if (esReliquia == true)
+        if (esReliquia == true) {
+
             return true;
+        }
+
     }
 
     // @Override

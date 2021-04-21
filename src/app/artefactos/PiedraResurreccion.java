@@ -10,6 +10,8 @@ public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
 
     }
 
+    public int esReliquia = 1;
+
     @Override
     public boolean esReliquiaMuerte(int esReliquia) {
         if (esReliquia == 1) {

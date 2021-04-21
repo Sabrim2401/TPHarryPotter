@@ -8,9 +8,11 @@ public class Transporte {
         this.nombre = nombre;
         this.duracionDelRecorrido = duracionDelRecorrido;
     }
+
     private String nombre;
     private int duracionDelRecorrido;
-    public List<Transporte> transportes = new ArrayList<>();
+    // public List<Transporte> transportes = new ArrayList<>(); //El transporte
+    // maneja una lista transportes?
 
     public String getNombre() {
         return this.nombre;
