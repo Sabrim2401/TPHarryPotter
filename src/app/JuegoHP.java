@@ -469,11 +469,11 @@ public class JuegoHP {
             Thread.sleep(1000);
         }
 
-        if (p1.salud > 0){
-            System.out.println(p1.color + p1.nombre + " gano!!!");
+        if (p1.getEnergiaMagica() > 0){
+            System.out.println(ANSI_PURPLE + p1.getNombre() + " ganó!!!");
         }
         else{
-            System.out.println(p2.color + p2.nombre + " gano!!!");
+            System.out.println(ANSI_PURPLE + p2.getNombre()+ " ganó!!!");
 
         }
 
