@@ -101,14 +101,14 @@ public class Wizard extends Persona implements IHaceMagia {
 
     @Override
     public void atacar(Personaje personaje, Hechizo hechizo) {
-
+        int saludEnCombate = personaje.getSalud() - hechizo.getNivelDanio();
+        personaje.setSalud(saludEnCombate);
 
     }
 
     @Override
     public void atacar(Personaje personaje, String hechizo) {
-    int saludEnCombate = personaje.getSalud() - hechizo.getNivelDanio();
-    personaje.setSalud(saludEnCombate);
+
      }
 
    /* int Salud = Personaje.getSalud();
