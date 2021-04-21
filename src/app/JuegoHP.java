@@ -422,7 +422,7 @@ public class JuegoHP {
         Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);//Revisar
         p1.setArtefacto(CapaInvisibilidad());//falta instanciar
-        p1.setHechizo(VaritaSauco()); // Devuelve un hechizo random
+        p1.aprender(Salviohexia()); // Devuelve un hechizo random
         p1.setPoderInicial(Metamorfosis());
         p1.aprender(Melofors());
 
