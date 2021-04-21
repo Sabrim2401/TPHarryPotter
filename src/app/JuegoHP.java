@@ -10,6 +10,7 @@ public class JuegoHP {
     public List<Personaje> personajes = new ArrayList<>();
     public List<Artefacto> artefactos = new ArrayList<>();
     public List<Hechizo> hechizos = new ArrayList<>();
+    public List<IHaceMagia> hacenmagia = new ArrayList<>();
 
     // Agrego colores para menú
 
@@ -243,7 +244,7 @@ public class JuegoHP {
 
     public Muggle crearPersonajeMuggle() {
         Muggle muggle = new Muggle("Muggle-Caro", 100, 10, "Rojo");
-        this.personajes.add(muggle);
+        //this.personajes.add(muggle);
         return muggle;
     }
 
@@ -259,7 +260,7 @@ public class JuegoHP {
         wizard.setEnergiaMagica(150);//Revisar
         wizard.setArtefacto(CapaInvisibilidad());//falta instanciar
         wizard.aprenderHechizoRandom(); // Devuelve un hechizo random /// VERIFICAR
-        this.personajes.add(wizard);
+        //this.personajes.add(wizard);
         return wizard;
     }
 
@@ -268,7 +269,7 @@ public class JuegoHP {
         wizardOscuro.setEnergiaMagica(150);//Revisar
         wizardOscuro.setArtefacto(Horrocrux());//falta instanciar
         wizardOscuro.setHechizo(aprenderHechizoRandom());
-        this.personajes.add(wizardOscuro);
+        //this.personajes.add(wizardOscuro);
         return wizardOscuro;
     }
 
@@ -422,16 +423,16 @@ public class JuegoHP {
         Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);//Revisar
         p1.setArtefacto(CapaInvisibilidad());//falta instanciar
-        p1.aprender(Salviohexia()); // Devuelve un hechizo random
         p1.setPoderInicial(Metamorfosis());
         p1.aprender(Melofors());
-
-
+        this.personajes.add(p1);
+        
         Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);//Revisar
         p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
         p2.aprender(Rictusempra());
+        this.personajes.add(p2);
 
         boolean turnoP1 = true;
 
@@ -448,7 +449,6 @@ public class JuegoHP {
             //Wizard atacante;
             //Elfo oponente;
 
-                       
             if (turnoP1){
                 atacante = p1;
                 oponente = p2;
