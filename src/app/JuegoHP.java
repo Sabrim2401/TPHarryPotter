@@ -3,8 +3,10 @@ package app;
 import java.util.*;
 import app.personajes.*;
 import app.artefactos.*;
+import app.interfaces.IHaceMagia;
 import app.poderes.hechizos.*;
 import app.poderes.*;
+
 
 public class JuegoHP {
     public List<Personaje> personajes = new ArrayList<>();
@@ -417,22 +419,29 @@ public class JuegoHP {
         elegirPersonaje();
     }
 
-    public void combate() {
-
+    public Wizard crearWizard() {
         crearNombrePersonaje();
         Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);//Revisar
         p1.setArtefacto(CapaInvisibilidad());//falta instanciar
         p1.setPoderInicial(Metamorfosis());
         p1.aprender(Melofors());
-        this.personajes.add(p1);
-        
+        return p1;
+    }
+    public Elfo crearElfo() {
         Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);//Revisar
         p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
         p2.aprender(Rictusempra());
-        this.personajes.add(p2);
+        return p2;
+    }
+
+
+    public void combate() {
+
+        Personaje personaje1 = crearWizard();
+        Personaje personaje2 = crearElfo();
 
         boolean turnoP1 = true;
 
@@ -442,8 +451,29 @@ public class JuegoHP {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         
-        //mientras ambos tengan salud, pelear entre si
-        //gameloop
+        //Casteo de los personajes
+
+        public void convertirPersonaje(){
+            //voy a imprimir el trailer de nominados.
+            int totalPelis = 0;
+            int totalActores = 0;
+            for (IHaceMagia hacenmagia : this.hacenmagia) {
+                nominado.reproducirTrailerNominacion();
+    
+                if (nominado instanceof Pelicula)
+                    totalPelis++;
+                if (nominado instanceof Actor)
+                    totalActores++;
+            }
+            System.out.println("Peliculas nominadas: "+ totalPelis);
+            System.out.println("Actores nominados: " + totalActores);
+        }
+
+
+
+
+
+
         while(p1.getEnergiaMagica() > 0 && p2.getEnergiaMagica() > 0){
 
             //Wizard atacante;
