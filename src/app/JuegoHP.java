@@ -419,13 +419,13 @@ public class JuegoHP {
     public void combate() {
 
         crearNombrePersonaje();
-        Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, "Verde");
+        Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);//Revisar
         p1.setArtefacto(CapaInvisibilidad());//falta instanciar
         p1.setHechizo(aprenderHechizoRandom()); // Devuelve un hechizo random
 
 
-        Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, "Gris");
+        Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);//Revisar
 
         boolean turnoP1 = true;
@@ -466,15 +466,14 @@ public class JuegoHP {
             turnoP1 = !turnoP1;
 
             //Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
-            Thread.sleep(1000);
+            Thread.sleep(3000);
         }
 
         if (p1.getEnergiaMagica() > 0){
-            System.out.println(ANSI_PURPLE + p1.getNombre() + " ganó!!!");
+            System.out.println(p1.getColor()  + p1.getNombre() + " ganó!!!");
         }
         else{
-            System.out.println(ANSI_PURPLE + p2.getNombre()+ " ganó!!!");
-
+            System.out.println(p2.getNombre()  + p2.getNombre()+ " ganó!!!");
         }
 
         public Artefacto obtenerArtefactoRandom() {
