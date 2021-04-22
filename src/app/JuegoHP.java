@@ -280,65 +280,69 @@ public class JuegoHP {
 
     public SectumSempra SectumSempra() {
         SectumSempra SectumSempra = new SectumSempra(30, 0, 15, 24);
+        SectumSempra.setDescripcionDelPoder("Su efecto es el equivalente al de un cuchillo invisible");
         this.hechizos.add(SectumSempra);
         return SectumSempra;
     }
 
     public VulneraSanentur VulneraSanentur() {
         VulneraSanentur VulneraSanentur = new VulneraSanentur(0, 30, 10, 10);
+        VulneraSanentur.setDescripcionDelPoder("Sana heridas profundas");
         this.hechizos.add(VulneraSanentur);
         return VulneraSanentur;
     }
 
     public WingwardumLeviosa WingwardumLeviosa() {
         WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(10, 0, 1, 5);
+        WingwardumLeviosa.setDescripcionDelPoder("Hace que el enemigo vuele o levite");
         return WingwardumLeviosa;
     }
 
     public Cavelnimicum Cavelnimicum() {
-        Cavelnimicum Cavelnimicum = new Cavelnimicum(25, 14, 5, 10);
+        Cavelnimicum Cavelnimicum = new Cavelnimicum(25, 5, 5, 10);
+        Cavelnimicum.setDescripcionDelPoder("Hace que el enemigo sienta que se está cayendo por un precipicio");
         this.hechizos.add(Cavelnimicum);
         return Cavelnimicum;
     }
 
-    // Es un hechizo de curación
     public HechizoCuracion Anapneo() {
-        HechizoCuracion Anapneo = new HechizoCuracion(0, 30, 1, 5);// settear parámetros!
+        HechizoCuracion Anapneo = new HechizoCuracion(5, 30, 5, 6);
+        Anapneo.setDescripcionDelPoder("Despeja las vías respiratorias de una persona");
         // this.hechizos.add(Anapneo);
         return Anapneo;
     }
 
-    // Alarte ascendare: Este hechizo eleva a su objetivo por los aires.
     public Hechizo Alarteascendare() {
-        Hechizo Alarteascendare = new Hechizo(0, 30, 1, 5);// settear parámetros
+        Hechizo Alarteascendare = new Hechizo(0, 30, 1, 5);
+        Alarteascendare.setDescripcionDelPoder("Este hechizo eleva a su objetivo por los aires");
         // this.hechizos.add(Alarteascendare);
         return Alarteascendare;
     }
 
-    // Salvio hexia. Permite proteger de encantamientos oscuros una zona
     public HechizoDefensa Salviohexia() {
         HechizoDefensa Salviohexia = new HechizoDefensa(0, 30, 15, 20);
+        Salviohexia.setDescripcionDelPoder("Permite proteger de encantamientos oscuros una zona");
         this.hechizos.add(Salviohexia);
         return Salviohexia;
     }
 
-    // Melofors. Envuelve la cabeza del enemigo con una calabaza
     public HechizoAtaque Melofors() {
         HechizoAtaque Melofors = new HechizoAtaque(20, 0, 10, 10);
+        Melofors.setDescripcionDelPoder("Envuelve la cabeza del enemigo con una calabaza");
         this.hechizos.add(Melofors);
         return Melofors;
     }
 
-    // Cura heridas.
     public HechizoCuracion Episkey() {
-        HechizoCuracion Episkey = new HechizoCuracion(0, 30, 1, 5);// settear parámetros
+        HechizoCuracion Episkey = new HechizoCuracion(2, 17, 1, 5);
+        Episkey.setDescripcionDelPoder("Cura heridas");
         // this.hechizos.add(Episkey);
         return Episkey;
     }
 
-    // Genera cosquillas en la víctima
     public HechizoOcio Rictusempra() {
-        HechizoOcio Rictusempra = new HechizoOcio(0, 30, 1, 5);// settear parámetros
+        HechizoOcio Rictusempra = new HechizoOcio(10, 0, 1, 5);
+        Rictusempra.setDescripcionDelPoder("Genera cosquillas en la víctima");
         // this.hechizos.add(Rictusempra);
         return Rictusempra;
     }
@@ -487,11 +491,13 @@ public class JuegoHP {
             if (atacante instanceof Wizard) {
                 Wizard magico = (Wizard) atacante; // esta linea es castear
                 magico.atacar(oponente, elegirHechizo());
+                
             }
 
             if (atacante instanceof Elfo) {
                 Elfo magico = (Elfo) atacante; // esta linea es castear
                 magico.atacar(oponente, obtenerHechizoRandom());
+                
             }
 
             System.out.println("A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
