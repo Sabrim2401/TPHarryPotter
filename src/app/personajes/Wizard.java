@@ -84,6 +84,14 @@ public class Wizard extends Persona implements IHaceMagia {
         this.magoOscuro = magoOscuro;
     }
 
+    public List<Hechizo> getHechizo() {
+        return this.hechizos;
+    }
+
+    public void setHechizo(List<Hechizo> hechizos) {
+        this.hechizos = hechizos;
+    }
+
     // poder
     public Poder getPoder() {
         return this.poder;
