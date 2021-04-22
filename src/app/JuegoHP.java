@@ -303,8 +303,8 @@ public class JuegoHP {
     }
 
     //Es un hechizo de curación
-    public Hechizo Anapneo() {
-        Hechizo Anapneo = new Hechizo(0, 30, 1, 5);// settear parámetros!
+    public HechizoCuracion Anapneo() {
+        HechizoCuracion Anapneo = new HechizoCuracion(0, 30, 1, 5);// settear parámetros!
         //this.hechizos.add(Anapneo);
         return Anapneo;
     }
@@ -331,15 +331,15 @@ public class JuegoHP {
     }
 
     //Cura heridas.
-    public Hechizo Episkey() {
-        Hechizo Episkey = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public HechizoCuracion Episkey() {
+        HechizoCuracion Episkey = new HechizoCuracion(0, 30, 1, 5);// settear parámetros
         //this.hechizos.add(Episkey);
         return Episkey;
     }
 
      //Genera cosquillas en la víctima
-    public Hechizo Rictusempra() {
-        Hechizo Rictusempra = new Hechizo(0, 30, 1, 5);// settear parámetros
+    public HechizoOcio Rictusempra() {
+        HechizoOcio Rictusempra = new HechizoOcio(0, 30, 1, 5);// settear parámetros
         //this.hechizos.add(Rictusempra);
         return Rictusempra;
     }
