@@ -22,6 +22,16 @@ public class Elfo extends Criatura implements IHaceMagia {
    private Poder poder;
    private Artefacto artefacto;
 
+   //Agrego setter y getter de hechizos
+
+   public List<Hechizo> getHechizo() {
+      return this.hechizos;
+  }
+
+  public void setHechizo(List<Hechizo> hechizos) {
+      this.hechizos = hechizos;
+  }
+
    // Salud
    @Override
    public int getEnergiaMagica() {
