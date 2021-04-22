@@ -420,18 +420,17 @@ public class JuegoHP {
     }
 
     public Wizard crearWizard() {
-        crearNombrePersonaje();
-        Wizard p1 = new Wizard(crearNombrePersonaje(), 150, 12, ANSI_WHITE);
+        Wizard p1 = new Wizard("Julieta", 100, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);//Revisar
         p1.setArtefacto(CapaInvisibilidad());//falta instanciar
-        p1.setPoderInicial(Metamorfosis());
+       // p1.setPoderInicial(Metamorfosis());
         p1.aprender(Melofors());
         return p1;
     }
     public Elfo crearElfo() {
-        Elfo p2 = new Elfo("Elfo-Chabri", 50, 15, ANSI_BLUE);
+        Elfo p2 = new Elfo("Elfo-Chabri", 100, 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);//Revisar
-        p2.setPoderInicial(Invisibilidad());
+        //p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
         p2.aprender(Rictusempra());
         return p2;
@@ -459,12 +458,12 @@ public class JuegoHP {
             //Elfo oponente;
 
             if (turnoP1){
-                atacante = p1;
-                oponente = p2;
+                atacante = personaje1;
+                oponente = personaje2;
             }
             else{
-                atacante = p2;
-                oponente = p1;
+                atacante = personaje2;
+                oponente = personaje1;
             }
 
 
@@ -491,14 +490,14 @@ public class JuegoHP {
             turnoP1 = !turnoP1; // Aca cambia turno
 
             // Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
-            Thread.sleep(3000); 
+            //Thread.sleep(3000); 
         }
 
-        if (p1.getEnergiaMagica() > 0){
-            System.out.println(p1.getColor()  + p1.getNombre() + " ganó!!!");
+        if (personaje1.getSalud() > 0){
+            System.out.println(personaje1.getColor()  + personaje1.getNombre() + " ganó!!!");
         }
         else{
-            System.out.println(p2.getColor()  + p2.getNombre()+ " ganó!!!");
+            System.out.println(personaje2.getColor()  + personaje2.getNombre()+ " ganó!!!");
         }
     }
 
