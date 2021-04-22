@@ -280,6 +280,7 @@ public class JuegoHP {
 
     public SectumSempra SectumSempra() {
         SectumSempra SectumSempra = new SectumSempra(30, 0, 15, 24);
+        SectumSempra.setNombreDelPoder("Sectumsempra");
         SectumSempra.setDescripcionDelPoder("Su efecto es el equivalente al de un cuchillo invisible");
         this.hechizos.add(SectumSempra);
         return SectumSempra;
@@ -287,6 +288,7 @@ public class JuegoHP {
 
     public VulneraSanentur VulneraSanentur() {
         VulneraSanentur VulneraSanentur = new VulneraSanentur(0, 30, 10, 10);
+        VulneraSanentur.setNombreDelPoder("Vulnera Sanentura");
         VulneraSanentur.setDescripcionDelPoder("Sana heridas profundas");
         this.hechizos.add(VulneraSanentur);
         return VulneraSanentur;
@@ -294,12 +296,14 @@ public class JuegoHP {
 
     public WingwardumLeviosa WingwardumLeviosa() {
         WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(10, 0, 1, 5);
+        WingwardumLeviosa.setNombreDelPoder("Wingardium leviosa");
         WingwardumLeviosa.setDescripcionDelPoder("Hace que el enemigo vuele o levite");
         return WingwardumLeviosa;
     }
 
     public Cavelnimicum Cavelnimicum() {
         Cavelnimicum Cavelnimicum = new Cavelnimicum(25, 5, 5, 10);
+        Cavelnimicum.setNombreDelPoder("Cavelnimicum");
         Cavelnimicum.setDescripcionDelPoder("Hace que el enemigo sienta que se está cayendo por un precipicio");
         this.hechizos.add(Cavelnimicum);
         return Cavelnimicum;
@@ -307,6 +311,7 @@ public class JuegoHP {
 
     public HechizoCuracion Anapneo() {
         HechizoCuracion Anapneo = new HechizoCuracion(5, 30, 5, 6);
+        Anapneo.setNombreDelPoder("Anapneo");
         Anapneo.setDescripcionDelPoder("Despeja las vías respiratorias de una persona");
         // this.hechizos.add(Anapneo);
         return Anapneo;
@@ -314,6 +319,7 @@ public class JuegoHP {
 
     public Hechizo Alarteascendare() {
         Hechizo Alarteascendare = new Hechizo(0, 30, 1, 5);
+        Alarteascendare.setNombreDelPoder("Alarte Ascendare");
         Alarteascendare.setDescripcionDelPoder("Este hechizo eleva a su objetivo por los aires");
         // this.hechizos.add(Alarteascendare);
         return Alarteascendare;
@@ -321,6 +327,7 @@ public class JuegoHP {
 
     public HechizoDefensa Salviohexia() {
         HechizoDefensa Salviohexia = new HechizoDefensa(0, 30, 15, 20);
+        Salviohexia.setNombreDelPoder("Salvio Hexia");
         Salviohexia.setDescripcionDelPoder("Permite proteger de encantamientos oscuros una zona");
         this.hechizos.add(Salviohexia);
         return Salviohexia;
@@ -328,6 +335,7 @@ public class JuegoHP {
 
     public HechizoAtaque Melofors() {
         HechizoAtaque Melofors = new HechizoAtaque(20, 0, 10, 10);
+        Melofors.setNombreDelPoder("Melofors");
         Melofors.setDescripcionDelPoder("Envuelve la cabeza del enemigo con una calabaza");
         this.hechizos.add(Melofors);
         return Melofors;
@@ -335,6 +343,7 @@ public class JuegoHP {
 
     public HechizoCuracion Episkey() {
         HechizoCuracion Episkey = new HechizoCuracion(2, 17, 1, 5);
+        Episkey.setNombreDelPoder("Episkey");
         Episkey.setDescripcionDelPoder("Cura heridas");
         // this.hechizos.add(Episkey);
         return Episkey;
@@ -342,6 +351,7 @@ public class JuegoHP {
 
     public HechizoOcio Rictusempra() {
         HechizoOcio Rictusempra = new HechizoOcio(10, 0, 1, 5);
+        Rictusempra.setNombreDelPoder("Rictusempra");
         Rictusempra.setDescripcionDelPoder("Genera cosquillas en la víctima");
         // this.hechizos.add(Rictusempra);
         return Rictusempra;
@@ -511,17 +521,17 @@ public class JuegoHP {
 
             if (turnoP2) {
                 atacante = personaje2;
-               oponente = personaje1;
+                oponente = personaje1;
             } else {
                 atacante = personaje1;
                 oponente = personaje2;
             }
 
-            System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a " +
-             oponente.getNombre());
+            //System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a " +
+            // oponente.getNombre());
             // aca se atacan
             if (atacante instanceof Wizard) {
-                Wizard magico = (Wizard) oponente; // esta linea es castear
+                Wizard magico = (Wizard) atacante; // esta linea es castear
                 magico.atacar(oponente, elegirHechizo());
             }
 
