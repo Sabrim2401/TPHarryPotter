@@ -440,7 +440,7 @@ public class JuegoHP {
 
         int contador = 1;
         for (Hechizo hechizo : this.hechizos) {
-            System.out.println(contador + ")" + hechizo.getNombreDelPoder()+ ": "+ hechizo.getDescripcionDelPoder());
+            System.out.println(contador + ")" + hechizo.getNombreDelPoder() + ": " + hechizo.getDescripcionDelPoder());
             contador++;
         }
 
@@ -451,8 +451,7 @@ public class JuegoHP {
     }
 
     public Artefacto elegirArtefacto() {
-        System.out.println(
-                ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐚𝐫𝐭𝐞𝐟𝐚𝐜𝐭𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
+        System.out.println(ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐚𝐫𝐭𝐞𝐟𝐚𝐜𝐭𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
 
         int contador = 1;
         for (Artefacto artefacto : this.artefactos) {
@@ -466,17 +465,14 @@ public class JuegoHP {
         return this.artefactos.get(opcion - 1);
     }
 
-
-
-
-
-
     public Wizard crearWizard() {
         Wizard p1 = new Wizard("Julieta", 100, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);
-        p1.setArtefacto(CapaInvisibilidad());
+        p1.setArtefacto(VaritaSauco());
         // p1.setPoderInicial(Metamorfosis());
+        p1.aprender(Rictusempra());
         p1.aprender(Melofors());
+        p1.aprender(WingwardumLeviosa());
         return p1;
     }
 
@@ -486,102 +482,30 @@ public class JuegoHP {
         // p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
         p2.aprender(Rictusempra());
+        p2.aprender(SectumSempra());
+        p2.aprender(Anapneo());
+
+
         return p2;
     }
 
-    public void combate() {
-        // crear variable atacante oponente
+    public void combate() throws InterruptedException {
+        mensajeInicioCombate();
         Personaje personaje1 = crearWizard();
         Personaje personaje2 = crearElfo();
-
-        Personaje atacante;
-        Personaje oponente;
-
         boolean turnoP1 = true;
-
-        System.out.println(ANSI_CYAN
-                + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "𝑪𝒐𝒎𝒊𝒆𝒏𝒛𝒂 𝒆𝒍 𝒄𝒐𝒎𝒃𝒂𝒕𝒆");
-        System.out.println(ANSI_CYAN
-                + "═════════════════════════════════════════════════════════════════════════════════════════");
-        // while(personaje1.estaVivo() && personaje2.estaVivo()) {
-        do {
-
-            if (turnoP1) {
-                atacante = personaje1;
-                oponente = personaje2;
-            } else {
-                atacante = personaje2;
-                oponente = personaje1;
-            }
-
-            // System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a " +
-            // oponente.getNombre());
-            // aca se atacan
-            /*
-             * if (atacante instanceof IHaceMagia){ IHaceMagia magico =
-             * (IHaceMagia)atacante; // esta linea es castear magico.atacar(oponente,
-             * obtenerHechizoRandom()); } // equivalente a las lineas de 478 a 486
-             */
-            if (atacante instanceof Wizard) {
-                Wizard magico = (Wizard) atacante; // esta linea es castear
-                magico.atacar(oponente, elegirHechizo());
-                System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
-                                
-            }
-
-            if (atacante instanceof Elfo) {
-                Elfo magico = (Elfo) atacante; // esta linea es castear
-                magico.atacar(oponente, obtenerHechizoRandom());
-                System.out.println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
-                
-            }
-
-            System.out.println("A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
-            System.out.println(ANSI_GREEN + "Ahora es el turno de " + oponente.getNombre());
-            // CAMBIAR TURNO
+        boolean turnoP2 = true;
+        while (personaje1.estaVivo() && personaje2.estaVivo())
+            ;
+        {
+            chequearTurnoP1();
+            Thread.sleep(3000);
             turnoP1 = !turnoP1; // Aca cambia turno
-
-            // chabri
-            boolean turnoP2 = true; // chabri
-
-            if (turnoP2) {
-                atacante = personaje2;
-                oponente = personaje1;
-            } else {
-                atacante = personaje1;
-                oponente = personaje2;
-            }
-
-            //System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a " +
-            // oponente.getNombre());
-            // aca se atacan
-            if (atacante instanceof Wizard) {
-                Wizard magico = (Wizard) atacante; // esta linea es castear
-                magico.atacar(oponente, elegirHechizo());
-            }
-
-            if (atacante instanceof Elfo) {
-                Elfo magico = (Elfo) atacante; // esta linea es castear
-                magico.atacar(oponente, obtenerHechizoRandom());
-            }
-            System.out.println("A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
-            System.out.println(ANSI_GREEN + "Ahora es el turno de " + oponente.getNombre());
+            chequearTurnoP2();
+            Thread.sleep(3000);
             turnoP2 = !turnoP2;
-            // chabri
-            // Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
-            // Thread.sleep(3000);
-
-            /*
-             * if (personaje1.getSalud() > 0) { System.out.println(personaje1.getColor() +
-             * personaje1.getNombre() + " ganó!!!"); } else {
-             * System.out.println(personaje2.getColor() + personaje2.getNombre() +
-             * " ganó!!!"); }
-             */
-
-        } while (personaje1.estaVivo() && personaje2.estaVivo());
-
-        if (personaje1.getSalud() == 0) { // modificado por sabri era: personaje1.getSalud > 0
+        }
+        if (personaje1.getSalud() == 0) {
             System.out.println(personaje2.getColor() + personaje2.getNombre() + " ganó!!!");
         } else if (personaje2.getSalud() == 0) { // agrego else if
             System.out.println(personaje1.getColor() + personaje1.getNombre() + " ganó!!!");
@@ -598,4 +522,67 @@ public class JuegoHP {
 
     }
 
+    public boolean chequearTurnoP1() { // poner otro nombre de funcion
+        Personaje personaje1 = crearWizard();
+        Personaje personaje2 = crearElfo();
+
+        Personaje atacante;
+        Personaje oponente;
+
+        boolean turnoP1 = true;
+
+        if (turnoP1) {
+            atacante = personaje1;
+            oponente = personaje2;
+        } else {
+            atacante = personaje2;
+            oponente = personaje1;
+        }
+        if (atacante instanceof Wizard) {
+            Wizard magico = (Wizard) atacante; // esta linea es castear
+            magico.atacar(oponente, elegirHechizo());
+            System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
+            System.out.println(
+                    ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre());
+        }
+        return true;
+
+    }
+
+    public boolean chequearTurnoP2() {
+        Personaje personaje1 = crearWizard();
+        Personaje personaje2 = crearElfo();
+        Personaje atacante;
+        Personaje oponente;
+
+        boolean turnoP2 = true; // chabri
+
+        if (turnoP2) {
+            atacante = personaje2;
+            oponente = personaje1;
+        } else {
+            atacante = personaje1;
+            oponente = personaje2;
+        }
+        if (atacante instanceof Elfo) {
+            Elfo magico = (Elfo) atacante; // esta linea es castear
+            magico.atacar(oponente, obtenerHechizoRandom());
+            System.out
+                    .println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
+            System.out
+                    .println(ANSI_RED + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_YELLOW + "Ahora es el turno de " + oponente.getNombre());
+
+        }
+        return true;
+    }
+
+    public void mensajeInicioCombate() {
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+        System.out.println(ANSI_PURPLE + "𝑪𝒐𝒎𝒊𝒆𝒏𝒛𝒂 𝒆𝒍 𝒄𝒐𝒎𝒃𝒂𝒕𝒆");
+        System.out.println(ANSI_CYAN
+                + "═════════════════════════════════════════════════════════════════════════════════════════");
+    }
 }
