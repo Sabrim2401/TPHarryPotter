@@ -1,6 +1,5 @@
 package app.artefactos;
 
-import app.poderes.*;
 import app.interfaces.IReliquiaMuerte;
 
 public class Horrocrux extends Artefacto implements IReliquiaMuerte {
