@@ -313,20 +313,20 @@ public class JuegoHP {
         HechizoCuracion Anapneo = new HechizoCuracion(5, 30, 5, 6);
         Anapneo.setNombreDelPoder("Anapneo");
         Anapneo.setDescripcionDelPoder("Despeja las vías respiratorias de una persona");
-        // this.hechizos.add(Anapneo);
+        this.hechizos.add(Anapneo);
         return Anapneo;
     }
 
-    public Hechizo Alarteascendare() {
-        Hechizo Alarteascendare = new Hechizo(0, 30, 1, 5);
+    public HechizoAtaque Alarteascendare() {
+        HechizoAtaque Alarteascendare = new HechizoAtaque(0, 30, 1, 5);
         Alarteascendare.setNombreDelPoder("Alarte Ascendare");
-        Alarteascendare.setDescripcionDelPoder("Este hechizo eleva a su objetivo por los aires");
-        // this.hechizos.add(Alarteascendare);
+        Alarteascendare.setDescripcionDelPoder("Eleva a su objetivo por los aires");
+        this.hechizos.add(Alarteascendare);
         return Alarteascendare;
     }
 
     public HechizoDefensa Salviohexia() {
-        HechizoDefensa Salviohexia = new HechizoDefensa(0, 30, 15, 20);
+        HechizoDefensa Salviohexia = new HechizoDefensa(2, 15, 15, 20);
         Salviohexia.setNombreDelPoder("Salvio Hexia");
         Salviohexia.setDescripcionDelPoder("Permite proteger de encantamientos oscuros una zona");
         this.hechizos.add(Salviohexia);
@@ -345,7 +345,7 @@ public class JuegoHP {
         HechizoCuracion Episkey = new HechizoCuracion(2, 17, 1, 5);
         Episkey.setNombreDelPoder("Episkey");
         Episkey.setDescripcionDelPoder("Cura heridas");
-        // this.hechizos.add(Episkey);
+        this.hechizos.add(Episkey);
         return Episkey;
     }
 
@@ -353,7 +353,7 @@ public class JuegoHP {
         HechizoOcio Rictusempra = new HechizoOcio(10, 0, 1, 5);
         Rictusempra.setNombreDelPoder("Rictusempra");
         Rictusempra.setDescripcionDelPoder("Genera cosquillas en la víctima");
-        // this.hechizos.add(Rictusempra);
+        this.hechizos.add(Rictusempra);
         return Rictusempra;
     }
 
@@ -436,7 +436,7 @@ public class JuegoHP {
 
         int contador = 1;
         for (Hechizo hechizo : this.hechizos) {
-            System.out.println(contador + ")" + hechizo.getNombreDelPoder());
+            System.out.println(contador + ")" + hechizo.getNombreDelPoder()+ ": "+ hechizo.getDescripcionDelPoder());
             contador++;
         }
 
@@ -502,7 +502,7 @@ public class JuegoHP {
                 Wizard magico = (Wizard) atacante; // esta linea es castear
                 magico.atacar(oponente, elegirHechizo());
                 System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
-                
+                                
             }
 
             if (atacante instanceof Elfo) {
