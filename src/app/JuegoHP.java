@@ -390,21 +390,25 @@ public class JuegoHP {
 
     public CapaInvisibilidad CapaInvisibilidad() {
         CapaInvisibilidad CapaInvisibilidad = new CapaInvisibilidad("Capa de invisibilidad", 0.1, 0.5);
+        this.artefactos.add(CapaInvisibilidad);
         return CapaInvisibilidad;
     }
 
     public PiedraResurreccion PiedraResurreccion() {
         PiedraResurreccion PiedraResurreccion = new PiedraResurreccion("Piedra Resurrección", 0.1, 0.5);
+        this.artefactos.add(PiedraResurreccion);
         return PiedraResurreccion;
     }
 
     public VaritaSauco VaritaSauco() {
         VaritaSauco VaritaSauco = new VaritaSauco("VaritaSauco", 0.6, 0.2);
+        this.artefactos.add(VaritaSauco);
         return VaritaSauco;
     }
 
     public Horrocrux Horrocrux() {
         Horrocrux Horrocrux = new Horrocrux("Horrocrux", 0.6, 0.2);
+        this.artefactos.add(Horrocrux);
         return Horrocrux;
     }
 
@@ -445,6 +449,27 @@ public class JuegoHP {
         Teclado.nextLine();
         return this.hechizos.get(opcion - 1);
     }
+
+    public Artefacto elegirArtefacto() {
+        System.out.println(
+                ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐚𝐫𝐭𝐞𝐟𝐚𝐜𝐭𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
+
+        int contador = 1;
+        for (Artefacto artefacto : this.artefactos) {
+            System.out.println(contador + ")" + artefacto.getNombre());
+            contador++;
+        }
+
+        int opcion = 0;
+        opcion = Teclado.nextInt();
+        Teclado.nextLine();
+        return this.artefactos.get(opcion - 1);
+    }
+
+
+
+
+
 
     public Wizard crearWizard() {
         Wizard p1 = new Wizard("Julieta", 100, 12, ANSI_WHITE);
@@ -513,6 +538,7 @@ public class JuegoHP {
             }
 
             System.out.println("A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_GREEN + "Ahora es el turno de " + oponente.getNombre());
             // CAMBIAR TURNO
             turnoP1 = !turnoP1; // Aca cambia turno
 
@@ -540,6 +566,7 @@ public class JuegoHP {
                 magico.atacar(oponente, obtenerHechizoRandom());
             }
             System.out.println("A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_GREEN + "Ahora es el turno de " + oponente.getNombre());
             turnoP2 = !turnoP2;
             // chabri
             // Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
