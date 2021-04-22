@@ -106,7 +106,7 @@ public class JuegoHP {
     public static void listarMenu() {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "JUEGO HDP");
+        System.out.println(ANSI_PURPLE + "JUEGO HARRY POTTER");
         System.out.println(ANSI_PURPLE + " 1- ■ Jugar");
         System.out.println(ANSI_PURPLE + " 2- ■ Ver historia");
         System.out.println(ANSI_PURPLE + " 3- ■ Listar créditos");
@@ -418,7 +418,6 @@ public class JuegoHP {
         elegirPersonaje();
     }
 
-        // Método que permite Jugar // FALTA DESARROLLO
     public Hechizo elegirHechizo() {
         System.out.println(ANSI_CYAN + "Elija el número de hechizo que quiere utilizar");
 
@@ -431,13 +430,8 @@ public class JuegoHP {
         int opcion = 0;
         opcion = Teclado.nextInt();
         Teclado.nextLine();
-        return this.hechizos.get(opcion-1);
-               
+        return this.hechizos.get(opcion-1);            
         }
-
-
-
-
 
     public Wizard crearWizard() {
         Wizard p1 = new Wizard("Julieta", 100, 12, ANSI_WHITE);
