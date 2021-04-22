@@ -82,12 +82,12 @@ public class JuegoHP {
     public void listarCreditos() {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_GREEN + " Juego desarrollado por:");
-        System.out.println(ANSI_GREEN + " ■ Sabrina Meli");
-        System.out.println(ANSI_GREEN + " ■ Brenda Monteagudo");
-        System.out.println(ANSI_GREEN + " ■ Carolina Portillo");
-        System.out.println(ANSI_GREEN + " ■ Luli Nieva");
-        System.out.println(ANSI_GREEN + " ■ Mariana Avilano");
+        System.out.println(ANSI_GREEN + " 𝘑𝘶𝘦𝘨𝘰 𝘥𝘦𝘴𝘢𝘳𝘳𝘰𝘭𝘭𝘢𝘥𝘰 𝘱𝘰𝘳:");
+        System.out.println(ANSI_GREEN + " ■ 𝑆𝑎𝑏𝑟𝑖𝑛𝑎 𝑀𝑒𝑙𝑖");
+        System.out.println(ANSI_GREEN + " ■ 𝐵𝑟𝑒𝑛𝑑𝑎 𝑀𝑜𝑛𝑡𝑒𝑎𝑔𝑢𝑑𝑜");
+        System.out.println(ANSI_GREEN + " ■ 𝐶𝑎𝑟𝑜𝑙𝑖𝑛𝑎 𝑃𝑜𝑟𝑡𝑖𝑙𝑙𝑜");
+        System.out.println(ANSI_GREEN + " ■ 𝐿𝑢𝑙𝑖 𝑁𝑖𝑒𝑣𝑎");
+        System.out.println(ANSI_GREEN + " ■ 𝑀𝑎𝑟𝑖𝑎𝑛𝑎 𝐴𝑣𝑖𝑙𝑎𝑛𝑜");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         volverMenuPrincipal();
@@ -97,7 +97,7 @@ public class JuegoHP {
     public static void salirDelJuego() {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "¡𝔊𝔯𝔞𝔠𝔦𝔞𝔰 𝔭𝔬𝔯 𝔧𝔲𝔤𝔞𝔯!¡ℌ𝔞𝔰𝔱𝔞 𝔩𝔞 𝔭𝔯𝔬́𝔵𝔦𝔪𝔞!");
+        System.out.println(ANSI_PURPLE + "¡𝐺𝑟𝑎𝑐𝑖𝑎𝑠 𝑝𝑜𝑟 𝑗𝑢𝑔𝑎𝑟! ¡𝐻𝑎𝑠𝑡𝑎 𝑙𝑎 𝑝𝑟𝑜́𝑥𝑖𝑚𝑎!");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
     }
@@ -106,11 +106,11 @@ public class JuegoHP {
     public static void listarMenu() {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "JUEGO HARRY POTTER");
-        System.out.println(ANSI_PURPLE + " 1- ■ Jugar");
-        System.out.println(ANSI_PURPLE + " 2- ■ Ver historia");
-        System.out.println(ANSI_PURPLE + " 3- ■ Listar créditos");
-        System.out.println(ANSI_PURPLE + " 4- ■ Salir");
+        System.out.println(ANSI_PURPLE + "𝐽𝑈𝐸𝐺𝑂 𝐻𝐴𝑅𝑅𝑌 𝑃𝑂𝑇𝑇𝐸𝑅");
+        System.out.println(ANSI_PURPLE + " 1- ■ 𝐽𝑢𝑔𝑎𝑟");
+        System.out.println(ANSI_PURPLE + " 2- ■ 𝘝𝘦𝘳 𝘩𝘪𝘴𝘵𝘰𝘳𝘪𝘢");
+        System.out.println(ANSI_PURPLE + " 3- ■ 𝐿𝑖𝑠𝑡𝑎𝑟 𝑐𝑟𝑒́𝑑𝑖𝑡𝑜𝑠");
+        System.out.println(ANSI_PURPLE + " 4- ■ 𝑆𝑎𝑙𝑖𝑟");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
 
@@ -122,11 +122,11 @@ public class JuegoHP {
         Scanner sc = new Scanner(System.in);
         int opcion;
         do {
-            System.out.println(ANSI_PURPLE + "Ingrese una opción ---->");
+            System.out.println(ANSI_PURPLE + "𝐼𝑛𝑔𝑟𝑒𝑠𝑒 𝑢𝑛𝑎 𝑜𝑝𝑐𝑖𝑜́𝑛 ---->");
             System.out.println(ANSI_CYAN
                     + "═════════════════════════════════════════════════════════════════════════════════════════");
             while (!sc.hasNextInt()) {
-                System.out.println(ANSI_PURPLE + "La opción ingresada no es un número.");
+                System.out.println(ANSI_PURPLE + "𝐿𝑎 𝑜𝑝𝑐𝑖𝑜́𝑛 𝑖𝑛𝑔𝑟𝑒𝑠𝑎𝑑𝑎 𝑛𝑜 𝑒𝑠 𝑢𝑛 𝑛𝑢́𝑚𝑒𝑟𝑜.");
                 sc.next();
             }
             opcion = sc.nextInt();
@@ -142,8 +142,8 @@ public class JuegoHP {
 
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "Presione 1 para volver al menú principal.");
-        System.out.println(ANSI_PURPLE + "Presione 2 para salir del juego.");
+        System.out.println(ANSI_PURPLE + "𝑃𝑟𝑒𝑠𝑖𝑜𝑛𝑒 1 𝑝𝑎𝑟𝑎 𝑣𝑜𝑙𝑣𝑒𝑟 𝑎𝑙 𝑚𝑒𝑛𝑢́ 𝑝𝑟𝑖𝑛𝑐𝑖𝑝𝑎𝑙.");
+        System.out.println(ANSI_PURPLE + "𝑃𝑟𝑒𝑠𝑖𝑜𝑛𝑒 2 𝑝𝑎𝑟𝑎 𝑠𝑎𝑙𝑖𝑟 𝑑𝑒𝑙 𝑗𝑢𝑒𝑔𝑜");
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         Scanner sc = new Scanner(System.in);
@@ -163,7 +163,7 @@ public class JuegoHP {
             salirDelJuego();
             break;
         default:
-            System.out.printf("La opción  " + opcion + " no es una opción válida");
+            System.out.printf("𝐿𝑎 𝑜𝑝𝑐𝑖𝑜́𝑛 " + opcion + " 𝑛𝑜 𝑒𝑠 𝑢𝑛𝑎 𝑜𝑝𝑐𝑖𝑜́𝑛 𝑣𝑎́𝑙𝑖𝑑𝑎");
             break;
         }
         while (opcion > 0 && opcion <= 2)
@@ -192,7 +192,7 @@ public class JuegoHP {
             salirDelJuego();
             break;
         default:
-            System.out.printf("La opción  " + opcion + " no es una opción válida");
+            System.out.printf("𝐿𝑎 𝑜𝑝𝑐𝑖𝑜́𝑛 " + opcion + " 𝑛𝑜 𝑒𝑠 𝑢𝑛𝑎 𝑜𝑝𝑐𝑖𝑜́𝑛 𝑣𝑎́𝑙𝑖𝑑𝑎");
             break;
 
         }
@@ -419,7 +419,7 @@ public class JuegoHP {
     }
 
     public Hechizo elegirHechizo() {
-        System.out.println(ANSI_CYAN + "Elija el número de hechizo que quiere utilizar");
+        System.out.println(ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐧𝐮́𝐦𝐞𝐫𝐨 𝐝𝐞 𝐡𝐞𝐜𝐡𝐢𝐳𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
 
         int contador = 1;
         for (Hechizo hechizo : this.hechizos) {
