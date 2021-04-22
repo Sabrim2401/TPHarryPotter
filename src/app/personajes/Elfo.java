@@ -32,6 +32,7 @@ public class Elfo extends Criatura implements IHaceMagia {
       this.hechizos = hechizos;
   }
 
+  
    // Salud
    @Override
    public int getEnergiaMagica() {
@@ -49,7 +50,12 @@ public class Elfo extends Criatura implements IHaceMagia {
       return this.poderInicial;
    }
 
-   // poder
+   // poder // Le agrego el setter porque faltaba (Marian)
+   public Poder getPoder() {
+      return this.poder;
+   }
+
+
    @Override
    public void setPoder(Poder poder) {
       this.poder = poder;
