@@ -8,24 +8,10 @@ public class CapaInvisibilidad extends Artefacto implements IReliquiaMuerte {
         super(nombre, amplificadorDeDanio, amplificadorDeCuracion);
     }
 
-    
-    // Se plantean dos opciones de metodos para esReliquiaMuerte
-    // Revisar cual es correcta
     @Override
     public boolean esReliquiaMuerte() {
         return true;
 
     }
-
-    // @Override
-    // public boolean esReliquiaMuerte(String nombre) {
-    //// boolean esReliquia = true;
-    // if (getNombre().equals(Horrocrux)) {
-
-    // return false;
-    // }
-    // return true;
-
-    // }
 
 }

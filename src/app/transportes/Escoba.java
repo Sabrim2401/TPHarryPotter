@@ -1,5 +1,7 @@
 package app.transportes;
 
+import org.graalvm.compiler.phases.common.FloatingReadPhase;
+
 import app.interfaces.IEsMagico;
 
 public class Escoba extends Transporte implements IEsMagico {
@@ -10,12 +12,12 @@ public class Escoba extends Transporte implements IEsMagico {
 
     @Override
     public boolean esInvisibleAMuggles() {
-        return true;
+        return false;
     }
 
     @Override
     public boolean esInvisible() {
-        return true;
+        return false;
     }
 
 }
