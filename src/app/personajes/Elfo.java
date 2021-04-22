@@ -39,11 +39,6 @@ public class Elfo extends Criatura implements IHaceMagia {
       return this.poderInicial;
    }
 
-   @Override
-   public void setPoderInicial(Poder poderInicial) {
-      this.poderInicial = poderInicial;
-   }
-
    // poder
    @Override
    public void setPoder(Poder poder) {

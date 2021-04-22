@@ -11,8 +11,7 @@ public class Horrocrux extends Artefacto implements IReliquiaMuerte {
 
     @Override
     public boolean esReliquiaMuerte() {
-        // generar funcion
-        return true;
+        return false;
     }
 
 }

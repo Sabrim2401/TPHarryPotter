@@ -261,7 +261,7 @@ public class JuegoHP {
         Wizard wizard = new Wizard("Wizard-Mari", 75, 12, "Verde");
         wizard.setEnergiaMagica(150);//Revisar
         wizard.setArtefacto(CapaInvisibilidad());//falta instanciar
-        wizard.aprenderHechizoRandom(); // Devuelve un hechizo random /// VERIFICAR
+        //wizard.aprenderHechizoRandom(); // Devuelve un hechizo random /// VERIFICAR
         //this.personajes.add(wizard);
         return wizard;
     }
@@ -270,7 +270,7 @@ public class JuegoHP {
         WizardOscuro wizardOscuro = new WizardOscuro("Wizard-Luli", 60, 42, "Azul");
         wizardOscuro.setEnergiaMagica(150);//Revisar
         wizardOscuro.setArtefacto(Horrocrux());//falta instanciar
-        wizardOscuro.setHechizo(aprenderHechizoRandom());
+       // wizardOscuro.setHechizo(aprenderHechizoRandom());
         //this.personajes.add(wizardOscuro);
         return wizardOscuro;
     }
@@ -419,10 +419,31 @@ public class JuegoHP {
         elegirPersonaje();
     }
 
+        // Método que permite Jugar // FALTA DESARROLLO
+    public Hechizo elegirHechizo() {
+        System.out.println(ANSI_CYAN + "Elija el número de hechizo que quiere utilizar");
+
+        int contador = 1;
+        for (Hechizo hechizo : this.hechizos) {
+            System.out.println(contador + ")" + hechizo.getNombreDelPoder());
+            contador++;
+        }
+
+        int opcion = 0;
+        opcion = Teclado.nextInt();
+        Teclado.nextLine();
+        return this.hechizos.get(opcion-1);
+               
+        }
+
+
+
+
+
     public Wizard crearWizard() {
         Wizard p1 = new Wizard("Julieta", 100, 12, ANSI_WHITE);
-        p1.setEnergiaMagica(150);//Revisar
-        p1.setArtefacto(CapaInvisibilidad());//falta instanciar
+        p1.setEnergiaMagica(150);
+        p1.setArtefacto(CapaInvisibilidad());
        // p1.setPoderInicial(Metamorfosis());
         p1.aprender(Melofors());
         return p1;
@@ -454,9 +475,6 @@ public class JuegoHP {
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
          while(personaje1.estaVivo() && personaje2.estaVivo()){
 
-            //Wizard atacante;
-            //Elfo oponente;
-
             if (turnoP1){
                 atacante = personaje1;
                 oponente = personaje2;
@@ -469,21 +487,22 @@ public class JuegoHP {
 
             System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a "+ oponente.getNombre());
             // aca se atacan
+            /*
             if (atacante instanceof IHaceMagia){
                 IHaceMagia magico = (IHaceMagia)atacante; // esta linea es castear
                 magico.atacar(oponente, obtenerHechizoRandom()); 
             } // equivalente a las lineas de 478 a 486 
-                /*
+                */
             if (atacante instanceof Wizard){
                 Wizard magico = (Wizard)atacante; // esta linea es castear
-                magico.atacar(oponente, obtenerHechizoRandom()); 
+                magico.atacar(oponente, elegirHechizo()); 
             } 
 
             if (atacante instanceof Elfo){
                 Elfo magico = (Elfo)atacante; // esta linea es castear
                 magico.atacar(oponente, obtenerHechizoRandom()); 
             } 
-            */
+            
 
             System.out.println("A "+ oponente.getNombre() + " le queda "+ oponente.getSalud() + " de salud");
             //CAMBIAR TURNO
@@ -491,13 +510,15 @@ public class JuegoHP {
 
             // Pausa el programa por 2 segundos(2000 milisegundos = 2 segundos)
             //Thread.sleep(3000); 
-        }
+        
 
         if (personaje1.getSalud() > 0){
             System.out.println(personaje1.getColor()  + personaje1.getNombre() + " ganó!!!");
         }
         else{
             System.out.println(personaje2.getColor()  + personaje2.getNombre()+ " ganó!!!");
+        }
+
         }
     }
 
