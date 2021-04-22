@@ -491,12 +491,14 @@ public class JuegoHP {
             if (atacante instanceof Wizard) {
                 Wizard magico = (Wizard) atacante; // esta linea es castear
                 magico.atacar(oponente, elegirHechizo());
+                System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
                 
             }
 
             if (atacante instanceof Elfo) {
                 Elfo magico = (Elfo) atacante; // esta linea es castear
                 magico.atacar(oponente, obtenerHechizoRandom());
+                System.out.println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
                 
             }
 
@@ -509,17 +511,17 @@ public class JuegoHP {
 
             if (turnoP2) {
                 atacante = personaje2;
-                oponente = personaje1;
+               oponente = personaje1;
             } else {
                 atacante = personaje1;
                 oponente = personaje2;
             }
 
-            // System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a " +
-            // oponente.getNombre());
+            System.out.println(atacante.getColor() + atacante.getNombre() + " ataca a " +
+             oponente.getNombre());
             // aca se atacan
             if (atacante instanceof Wizard) {
-                Wizard magico = (Wizard) atacante; // esta linea es castear
+                Wizard magico = (Wizard) oponente; // esta linea es castear
                 magico.atacar(oponente, elegirHechizo());
             }
 
