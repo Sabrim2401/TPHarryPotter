@@ -280,25 +280,24 @@ public class JuegoHP {
     // energiaUtilizada)
 
     public SectumSempra SectumSempra() {
-        SectumSempra SectumSempra = new SectumSempra(30, 0, 2, 3);// settear parámetros
+        SectumSempra SectumSempra = new SectumSempra(30, 0, 15, 24);
         this.hechizos.add(SectumSempra);
         return SectumSempra;
     }
 
     public VulneraSanentur VulneraSanentur() {
-        VulneraSanentur VulneraSanentur = new VulneraSanentur(0, 30, 1, 5);// settear parámetros
+        VulneraSanentur VulneraSanentur = new VulneraSanentur(0, 30, 10, 10);
         this.hechizos.add(VulneraSanentur);
         return VulneraSanentur;
     }
 
     public WingwardumLeviosa WingwardumLeviosa() {
-        WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(0, 30, 1, 5);// settear parámetros
-        this.hechizos.add(WingwardumLeviosa);
+        WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(10, 0, 1, 5);
         return WingwardumLeviosa;
     }
 
     public Cavelnimicum Cavelnimicum() {
-        Cavelnimicum Cavelnimicum = new Cavelnimicum(0, 30, 1, 5);// settear parámetros
+        Cavelnimicum Cavelnimicum = new Cavelnimicum(25, 14, 5, 10);
         this.hechizos.add(Cavelnimicum);
         return Cavelnimicum;
     }
@@ -319,14 +318,14 @@ public class JuegoHP {
 
     //Salvio hexia. Permite proteger de encantamientos oscuros una zona
     public HechizoDefensa Salviohexia() {
-        HechizoDefensa Salviohexia = new HechizoDefensa(0, 30, 1, 5);// settear parámetros
+        HechizoDefensa Salviohexia = new HechizoDefensa(0, 30, 15, 20);
         this.hechizos.add(Salviohexia);
         return Salviohexia;
     }
 
     //Melofors. Envuelve la cabeza del enemigo con una calabaza
     public HechizoAtaque Melofors() {
-        HechizoAtaque Melofors = new HechizoAtaque(0, 30, 1, 5);// settear parámetros
+        HechizoAtaque Melofors = new HechizoAtaque(20, 0, 10,10);
         this.hechizos.add(Melofors);
         return Melofors;
     }
