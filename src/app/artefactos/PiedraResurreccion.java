@@ -1,6 +1,5 @@
 package app.artefactos;
 
-import app.poderes.*;
 import app.interfaces.IReliquiaMuerte;
 
 public class PiedraResurreccion extends Artefacto implements IReliquiaMuerte {
