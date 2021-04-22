@@ -1,7 +1,5 @@
 package app.transportes;
 
-import java.util.*;
-
 public class Transporte {
 
     public Transporte(int duracionDelRecorrido, String nombre) {
