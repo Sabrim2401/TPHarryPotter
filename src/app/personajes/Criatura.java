@@ -10,11 +10,11 @@ public abstract class Criatura extends Personaje implements IEsMagico {
 
     @Override
     public boolean esInvisibleAMuggles() {
-        return true;
+        return false;
     }
 
     @Override
     public boolean esInvisible() {
-        return true;
+        return false;
     }
 }
