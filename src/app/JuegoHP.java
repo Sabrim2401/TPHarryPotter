@@ -412,17 +412,7 @@ public class JuegoHP {
         return Horrocrux;
     }
 
-    public String crearNombrePersonaje() {
-        System.out.println(ANSI_CYAN
-                + "═════════════════════════════════════════════════════════════════════════════════════════");
-        System.out.println(ANSI_PURPLE + "𝐄𝐥𝐢𝐣𝐚 𝐮𝐧 𝐧𝐨𝐦𝐛𝐫𝐞 𝐩𝐚𝐫𝐚 𝐬𝐮 𝐩𝐞𝐫𝐬𝐨𝐧𝐚𝐣𝐞 𝐦𝐚𝐠𝐨:");
-        System.out.println(ANSI_CYAN
-                + "═════════════════════════════════════════════════════════════════════════════════════════");
-
-        String nombreElegido;
-        nombreElegido = Teclado.nextLine();
-        return nombreElegido;
-    }
+    
 
     // Método que permite Jugar // FALTA DESARROLLO
     public void jugar() {
