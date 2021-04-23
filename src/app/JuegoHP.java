@@ -554,11 +554,10 @@ public class JuegoHP {
         if (atacante instanceof Wizard) {
             Wizard magico = (Wizard) atacante; // esta linea es castear
             magico.atacar(oponente, elegirHechizo());
-         /*   System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
-            System.out.println(
-                    ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+         //   System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
+            System.out.println(ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
             System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre()); 
-            ESTO HACE QUE EL MENU DE HECHIZOS SE DUPLIQUE. SE COMENTA Y DESPUES HAY QUE REVISAR SI HAY QUE UBICARLO EN ALGUN LADO O BORRARLO. CHABRI*/ 
+            //ESTO HACE QUE EL MENU DE HECHIZOS SE DUPLIQUE. SE COMENTA Y DESPUES HAY QUE REVISAR SI HAY QUE UBICARLO EN ALGUN LADO O BORRARLO. CHABRI*/ 
 
         }
         return true;
