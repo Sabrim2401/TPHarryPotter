@@ -476,10 +476,10 @@ public class JuegoHP {
         Wizard p1 = new Wizard("Wizard-Helena", 100, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);
         p1.setArtefacto(VaritaSauco());
-        // p1.setPoderInicial(Metamorfosis());
+        //p1.setPoderInicial(Metamorfosis());
         p1.aprender(Rictusempra());
         p1.aprender(Melofors());
-        p1.aprender(WingwardumLeviosa());
+        p1.aprender(WingwardumLeviosa()); 
         return p1;
     }
 
@@ -488,9 +488,10 @@ public class JuegoHP {
         p2.setEnergiaMagica(150);// Revisar
         // p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
-        p2.aprender(Rictusempra());
+      //  p2 = hechizos.obtenerHechizoRandom(); //llamar a la lista de hechizos
+       /* p2.aprender(Rictusempra());
         p2.aprender(SectumSempra());
-        p2.aprender(Anapneo());
+        p2.aprender(Anapneo()); */
 
         return p2;
     }
