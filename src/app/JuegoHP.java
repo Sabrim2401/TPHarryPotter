@@ -435,19 +435,30 @@ public class JuegoHP {
     }
 
     public Hechizo elegirHechizo() {
-        System.out.println(
-                ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐧𝐮́𝐦𝐞𝐫𝐨 𝐝𝐞 𝐡𝐞𝐜𝐡𝐢𝐳𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
-
+      //  this.hechizos = new ArrayList<>();
+        System.out.println( ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐧𝐮́𝐦𝐞𝐫𝐨 𝐝𝐞 𝐡𝐞𝐜𝐡𝐢𝐳𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
+   
         int contador = 1;
         for (Hechizo hechizo : this.hechizos) {
-            System.out.println(contador + ")" + hechizo.getNombreDelPoder() + ": " + hechizo.getDescripcionDelPoder());
+           System.out.println(contador + ")" + hechizo.getNombreDelPoder() + ": " + hechizo.getDescripcionDelPoder());
             contador++;
+            
         }
+        
 
         int opcion = 0;
         opcion = Teclado.nextInt();
         Teclado.nextLine();
         return this.hechizos.get(opcion - 1);
+
+        /*for (Serie serie : this.series) {
+            //pregunto si el nombre de la serie actual
+            //que estoy recorriendo es la que necesito
+            if (serie.getNombre().equals(nombreABuscar))
+                return serie; //devuelvo esta serie.
+        }
+        //si llego hasta aca, es porque no encontro la serie.
+        return null;*/
     }
 
     public Artefacto elegirArtefacto() {
@@ -499,6 +510,7 @@ public class JuegoHP {
 
             chequearTurnoP1();
             Thread.sleep(3000);
+            this.hechizos = new ArrayList<>();
             turnoP1 = !turnoP1; // Aca cambia turno
             chequearTurnoP2();
             Thread.sleep(3000);
@@ -530,6 +542,7 @@ public class JuegoHP {
     public boolean chequearTurnoP1() { // poner otro nombre de funcion
         Personaje personaje1 = crearWizard();
         Personaje personaje2 = crearElfo();
+        
 
         Personaje atacante;
         Personaje oponente;
@@ -546,10 +559,10 @@ public class JuegoHP {
         if (atacante instanceof Wizard) {
             Wizard magico = (Wizard) atacante; // esta linea es castear
             magico.atacar(oponente, elegirHechizo());
-           // System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
-            System.out.println(
-                    ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
+            System.out.println( ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
             System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre());
+            
         }
         return true;
 
@@ -588,4 +601,25 @@ public class JuegoHP {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
     }
+
 }
+    /*public int danioTotalHechizo(int NivelDanio , int salud){
+        int hechizo.getNivelDanio();
+        double artefacto.getAmplificadorDeDanio;*/
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
