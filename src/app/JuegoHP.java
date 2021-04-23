@@ -510,12 +510,6 @@ public class JuegoHP {
         }
     }
 
-    public boolean estaVivo() {
-        int saludMinima = 1;
-        int saludMaxima = 100;
-        return true;
-    }
-
     public Artefacto obtenerArtefactoRandom() {
 
         int max = this.artefactos.size();
