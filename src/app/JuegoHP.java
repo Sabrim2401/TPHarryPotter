@@ -601,6 +601,15 @@ public class JuegoHP {
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
     }
 
+    public int CalcularDanioHechizo(){
+        int dañoHechizo = elegirHechizo().getNivelDanio();
+        double amplificadorDeCuracion = obtenerArtefactoRandom().getAmplificadorDeCuracion();
+        int daniototal = (int) (dañoHechizo * amplificadorDeCuracion);
+        System.out.println(obtenerArtefactoRandom().getNombre()+ "logró mitigar el impacto del ataque");
+        return daniototal;
+    }     
+
+
 }
 /*
  * public int danioTotalHechizo(int NivelDanio , int salud){ int
