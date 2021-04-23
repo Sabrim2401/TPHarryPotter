@@ -1,7 +1,5 @@
 package app.transportes;
 
-import org.graalvm.compiler.phases.common.FloatingReadPhase;
-
 import app.interfaces.IEsMagico;
 
 public class Escoba extends Transporte implements IEsMagico {
