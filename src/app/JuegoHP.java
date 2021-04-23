@@ -277,12 +277,19 @@ public class JuegoHP {
     // Instanciamos Hechizos: Modelo del constructor:
     // public Hechizo(int nivelDanio, int nivelCuracion, int energiaMagica, int
     // energiaUtilizada)
-
+    public void registrarHechizo(Hechizo hechizo){ 
+      for (Hechizo hechizo2 : this.hechizos){ 
+         if (hechizo2.getNombreDelPoder().equals(hechizo.getNombreDelPoder())){
+         return ;
+        }
+      }
+      this.hechizos.add(hechizo);
+    }
     public SectumSempra SectumSempra() {
         SectumSempra SectumSempra = new SectumSempra(30, 0, 15, 24);
         SectumSempra.setNombreDelPoder("Sectumsempra");
         SectumSempra.setDescripcionDelPoder("Su efecto es el equivalente al de un cuchillo invisible");
-        this.hechizos.add(SectumSempra);
+        this.registrarHechizo(SectumSempra);
         return SectumSempra;
     }
 
@@ -290,7 +297,7 @@ public class JuegoHP {
         VulneraSanentur VulneraSanentur = new VulneraSanentur(0, 30, 10, 10);
         VulneraSanentur.setNombreDelPoder("Vulnera Sanentura");
         VulneraSanentur.setDescripcionDelPoder("Sana heridas profundas");
-        this.hechizos.add(VulneraSanentur);
+        this.registrarHechizo(VulneraSanentur);
         return VulneraSanentur;
     }
 
@@ -298,6 +305,7 @@ public class JuegoHP {
         WingwardumLeviosa WingwardumLeviosa = new WingwardumLeviosa(10, 0, 1, 5);
         WingwardumLeviosa.setNombreDelPoder("Wingardium leviosa");
         WingwardumLeviosa.setDescripcionDelPoder("Hace que el enemigo vuele o levite");
+        this.registrarHechizo(WingwardumLeviosa);
         return WingwardumLeviosa;
     }
 
@@ -305,7 +313,7 @@ public class JuegoHP {
         Cavelnimicum Cavelnimicum = new Cavelnimicum(25, 5, 5, 10);
         Cavelnimicum.setNombreDelPoder("Cavelnimicum");
         Cavelnimicum.setDescripcionDelPoder("Hace que el enemigo sienta que se está cayendo por un precipicio");
-        this.hechizos.add(Cavelnimicum);
+        this.registrarHechizo(Cavelnimicum);
         return Cavelnimicum;
     }
 
@@ -313,7 +321,7 @@ public class JuegoHP {
         HechizoCuracion Anapneo = new HechizoCuracion(5, 30, 5, 6);
         Anapneo.setNombreDelPoder("Anapneo");
         Anapneo.setDescripcionDelPoder("Despeja las vías respiratorias de una persona");
-        this.hechizos.add(Anapneo);
+        this.registrarHechizo(Anapneo);
         return Anapneo;
     }
 
@@ -321,7 +329,7 @@ public class JuegoHP {
         HechizoAtaque Alarteascendare = new HechizoAtaque(0, 30, 1, 5);
         Alarteascendare.setNombreDelPoder("Alarte Ascendare");
         Alarteascendare.setDescripcionDelPoder("Eleva a su objetivo por los aires");
-        this.hechizos.add(Alarteascendare);
+        this.registrarHechizo(Alarteascendare);
         return Alarteascendare;
     }
 
@@ -329,7 +337,7 @@ public class JuegoHP {
         HechizoDefensa Salviohexia = new HechizoDefensa(2, 15, 15, 20);
         Salviohexia.setNombreDelPoder("Salvio Hexia");
         Salviohexia.setDescripcionDelPoder("Permite proteger de encantamientos oscuros una zona");
-        this.hechizos.add(Salviohexia);
+        this.registrarHechizo(Salviohexia);
         return Salviohexia;
     }
 
@@ -337,7 +345,7 @@ public class JuegoHP {
         HechizoAtaque Melofors = new HechizoAtaque(20, 0, 10, 10);
         Melofors.setNombreDelPoder("Melofors");
         Melofors.setDescripcionDelPoder("Envuelve la cabeza del enemigo con una calabaza");
-        this.hechizos.add(Melofors);
+        this.registrarHechizo(Melofors);
         return Melofors;
     }
 
@@ -345,7 +353,7 @@ public class JuegoHP {
         HechizoCuracion Episkey = new HechizoCuracion(2, 17, 1, 5);
         Episkey.setNombreDelPoder("Episkey");
         Episkey.setDescripcionDelPoder("Cura heridas");
-        this.hechizos.add(Episkey);
+        this.registrarHechizo(Episkey);
         return Episkey;
     }
 
@@ -353,7 +361,8 @@ public class JuegoHP {
         HechizoOcio Rictusempra = new HechizoOcio(10, 0, 1, 5);
         Rictusempra.setNombreDelPoder("Rictusempra");
         Rictusempra.setDescripcionDelPoder("Genera cosquillas en la víctima");
-        this.hechizos.add(Rictusempra);
+
+        this.registrarHechizo(Rictusempra);
         return Rictusempra;
     }
 
