@@ -72,11 +72,11 @@ public class Personaje {
         this.color = color;
     }
 
-    public boolean estaVivo() {
-        int saludMinima = 1;
-        int saludMaxima= 100;
-            return true;
-    }
+    public boolean estaVivo(){
+        if (this.getSalud() >= 1);
+        return true;
+    } 
+     
 
     public String crearNombrePersonaje() {
         System.out.println(ANSI_CYAN

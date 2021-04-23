@@ -104,12 +104,14 @@ public class Wizard extends Persona implements IHaceMagia {
 
     @Override
     public void aprender(Hechizo h) {
-
+        
     }
 
     @Override
     public void atacar(Personaje personaje, Hechizo hechizo) {
-        int saludEnCombate = personaje.getSalud() - hechizo.getNivelDanio();
+        int saludEnCombate = this.getSalud();
+        int danioHechizo = hechizo.getNivelDanio();
+        saludEnCombate = saludEnCombate - danioHechizo; //calculos 115
         personaje.setSalud(saludEnCombate);
 
     }
@@ -119,12 +121,7 @@ public class Wizard extends Persona implements IHaceMagia {
 
      }
 
-   /* int Salud = Personaje.getSalud();
-    int dañoHechizo = Hechizo.getNivelDanio();
-
-     //if (Personaje.getSalud() equals(obj))
-    }
-    /// no se si esta bien brenda
+ 
     /*
      * public Boolean esMagoOscuro(){ if
      * (Wizard.hechizo.septumSempra.equals(esMagoOscuro())); return true; }
