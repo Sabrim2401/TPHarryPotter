@@ -435,41 +435,37 @@ public class JuegoHP {
     }
 
     public Hechizo elegirHechizo() {
-      //  this.hechizos = new ArrayList<>();
-        System.out.println( ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐧𝐮́𝐦𝐞𝐫𝐨 𝐝𝐞 𝐡𝐞𝐜𝐡𝐢𝐳𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
-   
+        // this.hechizos = new ArrayList<>();
+        System.out.println(
+                ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐧𝐮́𝐦𝐞𝐫𝐨 𝐝𝐞 𝐡𝐞𝐜𝐡𝐢𝐳𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
+
         int contador = 1;
         for (Hechizo hechizo : this.hechizos) {
-           System.out.println(contador + ")" + hechizo.getNombreDelPoder() + ": " + hechizo.getDescripcionDelPoder());
+            System.out.println(contador + ")" + hechizo.getNombreDelPoder() + ": " + hechizo.getDescripcionDelPoder());
             contador++;
-            
+
         }
-        
 
         int opcion = 0;
         opcion = Teclado.nextInt();
         Teclado.nextLine();
         return this.hechizos.get(opcion - 1);
 
-        /*for (Serie serie : this.series) {
-            //pregunto si el nombre de la serie actual
-            //que estoy recorriendo es la que necesito
-            if (serie.getNombre().equals(nombreABuscar))
-                return serie; //devuelvo esta serie.
-        }
-        //si llego hasta aca, es porque no encontro la serie.
-        return null;*/
+        /*
+         * for (Serie serie : this.series) { //pregunto si el nombre de la serie actual
+         * //que estoy recorriendo es la que necesito if
+         * (serie.getNombre().equals(nombreABuscar)) return serie; //devuelvo esta
+         * serie. } //si llego hasta aca, es porque no encontro la serie. return null;
+         */
     }
 
     public Artefacto elegirArtefacto() {
         System.out.println(ANSI_CYAN + "𝐄𝐥𝐢𝐣𝐚 𝐞𝐥 𝐚𝐫𝐭𝐞𝐟𝐚𝐜𝐭𝐨 𝐪𝐮𝐞 𝐪𝐮𝐢𝐞𝐫𝐞 𝐮𝐭𝐢𝐥𝐢𝐳𝐚𝐫:");
-
         int contador = 1;
         for (Artefacto artefacto : this.artefactos) {
             System.out.println(contador + ")" + artefacto.getNombre());
             contador++;
         }
-
         int opcion = 0;
         opcion = Teclado.nextInt();
         Teclado.nextLine();
@@ -477,7 +473,7 @@ public class JuegoHP {
     }
 
     public Wizard crearWizard() {
-        Wizard p1 = new Wizard("Julieta", 100, 12, ANSI_WHITE);
+        Wizard p1 = new Wizard("Wizard-Helena", 100, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);
         p1.setArtefacto(VaritaSauco());
         // p1.setPoderInicial(Metamorfosis());
@@ -496,7 +492,6 @@ public class JuegoHP {
         p2.aprender(SectumSempra());
         p2.aprender(Anapneo());
 
-
         return p2;
     }
 
@@ -506,7 +501,7 @@ public class JuegoHP {
         Personaje personaje2 = crearElfo();
         boolean turnoP1 = true;
         boolean turnoP2 = true;
-        while (personaje1.estaVivo() && personaje2.estaVivo()){
+        while (personaje1.estaVivo() && personaje2.estaVivo()) {
 
             chequearTurnoP1();
             Thread.sleep(3000);
@@ -515,7 +510,7 @@ public class JuegoHP {
             chequearTurnoP2();
             Thread.sleep(3000);
             turnoP2 = !turnoP2;
-            
+
         }
         if (personaje1.getSalud() == 0) {
             System.out.println(personaje2.getColor() + personaje2.getNombre() + " ganó!!!");
@@ -526,9 +521,10 @@ public class JuegoHP {
 
     public boolean estaVivo() {
         int saludMinima = 1;
-        int saludMaxima= 100;
-            return true;
+        int saludMaxima = 100;
+        return true;
     }
+
     public Artefacto obtenerArtefactoRandom() {
 
         int max = this.artefactos.size();
@@ -542,7 +538,6 @@ public class JuegoHP {
     public boolean chequearTurnoP1() { // poner otro nombre de funcion
         Personaje personaje1 = crearWizard();
         Personaje personaje2 = crearElfo();
-        
 
         Personaje atacante;
         Personaje oponente;
@@ -559,10 +554,12 @@ public class JuegoHP {
         if (atacante instanceof Wizard) {
             Wizard magico = (Wizard) atacante; // esta linea es castear
             magico.atacar(oponente, elegirHechizo());
-            System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
-            System.out.println( ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
-            System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre());
-            
+         /*   System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
+            System.out.println(
+                    ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre()); 
+            ESTO HACE QUE EL MENU DE HECHIZOS SE DUPLIQUE. SE COMENTA Y DESPUES HAY QUE REVISAR SI HAY QUE UBICARLO EN ALGUN LADO O BORRARLO. CHABRI*/ 
+
         }
         return true;
 
@@ -586,8 +583,10 @@ public class JuegoHP {
         if (atacante instanceof Elfo) {
             Elfo magico = (Elfo) atacante; // esta linea es castear
             magico.atacar(oponente, obtenerHechizoRandom());
-            System.out.println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
-            System.out.println(ANSI_RED + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out
+                    .println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
+            System.out
+                    .println(ANSI_RED + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
             System.out.println(ANSI_YELLOW + "Ahora es el turno de " + oponente.getNombre());
 
         }
@@ -603,23 +602,7 @@ public class JuegoHP {
     }
 
 }
-    /*public int danioTotalHechizo(int NivelDanio , int salud){
-        int hechizo.getNivelDanio();
-        double artefacto.getAmplificadorDeDanio;*/
-
-    
-
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
+/*
+ * public int danioTotalHechizo(int NivelDanio , int salud){ int
+ * hechizo.getNivelDanio(); double artefacto.getAmplificadorDeDanio;
+ */
