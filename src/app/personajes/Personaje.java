@@ -61,12 +61,9 @@ public class Personaje {
     }
 
     public boolean estaVivo() {
-        int estaVivo = 1;
+        int saludMinima = 1;
         int saludMaxima= 100;
-        if (salud > estaVivo && salud < saludMaxima){
             return true;
-        }
-        return false;
     }
 
 }

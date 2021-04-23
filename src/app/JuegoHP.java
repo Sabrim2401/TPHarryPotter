@@ -495,15 +495,15 @@ public class JuegoHP {
         Personaje personaje2 = crearElfo();
         boolean turnoP1 = true;
         boolean turnoP2 = true;
-        while (personaje1.estaVivo() && personaje2.estaVivo())
-            ;
-        {
+        while (personaje1.estaVivo() && personaje2.estaVivo()){
+
             chequearTurnoP1();
             Thread.sleep(3000);
             turnoP1 = !turnoP1; // Aca cambia turno
             chequearTurnoP2();
             Thread.sleep(3000);
             turnoP2 = !turnoP2;
+            
         }
         if (personaje1.getSalud() == 0) {
             System.out.println(personaje2.getColor() + personaje2.getNombre() + " ganó!!!");
@@ -512,6 +512,11 @@ public class JuegoHP {
         }
     }
 
+    public boolean estaVivo() {
+        int saludMinima = 1;
+        int saludMaxima= 100;
+            return true;
+    }
     public Artefacto obtenerArtefactoRandom() {
 
         int max = this.artefactos.size();
@@ -541,7 +546,7 @@ public class JuegoHP {
         if (atacante instanceof Wizard) {
             Wizard magico = (Wizard) atacante; // esta linea es castear
             magico.atacar(oponente, elegirHechizo());
-            System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
+           // System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
             System.out.println(
                     ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
             System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre());
@@ -568,10 +573,8 @@ public class JuegoHP {
         if (atacante instanceof Elfo) {
             Elfo magico = (Elfo) atacante; // esta linea es castear
             magico.atacar(oponente, obtenerHechizoRandom());
-            System.out
-                    .println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
-            System.out
-                    .println(ANSI_RED + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
+            System.out.println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
+            System.out.println(ANSI_RED + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
             System.out.println(ANSI_YELLOW + "Ahora es el turno de " + oponente.getNombre());
 
         }
