@@ -14,12 +14,13 @@ public class Personaje {
     public static final String ANSI_WHITE = "\u001B[37m";
     public static Scanner Teclado = new Scanner(System.in);
 
-    public Personaje(String nombre, int salud, int golpe, String color) {
+    public Personaje(String nombre, int setSalud, int golpe, String color) {
         this.nombre = nombre;
-        this.salud = salud;
+        this.setSalud = salud; // 24 de abril, chabri
         this.golpe = golpe;
         this.color = color;
     }
+    
    
     private String nombre;
     private int salud;
@@ -41,8 +42,8 @@ public class Personaje {
         return this.salud;
     }
 
-    public void setSalud(int salud) {
-        this.salud = salud;
+    public int setSalud(int salud) {
+        return this.salud = salud;
     }
 
     // Edad
@@ -88,6 +89,9 @@ public class Personaje {
         String nombreElegido;
         nombreElegido = Teclado.nextLine();
         return nombreElegido;
+    }
+
+    public void atacar(int descuentoDeSaludDuranteCombate) {
     }
     
 

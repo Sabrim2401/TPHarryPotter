@@ -36,6 +36,8 @@ public class Wizard extends Persona implements IHaceMagia {
     private Artefacto artefacto;
     private boolean magoOscuro;
 
+
+
     @Override
     public int getEnergiaMagica() {
         return this.energiaMagica;
@@ -109,14 +111,12 @@ public class Wizard extends Persona implements IHaceMagia {
 
     @Override
     public void atacar(Personaje personaje, Hechizo hechizo) {
-        int saludEnCombate = personaje.getSalud();
-        int saludDuranteCombate = 0;
+      //  int saludEnCombate = personaje.setSalud(100); JUEGOHP. 
         int danioHechizo = hechizo.getNivelDanio();
       //  danioHechizo = (int) (danioHechizo * artefacto.getAmplificadorDeCuracion()); //calculos 115
-        saludDuranteCombate = saludEnCombate - danioHechizo;
-        personaje.setSalud(saludDuranteCombate);
-
+        personaje.atacar(danioHechizo);
     }
+
 
     /*public int CalcularDanioHechizo(){
         int dañoHechizo = elegirHechizo().getNivelDanio();
