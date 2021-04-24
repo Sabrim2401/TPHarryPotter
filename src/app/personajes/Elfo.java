@@ -78,8 +78,12 @@ public class Elfo extends Criatura implements IHaceMagia {
 
    @Override
    public void atacar(Personaje personaje, Hechizo hechizo) {
-      int saludEnCombate = personaje.getSalud() - hechizo.getNivelDanio();
+      int saludEnCombate = personaje.getSalud();
+      int danioHechizo = hechizo.getNivelDanio();
+      //danioHechizo = (int) (danioHechizo * artefacto.getAmplificadorDeCuracion()); //calculos 115
+      saludEnCombate = saludEnCombate - danioHechizo;
       personaje.setSalud(saludEnCombate);
+
    }
 
    @Override

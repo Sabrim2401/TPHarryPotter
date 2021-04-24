@@ -29,7 +29,7 @@ public class JuegoHP {
 
     // Método que permite ver la Historia creada.
 
-    public void verHistoria() {
+    public void verHistoria() throws InterruptedException {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         System.out.println(ANSI_PURPLE
@@ -78,7 +78,7 @@ public class JuegoHP {
     }
 
     // Método que da lista los créditos del juego.
-    public void listarCreditos() {
+    public void listarCreditos() throws InterruptedException {
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
         System.out.println(ANSI_GREEN + " 𝘑𝘶𝘦𝘨𝘰 𝘥𝘦𝘴𝘢𝘳𝘳𝘰𝘭𝘭𝘢𝘥𝘰 𝘱𝘰𝘳:");
@@ -137,7 +137,7 @@ public class JuegoHP {
 
     // Método que sirve para volver al Menú principal
 
-    public void volverMenuPrincipal() {
+    public void volverMenuPrincipal() throws InterruptedException {
 
         System.out.println(ANSI_CYAN
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
@@ -171,7 +171,7 @@ public class JuegoHP {
 
     // Método que sirve para inicializar Menú// DEBE MEJORARSE
 
-    public void inicializarMenu() {
+    public void inicializarMenu() throws InterruptedException {
 
         listarMenu();
         int opcion = 0;
@@ -179,7 +179,7 @@ public class JuegoHP {
 
         switch (opcion) {
         case 1:
-            jugar();
+            combate();
             break;
         case 2:
             verHistoria();
@@ -317,14 +317,6 @@ public class JuegoHP {
         return Cavelnimicum;
     }
 
-    public HechizoCuracion Anapneo() {
-        HechizoCuracion Anapneo = new HechizoCuracion(5, 30, 5, 6);
-        Anapneo.setNombreDelPoder("Anapneo");
-        Anapneo.setDescripcionDelPoder("Despeja las vías respiratorias de una persona");
-        this.registrarHechizo(Anapneo);
-        return Anapneo;
-    }
-
     public HechizoAtaque Alarteascendare() {
         HechizoAtaque Alarteascendare = new HechizoAtaque(0, 30, 1, 5);
         Alarteascendare.setNombreDelPoder("Alarte Ascendare");
@@ -333,13 +325,6 @@ public class JuegoHP {
         return Alarteascendare;
     }
 
-    public HechizoDefensa Salviohexia() {
-        HechizoDefensa Salviohexia = new HechizoDefensa(2, 15, 15, 20);
-        Salviohexia.setNombreDelPoder("Salvio Hexia");
-        Salviohexia.setDescripcionDelPoder("Permite proteger de encantamientos oscuros una zona");
-        this.registrarHechizo(Salviohexia);
-        return Salviohexia;
-    }
 
     public HechizoAtaque Melofors() {
         HechizoAtaque Melofors = new HechizoAtaque(20, 0, 10, 10);
@@ -349,13 +334,6 @@ public class JuegoHP {
         return Melofors;
     }
 
-    public HechizoCuracion Episkey() {
-        HechizoCuracion Episkey = new HechizoCuracion(2, 17, 1, 5);
-        Episkey.setNombreDelPoder("Episkey");
-        Episkey.setDescripcionDelPoder("Cura heridas");
-        this.registrarHechizo(Episkey);
-        return Episkey;
-    }
 
     public HechizoOcio Rictusempra() {
         HechizoOcio Rictusempra = new HechizoOcio(10, 0, 1, 5);
@@ -488,9 +466,9 @@ public class JuegoHP {
         // p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
       //  p2 = hechizos.obtenerHechizoRandom(); //llamar a la lista de hechizos
-       /* p2.aprender(Rictusempra());
+        p2.aprender(Rictusempra());
         p2.aprender(SectumSempra());
-        p2.aprender(Anapneo()); */
+        p2.aprender(WingwardumLeviosa());
 
         return p2;
     }
@@ -594,14 +572,7 @@ public class JuegoHP {
                 + "═════════════════════════════════════════════════════════════════════════════════════════");
     }
 
-    public int CalcularDanioHechizo(){
-        int dañoHechizo = elegirHechizo().getNivelDanio();
-        double amplificadorDeCuracion = obtenerArtefactoRandom().getAmplificadorDeCuracion();
-        int daniototal = (int) (dañoHechizo * amplificadorDeCuracion);
-        System.out.println(obtenerArtefactoRandom().getNombre()+ "logró mitigar el impacto del ataque");
-        return daniototal;
-    }     
-
+ 
 
 }
 /*
