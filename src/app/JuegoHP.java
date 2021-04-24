@@ -450,9 +450,10 @@ public class JuegoHP {
     }
 
     public Wizard crearWizard() {
-        Wizard p1 = new Wizard("Wizard-Helena", 100, 12, ANSI_WHITE);
+        Wizard p1 = new Wizard("Wizard-Helena", 0, 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);
         p1.setArtefacto(VaritaSauco());
+       // p1.setSalud(100);
         //p1.setPoderInicial(Metamorfosis());
         p1.aprender(Rictusempra());
         p1.aprender(Melofors());
@@ -461,11 +462,12 @@ public class JuegoHP {
     }
 
     public Elfo crearElfo() {
-        Elfo p2 = new Elfo("Elfo-Chabri", 100, 15, ANSI_BLUE);
+        Elfo p2 = new Elfo("Elfo-Chabri", 0 , 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);// Revisar
         // p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
-      //  p2 = hechizos.obtenerHechizoRandom(); //llamar a la lista de hechizos
+        // p1.setSalud(100);
+        //  p2 = hechizos.obtenerHechizoRandom(); //llamar a la lista de hechizos
         p2.aprender(Rictusempra());
         p2.aprender(SectumSempra());
         p2.aprender(WingwardumLeviosa());
