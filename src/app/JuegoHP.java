@@ -450,7 +450,7 @@ public class JuegoHP {
     }
 
     public Wizard crearWizard() {
-        Wizard p1 = new Wizard("Wizard-Helena", 0, 12, ANSI_WHITE);
+        Wizard p1 = new Wizard("Wizard-Helena", 0 , 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);
         p1.setArtefacto(VaritaSauco());
        // p1.setSalud(100);
@@ -466,7 +466,7 @@ public class JuegoHP {
         p2.setEnergiaMagica(150);// Revisar
         // p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
-        // p1.setSalud(100);
+       // p2.setSalud(100);
         //  p2 = hechizos.obtenerHechizoRandom(); //llamar a la lista de hechizos
         p2.aprender(Rictusempra());
         p2.aprender(SectumSempra());
@@ -481,6 +481,11 @@ public class JuegoHP {
         Personaje personaje2 = crearElfo();
         boolean turnoP1 = true;
         boolean turnoP2 = true;
+        //25/04
+        
+        //personaje1 = this.Wizard.setSalud(100);
+
+
         while (personaje1.estaVivo() && personaje2.estaVivo()) {
 
             chequearTurnoP1();

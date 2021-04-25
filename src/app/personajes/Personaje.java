@@ -16,7 +16,7 @@ public class Personaje {
 
     public Personaje(String nombre, int setSalud, int golpe, String color) {
         this.nombre = nombre;
-        this.setSalud = salud; // 24 de abril, chabri
+        this.salud = salud; // 24 de abril, chabri
         this.golpe = golpe;
         this.color = color;
     }
@@ -91,8 +91,6 @@ public class Personaje {
         return nombreElegido;
     }
 
-    public void atacar(int descuentoDeSaludDuranteCombate) {
-    }
     
 
        
