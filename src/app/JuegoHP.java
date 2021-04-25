@@ -286,7 +286,7 @@ public class JuegoHP {
       this.hechizos.add(hechizo);
     }
     public SectumSempra SectumSempra() {
-        SectumSempra SectumSempra = new SectumSempra(30, 0, 15, 24);
+        SectumSempra SectumSempra = new SectumSempra(15, 0, 15, 24);
         SectumSempra.setNombreDelPoder("Sectumsempra");
         SectumSempra.setDescripcionDelPoder("Su efecto es el equivalente al de un cuchillo invisible");
         this.registrarHechizo(SectumSempra);
@@ -310,7 +310,7 @@ public class JuegoHP {
     }
 
     public Cavelnimicum Cavelnimicum() {
-        Cavelnimicum Cavelnimicum = new Cavelnimicum(25, 5, 5, 10);
+        Cavelnimicum Cavelnimicum = new Cavelnimicum(20, 5, 5, 10);
         Cavelnimicum.setNombreDelPoder("Cavelnimicum");
         Cavelnimicum.setDescripcionDelPoder("Hace que el enemigo sienta que se está cayendo por un precipicio");
         this.registrarHechizo(Cavelnimicum);
@@ -450,10 +450,9 @@ public class JuegoHP {
     }
 
     public Wizard crearWizard() {
-        Wizard p1 = new Wizard("Wizard-Helena", 0 , 12, ANSI_WHITE);
+        Wizard p1 = new Wizard("Wizard-Helena", 100 , 12, ANSI_WHITE);
         p1.setEnergiaMagica(150);
         p1.setArtefacto(VaritaSauco());
-       // p1.setSalud(100);
         //p1.setPoderInicial(Metamorfosis());
         p1.aprender(Rictusempra());
         p1.aprender(Melofors());
@@ -462,11 +461,10 @@ public class JuegoHP {
     }
 
     public Elfo crearElfo() {
-        Elfo p2 = new Elfo("Elfo-Chabri", 0 , 15, ANSI_BLUE);
+        Elfo p2 = new Elfo("Elfo-Chabri", 100 , 15, ANSI_BLUE);
         p2.setEnergiaMagica(150);// Revisar
         // p2.setPoderInicial(Invisibilidad());
         p2.setArtefacto(CapaInvisibilidad());
-       // p2.setSalud(100);
         //  p2 = hechizos.obtenerHechizoRandom(); //llamar a la lista de hechizos
         p2.aprender(Rictusempra());
         p2.aprender(SectumSempra());
@@ -479,27 +477,23 @@ public class JuegoHP {
         mensajeInicioCombate();
         Personaje personaje1 = crearWizard();
         Personaje personaje2 = crearElfo();
-        boolean turnoP1 = true;
-        boolean turnoP2 = true;
+
         //25/04
         
         //personaje1 = this.Wizard.setSalud(100);
-
-
         while (personaje1.estaVivo() && personaje2.estaVivo()) {
 
-            chequearTurnoP1();
+            chequearTurnoP1(personaje1, personaje2);
             Thread.sleep(3000);
-            this.hechizos = new ArrayList<>();
-            turnoP1 = !turnoP1; // Aca cambia turno
-            chequearTurnoP2();
+            if (!personaje2.estaVivo()) 
+                break;
+            chequearTurnoP2(personaje1, personaje2);
             Thread.sleep(3000);
-            turnoP2 = !turnoP2;
 
         }
-        if (personaje1.getSalud() == 0) {
+        if (personaje1.getSalud() <= 0) {
             System.out.println(personaje2.getColor() + personaje2.getNombre() + " ganó!!!");
-        } else if (personaje2.getSalud() == 0) { // agrego else if
+        } else if (personaje2.getSalud() <= 0) { 
             System.out.println(personaje1.getColor() + personaje1.getNombre() + " ganó!!!");
         }
     }
@@ -514,9 +508,8 @@ public class JuegoHP {
 
     }
 
-    public boolean chequearTurnoP1() { // poner otro nombre de funcion
-        Personaje personaje1 = crearWizard();
-        Personaje personaje2 = crearElfo();
+    public boolean chequearTurnoP1(Personaje personaje1, Personaje personaje2) { // poner otro nombre de funcion
+
 
         Personaje atacante;
         Personaje oponente;
@@ -533,19 +526,18 @@ public class JuegoHP {
         if (atacante instanceof Wizard) {
             Wizard magico = (Wizard) atacante; // esta linea es castear
             magico.atacar(oponente, elegirHechizo());
-         //   System.out.println(ANSI_YELLOW + magico.getNombre() + " utilizó " + elegirHechizo().getNombreDelPoder());
             System.out.println(ANSI_YELLOW + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
-            System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre()); 
-            //ESTO HACE QUE EL MENU DE HECHIZOS SE DUPLIQUE. SE COMENTA Y DESPUES HAY QUE REVISAR SI HAY QUE UBICARLO EN ALGUN LADO O BORRARLO. CHABRI*/ 
+            if (oponente.estaVivo()) { 
+                System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre()); 
+            }
 
         }
         return true;
 
     }
 
-    public boolean chequearTurnoP2() {
-        Personaje personaje1 = crearWizard();
-        Personaje personaje2 = crearElfo();
+    public boolean chequearTurnoP2(Personaje personaje1, Personaje personaje2) {
+
         Personaje atacante;
         Personaje oponente;
 
@@ -565,7 +557,9 @@ public class JuegoHP {
                     .println(ANSI_RED + magico.getNombre() + " utilizó " + obtenerHechizoRandom().getNombreDelPoder());
             System.out
                     .println(ANSI_RED + "A " + oponente.getNombre() + " le queda " + oponente.getSalud() + " de salud");
-            System.out.println(ANSI_YELLOW + "Ahora es el turno de " + oponente.getNombre());
+            if (oponente.estaVivo()) { 
+                System.out.println(ANSI_RED + "Ahora es el turno de " + oponente.getNombre()); 
+            }
 
         }
         return true;

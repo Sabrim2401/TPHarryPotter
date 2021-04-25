@@ -14,9 +14,9 @@ public class Personaje {
     public static final String ANSI_WHITE = "\u001B[37m";
     public static Scanner Teclado = new Scanner(System.in);
 
-    public Personaje(String nombre, int setSalud, int golpe, String color) {
+    public Personaje(String nombre, int salud, int golpe, String color) {
         this.nombre = nombre;
-        this.salud = salud; // 24 de abril, chabri
+        this.salud = salud; 
         this.golpe = golpe;
         this.color = color;
     }
@@ -74,8 +74,11 @@ public class Personaje {
     }
 
     public boolean estaVivo(){
-        if (this.getSalud() >= 1);
-        return true;
+        if (this.getSalud() >= 1){
+            return true;
+        } 
+        else 
+            return false;
     } 
      
 
